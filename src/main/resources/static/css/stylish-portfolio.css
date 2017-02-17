@@ -236,6 +236,11 @@ hr.small {
     pointer-events: none;
 }
 
+#map-canvas{
+    height:500px;
+    width:100%;
+}
+
 /* Footer */
 
 footer {

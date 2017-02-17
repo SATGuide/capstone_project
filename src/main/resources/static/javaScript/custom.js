@@ -1,6 +1,9 @@
 /**
  * Created by jefferysmith on 2/16/17.
  */
+(function() {
+    'use strict';
+
 // Closes the sidebar menu
 $("#menu-close").click(function(e) {
     e.preventDefault();
@@ -29,7 +32,9 @@ $(function() {
     });
 });
 
-//#to-top button appears after scrolling
+// ============================================
+// #to-top button appears after scrolling
+
 var fixed = false;
 $(document).scroll(function() {
     if ($(this).scrollTop() > 250) {
@@ -55,6 +60,51 @@ $(document).scroll(function() {
     }
 });
 
+//======================================================================================================================
+    var json = [{
+        "title": "Concordia University",
+        "lat": 29.5186176,
+        "lng": -98.4532861
+
+    },{
+        "title": "Northeast Lakeview College",
+        "lat": 29.5462766,
+        "lng":-98.3226664
+
+    },{
+        "title": "Northwest Vista College",
+        "lat": 29.4721536,
+        "lng":-98.7067569
+    }];
+
+
+    var mapOptions = {
+        // Set the zoom level
+        zoom: 10,
+
+        // This sets the center of the map at our location
+        center: {
+            lat:  29.426791,
+            lng: -98.489602
+        }
+    };
+
+    // Render the map
+    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+    // Add markers to map
+    for (var i = 0, length = json.length; i < length; i++) {
+        var data = json[i],
+            latLng = new google.maps.LatLng(data.lat, data.lng);
+
+        // Creating a marker and putting it on the map
+        var marker = new google.maps.Marker({
+            position: latLng,
+            map: map,
+            title: data.title
+        });
+    }
+
 // Disable Google Maps scrolling
 // See http://stackoverflow.com/a/25904582/1607849
 // Disable scroll zooming and bind back the click event
@@ -77,3 +127,6 @@ var onMapClickHandler = function(event) {
 
 // Enable map zooming with mouse scroll when the user clicks the map
 $('.map').on('click', onMapClickHandler);
+//======================================================================================================================
+
+})();

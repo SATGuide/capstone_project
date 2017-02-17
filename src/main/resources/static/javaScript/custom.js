@@ -5,7 +5,7 @@
     'use strict';
 
 // Closes the sidebar menu
-$("#menu-close").click(function(e) {
+$('#menu-close').click(function(e) {
     e.preventDefault();
     $("#sidebar-wrapper").toggleClass("active");
 });

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header(title='To Do')">
+</head>
+
+<body>
+<nav th:replace="fragments/navbar :: navbar"/>
+
+<h1> A Page Offer Things To Do </h1>
+
+<section th:replace="fragments/map :: map" />
+
+<nav th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>

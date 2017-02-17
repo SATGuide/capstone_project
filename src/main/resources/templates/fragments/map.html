@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8"/>
-    <title></title>
-    <link href="../../static/css/stylish-portfolio.css"/>
 </head>
 <body>
 <!-- Google Map Interface -->
-<div th:fragment="navbar" id="map-canvas" class="map">
-</div>
+<div th:fragment="map" id="map-canvas" class="map">
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCV6bJQpcS2rrVTUEXzfwlFti-NnIsBa4Q"></script>
 <script src="../../static/javaScript/custom.js"></script>
+</div>
 </body>
 </html>

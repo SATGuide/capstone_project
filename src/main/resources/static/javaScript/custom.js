@@ -62,19 +62,22 @@ $(document).scroll(function() {
 
 //======================================================================================================================
     var json = [{
-        "title": "Concordia University",
-        "lat": 29.5186176,
-        "lng": -98.4532861
+        title: "Concordia University",
+        lat: 29.5186176,
+        lng: -98.4532861,
+        type:'bar'
 
     },{
-        "title": "Northeast Lakeview College",
-        "lat": 29.5462766,
-        "lng":-98.3226664
+        title: "Northeast Lakeview College",
+        lat: 29.5462766,
+        lng:-98.3226664,
+        type:'park'
 
     },{
-        "title": "Northwest Vista College",
-        "lat": 29.4721536,
-        "lng":-98.7067569
+        title: "Northwest Vista College",
+        lat: 29.4721536,
+        lng:-98.7067569,
+        type:'dining'
     }];
 
 
@@ -92,18 +95,38 @@ $(document).scroll(function() {
     // Render the map
     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
+    //Icon Repositories
+    var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+    var pushPin = 'https://maps.google.com/mapfiles/kml/pushpin/';
+
+    var icons = {
+        dining: {
+            icon: iconBase + 'dining.png'
+        },
+        park: {
+            icon: iconBase + 'parks.png'
+        },
+        bar: {
+            icon: iconBase + 'bars.png'
+        }
+    };
+
     // Add markers to map
     for (var i = 0, length = json.length; i < length; i++) {
+
         var data = json[i],
             latLng = new google.maps.LatLng(data.lat, data.lng);
 
-        // Creating a marker and putting it on the map
+
+        // Creating an icon and putting it on the map
         var marker = new google.maps.Marker({
             position: latLng,
-            map: map,
-            title: data.title
+            icon: icons[json[i].type].icon,
+            map: map
         });
+
     }
+
 
 // Disable Google Maps scrolling
 // See http://stackoverflow.com/a/25904582/1607849
@@ -112,7 +135,7 @@ var onMapMouseleaveHandler = function(event) {
     var that = $(this);
     that.on('click', onMapClickHandler);
     that.off('mouseleave', onMapMouseleaveHandler);
-    that.find('iframe').css("pointer-events", "none");
+    that.find('map-canvas').css("pointer-events", "none");
 }
 
 var onMapClickHandler = function(event) {
@@ -120,13 +143,15 @@ var onMapClickHandler = function(event) {
     // Disable the click handler until the user leaves the map area
     that.off('click', onMapClickHandler);
     // Enable scrolling zoom
-    that.find('iframe').css("pointer-events", "auto");
+    that.find('map-canvas').css("pointer-events", "auto");
     // Handle the mouse leave event
     that.on('mouseleave', onMapMouseleaveHandler);
 }
 
 // Enable map zooming with mouse scroll when the user clicks the map
 $('.map').on('click', onMapClickHandler);
+
 //======================================================================================================================
+
 
 })();

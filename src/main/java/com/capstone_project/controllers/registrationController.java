@@ -28,7 +28,7 @@ public class registrationController {
     }
 
     @PostMapping("/register")
-    public String registerUser(@Valid User user, Errors validation, Model model, @RequestParam(name = "password_confirm") String passwordconfirmation) {
+    public String registerUser(@Valid User user, Errors validation, Model model, @RequestParam(name = "confirm-password") String passwordconfirmation) {
 //        if (!passwordconfirmation.equals(user.getPassword())) {
 //            validation.rejectValue("password", "user.password", "Your passwords do not match");
 //        }

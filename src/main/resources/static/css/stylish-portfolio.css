@@ -17,6 +17,7 @@ body {
 }
 
 .text-vertical-center {
+    color: white;
     display: table-cell;
     text-align: center;
     vertical-align: middle;
@@ -155,7 +156,8 @@ hr.small {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url(img/homepage.jpg) no-repeat center center scroll;
+    opacity: 0.9;
+    background: url(img/bg.png) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -165,17 +167,31 @@ hr.small {
 /* About */
 
 .about {
+    background-color: ;
     padding: 50px 0;
 }
 
 /* Services */
 
 .services {
+    background-color: darkorange;
     padding: 50px 0;
 }
 
 .service-item {
     margin-bottom: 30px;
+}
+i .services, .fa-cutlery{
+    color: dimgrey;
+}
+i .services, .fa-users{
+    color: lightseagreen;
+}
+i .services, .fa-ticket{
+    color: deeppink;
+}
+i .services, .fa-bus{
+    color: gold;
 }
 
 /* Callout */

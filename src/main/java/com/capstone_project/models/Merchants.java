@@ -1,15 +1,33 @@
 package com.capstone_project.models;
 
+import javax.persistence.*;
+
 /**
  * Created by nedwaldie on 2/16/17.
  */
+@Entity
+@Table(name = "merchants")
 public class Merchants {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column(nullable = false, length = 45)
     private double lat;
+
+    @Column(nullable = false, length = 45)
     private double lon;
+
+    @Column(nullable = false, length = 45)
     private String busName;
+
+    @Column(nullable = false, length = 45)
     private String phone;
+
+    @Column(nullable = false, length = 5000)
     private String description;
+
+    @Column(nullable = false)
     private boolean approved;
 
     public int getId() {

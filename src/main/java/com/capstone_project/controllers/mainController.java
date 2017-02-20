@@ -12,4 +12,16 @@ public class mainController {
     public String showingHomePage() {
         return "index";
     }
+
+    @GetMapping("/howtogetthere")
+    public String howToGetTherePage() {return "howToGetThere"; }
+
+    @GetMapping("/thingstodo")
+    public String thingsToDoPage() {return "thingsToDo"; }
+
+    @GetMapping("/whatishappening")
+    public String whatIsHappeningPage() {return "whatIsHappening"; }
+
+    @GetMapping("/wheretoeat")
+    public String whereToEatPage() {return "whereToEat"; }
 }

@@ -10,19 +10,31 @@
     <!-- Navigation -->
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
+        <ul class="sidebar-nav mainmenu">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
                 <a href="#top" onclick="$('#menu-close').click();">Start Bootstrap</a>
             </li>
             <li>
-                <a href="#top" onclick="$('#menu-close').click();">Home</a>
+                <a th:href="@{/index}" onclick="$('#menu-close').click();">Home</a>
             </li>
             <li>
                 <a th:href="@{/wheretoeat}" onclick="$('#menu-close').click();">Dining</a>
+                <ul class="submenu">
+                    <li><a href="#" class="left-menu-toggle"  style="color:black" onclick="$('#menu-close').click();">local Cuisine</a></li>
+                    <li><a href="#" class="left-menu-toggle"  style="color:black" onclick="$('#menu-close').click();">National Chains</a></li>
+\                </ul>
             </li>
             <li>
                 <a th:href="@{/thingstodo}" onclick="$('#menu-close').click();">Things To Do</a>
+                <ul class="submenu">
+                    <li><a href="#" class="left-menu-toggle"  style="color:black" onclick="$('#menu-close').click();">Shopping</a></li>
+                    <li><a href="#" class="left-menu-toggle"  style="color:black" onclick="$('#menu-close').click();">Local Attractions</a></li>
+                    <li><a href="#" class="left-menu-toggle"  style="color:black" onclick="$('#menu-close').click();">Historical Locations</a></li>
+                    <li><a href="#" class="left-menu-toggle"  style="color:black" onclick="$('#menu-close').click();">Amusement Parks</a></li>
+                    <li><a href="#" class="left-menu-toggle"  style="color:black" onclick="$('#menu-close').click();">Parks</a></li>
+
+                </ul>
             </li>
             <li>
                 <a th:href="@{/whatishappening}" onclick="$('#menu-close').click();">Calendar</a>

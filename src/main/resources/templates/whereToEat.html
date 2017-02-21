@@ -4,9 +4,12 @@
 </head>
 
 <body>
+
 <nav th:replace="fragments/navbar :: navbar"/>
 
-<h1> A Page To Show The User Dining Options </h1>
+<nav th:replace="fragments/leftNavbar :: leftNavbar"/>
+
+<h1>Dining<span th:text="${name}"></span></h1>
 
 <section th:replace="fragments/map :: map" />
 

@@ -4,12 +4,12 @@
 </head>
 
 <body>
-<footer th:replace="fragments/navbar :: navbar"/>
+<!--<footer th:replace="fragments/navbar :: navbar"/>-->
 
 <!-- Header -->
 <header id="top" class="header">
     <div class="text-vertical-center">
-        <h1>SATX Interactive</h1>
+        <h1>SATX <span th:text="${name}">Interactive</span></h1>
         <!--<h3>Free Bootstrap Themes &amp; Templates</h3>-->
         <!--<br />-->
         <!--<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>-->

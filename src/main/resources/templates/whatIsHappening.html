@@ -6,7 +6,7 @@
 <body>
 <nav th:replace="fragments/navbar :: navbar"/>
 
-<h1> A Page To Show Current Events </h1>
+<h1>Events<span th:text="${name}"></span></h1>
 
 <section th:replace="fragments/map :: map" />
 

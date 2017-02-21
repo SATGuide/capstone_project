@@ -21,14 +21,49 @@ public class Merchant {
     @Column(nullable = false, length = 45)
     private String busName;
 
-    @Column(nullable = false, length = 45)
+    @Column(nullable = true, length = 45)
     private String phone;
 
-    @Column(nullable = false, length = 5000)
+    @Column(nullable = true, length = 5000)
     private String description;
 
     @Column(nullable = false)
     private boolean approved;
+
+    @ManyToOne
+    @JoinColumn (name = "category_id")
+    private Category category;
+
+    @ManyToOne
+    @JoinColumn (name = "ageCheck")
+    private AgeCheck ageCheck;
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public AgeCheck getAgeCheck() {
+        return ageCheck;
+    }
+
+    public void setAgeCheck(AgeCheck ageCheck) {
+        this.ageCheck = ageCheck;
+    }
+
+    public String getWeb() {
+        return web;
+    }
+
+    public void setWeb(String web) {
+        this.web = web;
+    }
+
+    @Column(nullable = true, length = 200)
+    private String web;
 
     public int getId() {
         return id;

@@ -4,33 +4,47 @@
 (function() {
     'use strict';
 
-// Closes the sidebar menu
-$('#menu-close').click(function(e) {
-    e.preventDefault();
-    $("#sidebar-wrapper").toggleClass("active");
-});
-
-// Opens the sidebar menu
-$("#menu-toggle").click(function(e) {
-    e.preventDefault();
-    $("#sidebar-wrapper").toggleClass("active");
-});
-
-// Scrolls to the selected menu item on the page
-$(function() {
-    $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                $('html,body').animate({
-                    scrollTop: target.offset().top
-                }, 1000);
-                return false;
-            }
-        }
+    // Closes right sidebar menu
+    $('#menu-close').click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
     });
-});
+
+    // Closes left sidebar menu
+    $('#left-menu-close').click(function(e) {
+        e.preventDefault();
+        $("#left-sidebar-wrapper").toggleClass("active");
+        $('#menu-toggle').show();
+    });
+
+    // Opens the right sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens left sidebar menu
+    $(".left-menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#left-sidebar-wrapper").toggleClass("active");
+        $('#menu-toggle').hide();
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
 
 // ============================================
 // #to-top button appears after scrolling

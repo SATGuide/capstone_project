@@ -10,19 +10,31 @@
     <!-- Navigation -->
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
+        <ul class="sidebar-nav mainmenu">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
                 <a href="#top" onclick="$('#menu-close').click();">Start Bootstrap</a>
             </li>
             <li>
-                <a href="#top" onclick="$('#menu-close').click();">Home</a>
+                <a th:href="@{/index}" onclick="$('#menu-close').click();">Home</a>
             </li>
             <li>
                 <a th:href="@{/wheretoeat}" onclick="$('#menu-close').click();">Dining</a>
+                <ul class="submenu">
+                    <li><a href="" style="color:black">Local Cuisine</a></li>
+                    <li><a href="" style="color:black">National Chain</a></li>
+                </ul>
             </li>
             <li>
                 <a th:href="@{/thingstodo}" onclick="$('#menu-close').click();">Things To Do</a>
+                <ul class="submenu">
+                    <li><a href="" style="color:black">Shopping</a></li>
+                    <li><a href="" style="color:black">Local Attractions</a></li>
+                    <li><a href="" style="color:black">Historical Locations</a></li>
+                    <li><a href="" style="color:black">Amusement Parks</a></li>
+                    <li><a href="" style="color:black">Parks</a></li>
+
+                </ul>
             </li>
             <li>
                 <a th:href="@{/whatishappening}" onclick="$('#menu-close').click();">Calendar</a>

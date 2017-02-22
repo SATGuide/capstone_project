@@ -10,33 +10,33 @@ import org.springframework.web.bind.annotation.PathVariable;
  */
 @Controller
 public class mainController {
-    @GetMapping("/home/{name}")
-    public String homePage(@PathVariable String name, Model model) {
-        model.addAttribute("name", name);
-        return "Home";
+    @GetMapping("/home")
+    public String showingHomePage() {
+        return "showHome";
     }
 
-    @GetMapping("/transportation/{name}")
-    public String transportationPage(@PathVariable String name, Model model) {
-        model.addAttribute("name", name);
-        return "transportation";
+    @GetMapping("/howtogetthere")
+    public String howToGetTherePage() {
+        return "howToGetThere";
     }
 
-    @GetMapping("/thingstodo/{name}")
-    public String thingsToDoPage(@PathVariable String name, Model model) {
-        model.addAttribute("name", name);
+    @GetMapping("/thingstodo")
+    public String thingsToDoPage() {
         return "thingsToDo";
     }
 
-    @GetMapping("/localevents/{name}")
-    public String localEventsPage(@PathVariable String name, Model model) {
-        model.addAttribute("name", name);
-        return "local events";
+    @GetMapping("/whatishappening")
+    public String whatIsHappeningPage() {
+        return "whatIsHappening";
     }
 
-    @GetMapping("/dining/{name}")
-    public String diningPage(@PathVariable String name, Model model) {
-        model.addAttribute("name", name);
-        return "dining";
+    @GetMapping("/wheretoeat")
+    public String whereToEatPage() {
+        return "whereToEat";
+    }
+
+    @GetMapping("/general")
+    public String showGeneral() {
+        return  "general";
     }
 }

@@ -18,7 +18,7 @@ body {
 
 .text-vertical-center  {
     color: white;
-    text-shadow: 2px 2px darkblue;
+    text-shadow: 2px 2px blue;
     display: table-cell;
     text-align: center;
     vertical-align: middle;
@@ -32,6 +32,14 @@ body {
 
 .text-vertical-center h2 {
     color: white;
+
+}
+.text-horiz-right {
+    color: darkblue;
+    text-shadow: 2px 2px white;
+    display: table-cell;
+    text-align: right;
+    horiz-align: right;
 
 }
 
@@ -75,7 +83,7 @@ hr.small {
 
 /* Header */
 
-.header {
+.header-home {
     display: table;
     position: relative;
     width: 100%;
@@ -87,11 +95,22 @@ hr.small {
     background-size: 100%;
     /*-o-background-size: cover;*/
 }
+.header-dining {
+    display: block;
+    /*position: relative;*/
+    width: 50%;
+    height: 70%;
+    background: url(img/dining-collage.jpg) no-repeat left scroll;
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*background-size: 50%;*/
+    /*-o-background-size: cover;*/
+}
 
 /* About */
 
 .about {
-    
+
     padding: 60px 0;
 }
 
@@ -108,7 +127,7 @@ hr.small {
 a, .btn {
     color: darkblue;
 }
-h2, .service-item {
+h2 {
     color: darkblue;
 
 }
@@ -132,7 +151,7 @@ i .services, .fa-bus{
 
 .callout {
     display: table;
-    width: 100%;
+    width: 50%;
     height: 400px;
     color: #fff;
     background: url(img/callout.jpg) no-repeat center center scroll;

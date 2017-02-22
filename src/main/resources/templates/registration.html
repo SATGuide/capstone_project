@@ -1,10 +1,9 @@
     <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8"/>
-    <title></title>
-</head>
+    <head th:replace="fragments/header :: header(title='Home')">
+    </head>
 <body>
+
 <div class="container">
 <form th:action="@{/register}" th:object="${user}" th:method="post">
 

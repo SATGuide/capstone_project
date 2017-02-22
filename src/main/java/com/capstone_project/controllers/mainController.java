@@ -34,4 +34,9 @@ public class mainController {
     public String whereToEatPage() {
         return "whereToEat";
     }
+
+    @GetMapping("/general")
+    public String showGeneral() {
+        return  "general";
+    }
 }

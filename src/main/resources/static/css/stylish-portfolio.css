@@ -97,7 +97,17 @@ hr.small {
 .service-item {
     margin-bottom: 30px;
 }
-i .services, .fa-cutlery{
+a, .btn {
+    color: darkblue;
+}
+h2 {
+    color: darkblue;
+    font-family: ;
+}
+h4, p {
+    color: darkblue;
+}
+i .services, .fa-cutlery {
     color: dimgrey;
 }
 i .services, .fa-users{
@@ -176,14 +186,16 @@ i .services, .fa-bus{
 /* Footer */
 
 footer {
-    padding: 100px 0;
+    padding: 30px 0;
+
 }
 
 #to-top {
   display: none;
   position: fixed;
-  bottom: 3px;
+  bottom: 5px;
   right: 5px;
+
 }
 
 /*=======================================*/

@@ -38,6 +38,7 @@ public class registrationController {
 
     @PostMapping("/register")
     public String registerUser(@Valid User user, Errors validation, Model model, @RequestParam(name = "confirm-password") String passwordconfirmation) {
+
         if (!passwordconfirmation.equals(user.getPassword())) {
             validation.rejectValue("password", "user.password", "Your passwords do not match");
         }
@@ -46,7 +47,6 @@ public class registrationController {
             model.addAttribute("user", user);
             return "/posts/register";
         }
-
 
         String hashedPassword = encoder.encode(user.getPassword());
         user.setPassword(hashedPassword);

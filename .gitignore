@@ -10,6 +10,7 @@ application.properties
 .settings
 .springBeans
 
+
 ### IntelliJ IDEA ###
 .idea
 *.iws

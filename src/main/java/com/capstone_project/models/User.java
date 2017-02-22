@@ -30,16 +30,18 @@ public class User {
     @Column(nullable = false, length = 10)
     private String phone;
 
-    public User(String email, String password, String firstName, String lastName, String company, String phone) {
-        this.email = email;
-        this.password = password;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.company = company;
-        this.phone = phone;
+
+    public User(User user) {
+        id = user.id;
+        email = user.email;
+        password = user.password;
+        firstName = user.firstName;
+        lastName = user.lastName;
+        company = user.company;
+        phone = user.phone;
     }
 
-    public User () {}
+    public User() {}
 
     public int getId() {
         return id;

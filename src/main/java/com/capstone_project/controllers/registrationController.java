@@ -1,7 +1,9 @@
 package com.capstone_project.controllers;
 
 import com.capstone_project.models.User;
+import com.capstone_project.models.UserRole;
 import com.capstone_project.repositories.Merchants;
+import com.capstone_project.repositories.Roles;
 import com.capstone_project.repositories.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -18,15 +20,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.validation.Valid;
 
 @Controller
-public class registrationController extends WebSecurityConfigurerAdapter {
-
+public class registrationController {
     @Autowired
     Users userRepo;
 
-    @Bean(name = "passwordEncoder")
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
+    @Autowired
+    PasswordEncoder encoder;
+
+    @Autowired
+    Roles roles;
 
     @GetMapping("/register")
     public String registrationPage(Model model) {
@@ -36,22 +38,26 @@ public class registrationController extends WebSecurityConfigurerAdapter {
 
     @PostMapping("/register")
     public String registerUser(@Valid User user, Errors validation, Model model, @RequestParam(name = "confirm-password") String passwordconfirmation) {
-//        if (!passwordconfirmation.equals(user.getPassword())) {
-//            validation.rejectValue("password", "user.password", "Your passwords do not match");
-//        }
-//        if (validation.hasErrors()) {
-//            model.addAttribute("errors", validation);
-//            model.addAttribute("user", user);
-//            return "/posts/register";
-//        }
+        if (!passwordconfirmation.equals(user.getPassword())) {
+            validation.rejectValue("password", "user.password", "Your passwords do not match");
+        }
+        if (validation.hasErrors()) {
+            model.addAttribute("errors", validation);
+            model.addAttribute("user", user);
+            return "/posts/register";
+        }
 
 
-        String hashedPassword = passwordEncoder(user.getPassword());
+        String hashedPassword = encoder.encode(user.getPassword());
         user.setPassword(hashedPassword);
-//        User newUser =
-        userRepo.save(user);
+        User newUser = userRepo.save(user);
 
-        return "redirect:/login";
+        UserRole ur = new UserRole();
+        ur.setRole("ROLE_USER");
+        ur.setUserId(newUser.getId());
+        roles.save(ur);
+
+        return "redirect:/register";
     }
 
 

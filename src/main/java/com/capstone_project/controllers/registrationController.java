@@ -19,17 +19,14 @@ import javax.validation.Valid;
 
 @Controller
 public class registrationController extends WebSecurityConfigurerAdapter {
-    private Users userRepository;
-    private PasswordEncoder encoder;
 
     @Autowired
     Users userRepo;
 
-    public registrationController(PasswordEncoder encoder, Users userRepository) {
-        this.encoder = encoder;
-        this.userRepository = userRepository;
+    @Bean(name = "passwordEncoder")
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
-
 
     @GetMapping("/register")
     public String registrationPage(Model model) {
@@ -49,7 +46,7 @@ public class registrationController extends WebSecurityConfigurerAdapter {
 //        }
 
 
-        String hashedPassword = encoder.encode(user.getPassword());
+        String hashedPassword = passwordEncoder(user.getPassword());
         user.setPassword(hashedPassword);
 //        User newUser =
         userRepo.save(user);

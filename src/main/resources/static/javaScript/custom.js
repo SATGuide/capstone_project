@@ -4,6 +4,57 @@
 (function() {
     'use strict';
 
+    var json = [{
+        title: "Concordia University",
+        lat: 29.5186176,
+        lng: -98.4532861,
+        type:'bar'
+
+    },{
+        title: "Northeast Lakeview College",
+        lat: 29.5462766,
+        lng:-98.3226664,
+        type:'park'
+
+    },{
+        title: "Northwest Vista College",
+        lat: 29.4721536,
+        lng:-98.7067569,
+        type:'dining'
+    },{
+        title:"San Pedro Springs",
+        lat:29.4470177,
+        lng:-98.4993534,
+        type:'bar'
+    },{
+        title:"O.P. Schnabel",
+        lat:29.5339323,
+        lng:-98.6418023,
+        type:'park'
+    },{
+        title:"South Side Lions",
+        lat:29.3834152,
+        lng:-98.4373305,
+        type:'dining'
+    },{
+        title:"The Pearl",
+        lat:29.4425075,
+        lng:-98.4795581,
+        type:'dining'
+    },{
+        title:"Port San Antonio",
+        lat:29.3861989,
+        lng:-98.5714824,
+        type:'bar'
+    },{
+        title:"San Antonio Aquarium",
+        lat:29.4872339,
+        lng:-98.609355,
+        type:'park'
+    }];
+
+//========= Menus  ============================================================================================
+
     // Closes right sidebar menu
     $('#menu-close').click(function(e) {
         e.preventDefault();
@@ -14,6 +65,8 @@
     $('#left-menu-close').click(function(e) {
         e.preventDefault();
         $("#left-sidebar-wrapper").toggleClass("active");
+
+        // show right menu button
         $('#menu-toggle').show();
     });
 
@@ -26,7 +79,14 @@
     // Opens left sidebar menu
     $(".left-menu-toggle").click(function(e) {
         e.preventDefault();
+
+        // show left menu
         $("#left-sidebar-wrapper").toggleClass("active");
+
+        // show selected Category on top of menu
+        $('#categoryTitle').html("Category Title Here");
+
+        // hide right menu button to prevent overlapping menu
         $('#menu-toggle').hide();
     });
 
@@ -46,7 +106,6 @@
         });
     });
 
-// ============================================
 // #to-top button appears after scrolling
 
 var fixed = false;
@@ -74,26 +133,7 @@ $(document).scroll(function() {
     }
 });
 
-//======================================================================================================================
-    var json = [{
-        title: "Concordia University",
-        lat: 29.5186176,
-        lng: -98.4532861,
-        type:'bar'
-
-    },{
-        title: "Northeast Lakeview College",
-        lat: 29.5462766,
-        lng:-98.3226664,
-        type:'park'
-
-    },{
-        title: "Northwest Vista College",
-        lat: 29.4721536,
-        lng:-98.7067569,
-        type:'dining'
-    }];
-
+//========= Google Map API ============================================================================================
 
     var mapOptions = {
         // Set the zoom level
@@ -164,8 +204,5 @@ var onMapClickHandler = function(event) {
 
 // Enable map zooming with mouse scroll when the user clicks the map
 $('.map').on('click', onMapClickHandler);
-
-//======================================================================================================================
-
 
 })();

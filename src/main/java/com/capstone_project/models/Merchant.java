@@ -31,11 +31,23 @@ public class Merchant {
     private boolean approved;
 
     @ManyToOne
+    @JoinColumn (name = "user_id")
+    private User user;
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    @ManyToOne
     @JoinColumn (name = "category_id")
     private Category category;
 
     @ManyToOne
-    @JoinColumn (name = "ageCheck")
+    @JoinColumn (name = "ageCheck_id")
     private AgeCheck ageCheck;
 
     public Category getCategory() {

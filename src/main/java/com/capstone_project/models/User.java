@@ -1,6 +1,7 @@
 package com.capstone_project.models;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by nedwaldie on 2/16/17.
@@ -29,6 +30,17 @@ public class User {
 
     @Column(nullable = false, length = 10)
     private String phone;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    private List<Merchant> merchants;
+
+    public List<Merchant> getMerchants() {
+        return merchants;
+    }
+
+    public void setMerchants(List<Merchant> merchants) {
+        this.merchants = merchants;
+    }
 
     public int getId() {
         return id;

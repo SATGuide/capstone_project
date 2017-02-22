@@ -11,5 +11,38 @@ import java.util.List;
 /**
  * Created by nedwaldie on 2/22/17.
  */
-public class UserDetailList extends User {}
+public class UserDetailList extends User {
+//    private List<String> userRoles;
+//
+//    public UserDetailList(User user, List<String> userRoles) {
+//        super(user);
+//        this.userRoles = userRoles;
+//    }
+//
+//    @Override
+//    public Collection<? extends GrantedAuthority> getAuthorities() {
+//        String roles = StringUtils.collectionToCommaDelimitedString(userRoles);
+//        return AuthorityUtils.commaSeparatedStringToAuthorityList(roles);
+//    }
+//
+//    @Override
+//    public boolean isAccountNonExpired() {
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean isAccountNonLocked() {
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean isCredentialsNonExpired() {
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean isEnabled() {
+//        return true;
+//    }
+}
 

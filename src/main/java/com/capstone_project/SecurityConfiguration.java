@@ -1,4 +1,4 @@
-package com.capstone_project;
+package com.codeup;
 
 import com.capstone_project.services.UserDetailList;
 import com.capstone_project.services.UserDetailsLoader;
@@ -12,10 +12,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-
-//import com.capstone_project.services.UserDetailList;
-//import com.capstone_project.services.UserDetailsLoader;
-
 
 @Configuration
 @EnableWebSecurity
@@ -56,4 +52,3 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 //        auth.userDetailsService(userDetails).passwordEncoder(passwordEncoder());
 //    }
 }
-

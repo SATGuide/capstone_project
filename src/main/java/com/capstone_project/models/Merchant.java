@@ -18,10 +18,10 @@ public class Merchant {
     @Column(nullable = false, length = 45)
     private double lon;
 
-    @Column(nullable = false, length = 45)
+    @Column(nullable = false, length = 100)
     private String busName;
 
-    @Column(nullable = true, length = 45)
+    @Column(nullable = true, length = 10)
     private String phone;
 
     @Column(nullable = true, length = 5000)

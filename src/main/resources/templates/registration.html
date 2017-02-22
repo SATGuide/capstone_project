@@ -12,7 +12,7 @@
     <div>
         <h1>Register</h1>
     </div>
-<form th:action="@{/register}" th:object="${user}" method="post">
+<form th:action="@{/register}" th:object="${user}" th:method="POST">
     <div class="form-group">
         <label for="email">Email</label>
         <input type="text" id="email" class="form-control" th:field="*{email}"/>

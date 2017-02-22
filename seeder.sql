@@ -9,6 +9,8 @@ INSERT INTO category (id, category) VALUES (7,'Cultural/Arts');
 INSERT INTO category (id, category) VALUES (8,'Medical');
 INSERT INTO category (id, category) VALUES (9,'Government/Military');
 INSERT INTO category (id, category) VALUES (10,'Colleges');
+INSERT INTO category (id, category) VALUES (10,'Bars/Clubs');
+
 INSERT INTO age_check (id, age_check) VALUES (1,'All ages');
 INSERT INTO age_check (id, age_check) VALUES (2,'Teens');
 INSERT INTO age_check (id, age_check) VALUES (3,'Adults (21 and up)');

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header(title='Site registration')">
+</head>
+<body>
+<nav th:replace="fragments/navbar :: navbar"/>
+<div class="container">
+    <h1>Business registration</h1>
+    <form action="/forms/register" method="post" th:object="${post}" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="category">Business categoyr</label>
+            <select th:field="*{category}">
+                <option th:each="type : ${allCategories}"
+                        th:value="${category}"
+                        th:text="#{${'seedstarter.category.' + category}}">Category</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="bus_name">Business name</label>
+            <input type="text" name="bus_name" th:field="*{bus_name}" class="form-control"/>
+            <p th:if="${#fields.hasErrors('bus_name')}" th:errors="*{bus_name}"/>
+        </div>
+        <div class="form-group">
+            <label for="bus_address">Street address</label>
+            <input type="text" name="bus_address" th:field="*{bus_address}" class="form-control"/>
+            <p th:if="${#fields.hasErrors('bus_address')}" th:errors="*{bus_address}"/>
+        </div>
+        <div class="form-group">
+            <label for="bus_phone">Business phone number</label>
+            <input type="text" name="bus_phone" th:field="*{bus_phone}" class="form-control"/>
+            <p th:if="${#fields.hasErrors('bus_phone')}" th:errors="*{bus_phone}"/>
+        </div>
+        <div class="form-group">
+            <label for="web_address">Website (if you have one)</label>
+            <input type="text" name="web_address" th:field="*{web_address}" class="form-control"/>
+            <p th:if="${#fields.hasErrors('web_address')}" th:errors="*{web_address}"/>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" name="description" th:field="*{description}" class="form-control"/>
+            <p th:if="${#fields.hasErrors('description')}" th:errors="*{description}"/>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Submit"/>
+        <input type="hidden" th:attr="name=${_csrf.parameterName}, value=${_csrf.token}"/>
+    </form>
+</div>
+<footer th:replace="fragments/footer :: footer"/>
+</body>
+</html>

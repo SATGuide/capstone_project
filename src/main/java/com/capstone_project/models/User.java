@@ -43,6 +43,17 @@ public class User {
 
     public User() {}
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    private List<Merchant> merchants;
+
+    public List<Merchant> getMerchants() {
+        return merchants;
+    }
+
+    public void setMerchants(List<Merchant> merchants) {
+        this.merchants = merchants;
+    }
+
     public int getId() {
         return id;
     }

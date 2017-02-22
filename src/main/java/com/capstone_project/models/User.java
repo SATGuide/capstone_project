@@ -16,7 +16,7 @@ public class User {
     @Column(nullable = false, length = 45)
     private String email;
 
-    @Column(nullable = false, length = 45)
+    @Column(nullable = false)
     private String password;
 
     @Column(nullable = false, length = 30)
@@ -30,6 +30,19 @@ public class User {
 
     @Column(nullable = false, length = 10)
     private String phone;
+
+
+    public User(User user) {
+        id = user.id;
+        email = user.email;
+        password = user.password;
+        firstName = user.firstName;
+        lastName = user.lastName;
+        company = user.company;
+        phone = user.phone;
+    }
+
+    public User() {}
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<Merchant> merchants;

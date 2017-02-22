@@ -1,19 +1,48 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8"/>
-    <title>Title</title>
-</head>
+    <head th:replace="fragments/header :: header(title='Home')">
+    </head>
 <body>
-<form action="#" th:action="@{/registration}" th:object="${registration}" method="post">
-    <p>Id: <input type="text" th:field="*{id}" /></p>
-    <p>Email: <input type="text" th:field="*{email}" /></p>
-    <p>Password: <input type="text" th:field="*{password}" /></p>
-    <p>First Name: <input type="text" th:field="*{first_name}" /></p>
-    <p>Last Name: <input type="text" th:field="*{last_name}" /></p>
-    <p>Company: <input type="text" th:field="*{company}" /></p>
-    <p>Phone Number: <input type="text" th:field="*{phone_number}" /></p>
-    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+
+<div class="container">
+<form th:action="@{/register}" th:object="${user}" th:method="post">
+
+    <div class="form-group">
+        <label for="first-name">First Name</label>
+        <input type="text" class="form-control" id="first-name" th:field="*{firstName}" />
+    </div>
+
+    <div class="form-group">
+        <label for="last-name">Last Name</label>
+        <input type="text" class="form-control" id="last-name" th:field="*{lastName}" />
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" th:field="*{email}" />
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" th:field="*{password}" />
+    </div>
+
+    <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="text" class="form-control" id="confirm-password" name="confirm-password" />
+    </div>
+
+    <div class="form-group">
+        <label for="company">Company</label>
+        <input type="text" class="form-control" id="company" th:field="*{company}" />
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="text" class="form-class" id="phone" th:field="*{phone}" />
+    </div>
+    <input type="submit" value="Submit" />
 </form>
+</div>
 </body>
 </html>

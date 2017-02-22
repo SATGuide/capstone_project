@@ -10,6 +10,7 @@ application.properties
 .settings
 .springBeans
 
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
@@ -23,3 +24,4 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+/src/main/resources/application.properties

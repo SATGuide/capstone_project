@@ -10,16 +10,16 @@ import org.springframework.web.bind.annotation.PathVariable;
  */
 @Controller
 public class mainController {
-    @GetMapping("/showhome/{name}")
-    public String showingHomePage(@PathVariable String name, Model model) {
+    @GetMapping("/home/{name}")
+    public String homePage(@PathVariable String name, Model model) {
         model.addAttribute("name", name);
-        return "showHome";
+        return "Home";
     }
 
-    @GetMapping("/howtogetthere/{name}")
-    public String howToGetTherePage(@PathVariable String name, Model model) {
+    @GetMapping("/transportation/{name}")
+    public String transportationPage(@PathVariable String name, Model model) {
         model.addAttribute("name", name);
-        return "howToGetThere";
+        return "transportation";
     }
 
     @GetMapping("/thingstodo/{name}")
@@ -28,15 +28,15 @@ public class mainController {
         return "thingsToDo";
     }
 
-    @GetMapping("/whatishappening/{name}")
-    public String whatIsHappeningPage(@PathVariable String name, Model model) {
+    @GetMapping("/localevents/{name}")
+    public String localEventsPage(@PathVariable String name, Model model) {
         model.addAttribute("name", name);
-        return "whatIsHappening";
+        return "local events";
     }
 
-    @GetMapping("/wheretoeat/{name}")
-    public String whereToEatPage(@PathVariable String name, Model model) {
+    @GetMapping("/dining/{name}")
+    public String diningPage(@PathVariable String name, Model model) {
         model.addAttribute("name", name);
-        return "whereToEat";
+        return "dining";
     }
 }

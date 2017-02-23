@@ -15,9 +15,9 @@ public class mainController {
         return "home";
     }
 
-    @GetMapping("/howtogetthere")
+    @GetMapping("/transportation")
     public String howToGetTherePage() {
-        return "howToGetThere";
+        return "transportation";
     }
 
     @GetMapping("/thingstodo")
@@ -30,13 +30,15 @@ public class mainController {
         return "whatIsHappening";
     }
 
-    @GetMapping("/wheretoeat")
+    @GetMapping("/dining")
     public String whereToEatPage() {
-        return "whereToEat";
+        return "dining";
     }
 
     @GetMapping("/general")
     public String showGeneral() {
         return  "general";
     }
+
+
 }

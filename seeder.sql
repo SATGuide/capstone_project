@@ -1,4 +1,6 @@
-INSERT INTO users (id, company, email, first_name, last_name, password, phone) VALUES (1,'hmt3design.com','hmt3design@gmail.com','Harry','Thomas','Codeup','2106834821');
+USE satxinteractive_db;
+
+INSERT INTO users (company, email, first_name, last_name, password, phone) VALUES ('hmt3design.com','hmt3design@gmail.com','Harry','Thomas','Codeup','2106834821');
 INSERT INTO category (id, category) VALUES (1,'Local');
 INSERT INTO category (id, category) VALUES (2,'Chain');
 INSERT INTO category (id, category) VALUES (3,'Attractions');
@@ -9,7 +11,7 @@ INSERT INTO category (id, category) VALUES (7,'Cultural/Arts');
 INSERT INTO category (id, category) VALUES (8,'Medical');
 INSERT INTO category (id, category) VALUES (9,'Government/Military');
 INSERT INTO category (id, category) VALUES (10,'Colleges');
-INSERT INTO category (id, category) VALUES (10,'Bars/Clubs');
+INSERT INTO category (id, category) VALUES (11,'Bars/Clubs');
 
 INSERT INTO age_check (id, age_check) VALUES (1,'All ages');
 INSERT INTO age_check (id, age_check) VALUES (2,'Teens');

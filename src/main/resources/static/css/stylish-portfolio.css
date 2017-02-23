@@ -326,7 +326,8 @@ footer {
 
 .mainmenu li:hover .submenu {
     display: block;
-    max-height: 200px;
+    /* this setting adjust max height in sub-menu view */
+    max-height: 600px;
 }
 
 /*

@@ -40,5 +40,10 @@ public class mainController {
         return  "general";
     }
 
+    @GetMapping("/localvents")
+    public String localEventsPage() {
+        return "localEvents";
+    }
+
 
 }

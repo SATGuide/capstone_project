@@ -26,7 +26,7 @@ public class businessController {
     @Autowired
     Merchants merchantRepo;
 
-    @GetMapping(name = "/merchant/add")
+    @GetMapping("/merchant/add")
     public String newMerchant(Model model) {
         List<Category> categories = (List<Category>) categoryRepo.findAll();
         model.addAttribute("category", categories);
@@ -34,13 +34,9 @@ public class businessController {
         return "/registration/business";
     }
 
-    @PostMapping
+    @PostMapping("/merchant/add")
     public String addNewMerchant(@Valid Merchant merchant, @Valid Category merchantCategory, @RequestParam(name = "category") String category) {
-
-//        merchantCategory = (Category) categoryRepo.findByCategory(category);
-//        merchant.setCategory(merchantCategory);
         merchantRepo.save(merchant);
-
-        return "home";
+        return "redirect:/home";
     }
 }

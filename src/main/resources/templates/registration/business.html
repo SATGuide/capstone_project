@@ -6,7 +6,7 @@
 <nav th:replace="fragments/navbar :: navbar"/>
 <div class="container">
     <h1>Business registration</h1>
-    <form action="/forms/register" method="post" th:object="${merchant}" enctype="multipart/form-data">
+    <form action="/merchant/add" method="post" th:object="${merchant}" enctype="multipart/form-data">
         <div class="form-group">
             <label for="category">Business category</label>
             <select name="category" id="category">

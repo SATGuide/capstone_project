@@ -9,8 +9,8 @@
     <form action="/merchant/add" method="post" th:object="${merchant}" enctype="multipart/form-data">
         <div class="form-group">
             <label for="category">Business category</label>
-            <select name="category" id="category">
-                <option th:each="cat : ${category}" th:value="${cat.id}" th:text="${cat.category}"></option>
+            <select id="category" th:field="*{category}">
+                <option th:each="cat : ${category}" th:value="${cat.id}"  th:text="${cat.category}"></option>
                 <!--<option th:each="type : ${allCategories}"-->
                         <!--th:value="${category}"-->
                         <!--th:text="#{${'seedstarter.category.' + category}}">Category</option>-->

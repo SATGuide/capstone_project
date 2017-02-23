@@ -25,11 +25,6 @@ public class mainController {
         return "thingsToDo";
     }
 
-    @GetMapping("/whatishappening")
-    public String whatIsHappeningPage() {
-        return "whatIsHappening";
-    }
-
     @GetMapping("/dining")
     public String whereToEatPage() {
         return "dining";
@@ -44,6 +39,5 @@ public class mainController {
     public String localEventsPage() {
         return "localEvents";
     }
-
 
 }

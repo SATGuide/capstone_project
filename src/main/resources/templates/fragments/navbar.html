@@ -21,10 +21,12 @@
             <li>
                 <a th:href="@{/wheretoeat}" onclick="$('#menu-close').click();">Dining</a>
                 <ul class="submenu">
-                    <li><a href="#" class="left-menu-toggle"  style="color:black"
+                    <li><a id="local" href="#" class="left-menu-toggle"  style="color:black"
                            onclick="$('#menu-close').click();">local Cuisine</a></li>
-                    <li><a href="#" class="left-menu-toggle"  style="color:black"
+                    <li><a id="chain" href="#" class="left-menu-toggle"  style="color:black"
                            onclick="$('#menu-close').click();">Favorite Eats</a></li>
+                    <li><a id="bars" href="#" class="left-menu-toggle"  style="color:black"
+                           onclick="$('#menu-close').click();">Bar / Club</a></li>
                 </ul>
             </li>
             <li>

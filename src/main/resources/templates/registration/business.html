@@ -17,8 +17,8 @@
         </div>
         <div class="form-group">
             <label for="bus_name">Business name</label>
-            <input type="text" name="bus_name" th:field="*{bus_name}" class="form-control"/>
-            <p th:if="${#fields.hasErrors('bus_name')}" th:errors="*{bus_name}"/>
+            <input type="text" name="bus_name" th:field="*{busName}" class="form-control"/>
+            <p th:if="${#fields.hasErrors('bus_name')}" th:errors="*{busName}"/>
         </div>
         <div class="form-group">
             <label for="bus_address">Street address</label>
@@ -27,13 +27,13 @@
         </div>
         <div class="form-group">
             <label for="bus_phone">Business phone number</label>
-            <input type="text" name="bus_phone" th:field="*{bus_phone}" class="form-control"/>
-            <p th:if="${#fields.hasErrors('bus_phone')}" th:errors="*{bus_phone}"/>
+            <input type="text" name="bus_phone" th:field="*{busPhone}" class="form-control"/>
+            <p th:if="${#fields.hasErrors('bus_phone')}" th:errors="*{busPhone}"/>
         </div>
         <div class="form-group">
             <label for="web_address">Website (if you have one)</label>
-            <input type="text" name="web_address" th:field="*{web_address}" class="form-control"/>
-            <p th:if="${#fields.hasErrors('web_address')}" th:errors="*{web_address}"/>
+            <input type="text" name="web_address" th:field="*{web}" class="form-control"/>
+            <p th:if="${#fields.hasErrors('web_address')}" th:errors="*{web}"/>
         </div>
         <div class="form-group">
             <label for="description">Description</label>

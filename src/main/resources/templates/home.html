@@ -8,12 +8,13 @@
 
 <!-- Header -->
 <header id="top" class="header">
-    <div class="text-vertical-center">
-        <h1>SATX Interactive</h1>
-        <!--<h3>Free Bootstrap Themes &amp; Templates</h3>-->
-        <!--<br />-->
-        <!--<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>-->
-    </div>
+    <img src="/css/img/bg-resize.jpg" class="img-responsive center-block" alt="SATX Interactive" />
+    <!--<div class="text-vertical-center">-->
+        <!--<h1>SATX Interactive</h1>-->
+        <!--&lt;!&ndash;<h3>Free Bootstrap Themes &amp; Templates</h3>&ndash;&gt;-->
+        <!--&lt;!&ndash;<br />&ndash;&gt;-->
+        <!--&lt;!&ndash;<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>&ndash;&gt;-->
+    <!--</div>-->
 </header>
 
 <!-- About -->
@@ -21,7 +22,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2>Your user friendly guide to San Antonio FUN!</h2>
+                <h2>Your pocket guide to San Antonio</h2>
                 <!--<p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>-->
             </div>
         </div>
@@ -41,6 +42,7 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
                         <div class="service-item">
+                            <a th:href="@{/dining}">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-cutlery fa-stack-1x text-primary"></i>
@@ -48,12 +50,13 @@
                             <h4>
                                 <strong>Dining</strong>
                             </h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <a th:href="@{/dining}" class="btn btn-light">Learn More</a>
+                            <p>San Antonio has an abundance of great restaurants. (Don't skip our greatest contribution: breakfast tacos.)</p>
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="service-item">
+                            <a th:href="@{/thingstodo}">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-users fa-stack-1x text-primary"></i>
@@ -61,12 +64,13 @@
                             <h4>
                                 <strong>Things To Do</strong>
                             </h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <a th:href="@{/thingstodo}" class="btn btn-light">Learn More</a>
+                            <p>Although it's the number one tourist destination in Texas, the Alamo isn't the only great thing about San Antonio.</p>
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="service-item">
+                            <a th:href="@{/localevents}">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-ticket fa-stack-1x text-primary"></i>
@@ -74,12 +78,13 @@
                             <h4>
                                 <strong>Local Events</strong>
                             </h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elite.</p>
-                            <a th:href="@{/localevents}" class="btn btn-light">Learn Mo</a>
+                            <p>San Antonio always has <em>something</em> to celebrate, starting with our annual two-week party known as Fiesta.</p>
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="service-item">
+                            <a th:href="@{/transportation}">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-bus fa-stack-1x text-primary"></i>
@@ -87,8 +92,8 @@
                             <h4>
                                 <strong>Transportation</strong>
                             </h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <a th:href="@{/transportation}" class="btn btn-light">Learn More</a>
+                            <p>Bus, taxi, rideshare, bicycle, shoe leather: There's lots of ways to get around the Alamo City.</p>
+                            </a>
                         </div>
                     </div>
                 </div>

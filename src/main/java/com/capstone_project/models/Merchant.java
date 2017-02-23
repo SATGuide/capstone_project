@@ -22,10 +22,13 @@ public class Merchant {
     private String busName;
 
     @Column(nullable = true, length = 10)
-    private String phone;
+    private String busPhone;
 
     @Column(nullable = true, length = 5000)
     private String description;
+
+    @Column(nullable = true, length = 200)
+    private String web;
 
     @Column(nullable = false)
     private boolean approved;
@@ -74,9 +77,6 @@ public class Merchant {
         this.web = web;
     }
 
-    @Column(nullable = true, length = 200)
-    private String web;
-
     public int getId() {
         return id;
     }
@@ -109,12 +109,12 @@ public class Merchant {
         this.busName = busName;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getBusPhone() {
+        return busPhone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setBusPhone(String busPhone) {
+        this.busPhone = busPhone;
     }
 
     public String getDescription() {

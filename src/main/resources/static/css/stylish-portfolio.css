@@ -16,19 +16,35 @@ body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-.text-vertical-center {
+.text-vertical-center  {
     color: white;
+    text-shadow: 2px 2px blue;
     display: table-cell;
     text-align: center;
     vertical-align: middle;
 }
-
-.text-vertical-center h1 {
+.text-vertical-center h1{
     margin: 0;
     padding: 0;
     font-size: 4.5em;
     font-weight: 700;
 }
+
+.text-vertical-center h2 {
+    color: white;
+
+}
+.text-horiz-right {
+    color: darkblue;
+    text-shadow: 2px 2px white;
+    display: table-cell;
+    text-align: right;
+    horiz-align: right;
+
+}
+
+
+
 
 /* Custom Button Styles */
 
@@ -67,30 +83,58 @@ hr.small {
 
 /* Header */
 
-.header {
+.header-home {
     display: table;
     position: relative;
     width: 100%;
-    height: 100%;
-    opacity: 0.9;
+    height: 75%;
+    opacity: 0.95;
     background: url(img/bg.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    background-size: 100%;
+    /*-o-background-size: cover;*/
+}
+.header-dining {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 75%;
+    background: url(img/dining-collage.jpg) no-repeat left center scroll;
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    background-size: 100%;
+    /*-o-background-size: cover;*/
+}
+.header-general {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 75%;
+    opacity: 0.95;
+    background: url(img/telephone2.jpeg) no-repeat right center scroll;
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
     background-size: cover;
-    -o-background-size: cover;
+    /*-o-background-size: cover;*/
 }
 
 /* About */
 
 .about {
-    
-    padding: 50px 0;
+
+    padding: 60px 0;
 }
 
 /* Services */
 
 .services {
-    background-color: darkorange;
+    background: url(img/fPVFLQ.jpg);
+    opacity: 80;
+    padding: 50px 0;
+}
+.services-general {
+    background-color: rosybrown;
     padding: 50px 0;
 }
 
@@ -102,7 +146,7 @@ a, .btn {
 }
 h2 {
     color: darkblue;
-    font-family: ;
+
 }
 h4, p {
     color: darkblue;
@@ -119,12 +163,15 @@ i .services, .fa-ticket{
 i .services, .fa-bus{
     color: gold;
 }
+i .services-general, .fa-plus-square{
+    color: red;
+}
 
 /* Callout */
 
 .callout {
     display: table;
-    width: 100%;
+    width: 50%;
     height: 400px;
     color: #fff;
     background: url(img/callout.jpg) no-repeat center center scroll;

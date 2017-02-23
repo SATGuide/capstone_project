@@ -12,31 +12,37 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class mainController {
     @GetMapping("/home")
     public String showingHomePage() {
+
         return "home";
     }
 
     @GetMapping("/howtogetthere")
     public String howToGetTherePage() {
+
         return "howToGetThere";
     }
 
     @GetMapping("/thingstodo")
     public String thingsToDoPage() {
+
         return "thingsToDo";
     }
 
     @GetMapping("/whatishappening")
     public String whatIsHappeningPage() {
+
         return "whatIsHappening";
     }
 
     @GetMapping("/wheretoeat")
     public String whereToEatPage() {
+
         return "whereToEat";
     }
 
     @GetMapping("/general")
     public String showGeneral() {
+
         return  "general";
     }
 }

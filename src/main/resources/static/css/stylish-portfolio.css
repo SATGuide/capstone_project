@@ -68,37 +68,30 @@ hr.small {
 /* Header */
 
 .header {
-    display: table;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    opacity: 0.9;
-    background: url(img/bg.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    width: auto;
+    height: auto;
+    background-color: black;
 }
 
 /* About */
 
 .about {
     
-    padding: 50px 0;
+    padding: 15px 0;
 }
 
 /* Services */
 
 .services {
     background-color: darkorange;
-    padding: 50px 0;
+    padding: 15px 0;
 }
 
 .service-item {
     margin-bottom: 30px;
 }
 a, .btn {
-    color: darkblue;
+    color: white;
 }
 h2 {
     color: darkblue;
@@ -107,7 +100,7 @@ h4, p {
     color: darkblue;
 }
 i .services, .fa-cutlery {
-    color: dimgrey;
+    color: lightgray;
 }
 i .services, .fa-users{
     color: lightseagreen;

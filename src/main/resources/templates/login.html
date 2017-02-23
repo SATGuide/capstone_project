@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header(title='Login')">
+</head>
+
+<body>
+<header id="top" class="header-login">
+<div class="text-vertical-center">
+    <h1>Login</h1>
+</div>
+</header>
+<div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" th:field="*{email}" class="form-control"/>
+    <!--<p th:if="${#fields.hasErrors('bus_name')}" th:errors="*{busName}"/>-->
+</div>
+<div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" class="form-control"/>
+    <!--<p th:if="${#fields.hasErrors('bus_address')}" th:errors="*{bus_address}"/>-->
+</div>
+<nav th:replace="fragments/navbar :: navbar"/>
+
+<section th:replace="fragments/map :: map" />
+
+<nav th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>

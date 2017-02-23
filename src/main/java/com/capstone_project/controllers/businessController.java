@@ -35,7 +35,7 @@ public class businessController {
     }
 
     @PostMapping("/merchant/add")
-    public String addNewMerchant(@Valid Merchant merchant, @Valid Category merchantCategory, @RequestParam(name = "category") String category) {
+    public String addNewMerchant(@Valid Merchant merchant) {
         merchantRepo.save(merchant);
         return "redirect:/home";
     }

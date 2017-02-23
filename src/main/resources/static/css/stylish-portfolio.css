@@ -16,35 +16,19 @@ body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-.text-vertical-center  {
+.text-vertical-center {
     color: white;
-    text-shadow: 2px 2px blue;
     display: table-cell;
     text-align: center;
     vertical-align: middle;
 }
-.text-vertical-center h1{
+
+.text-vertical-center h1 {
     margin: 0;
     padding: 0;
     font-size: 4.5em;
     font-weight: 700;
 }
-
-.text-vertical-center h2 {
-    color: white;
-
-}
-.text-horiz-right {
-    color: darkblue;
-    text-shadow: 2px 2px white;
-    display: table-cell;
-    text-align: right;
-    horiz-align: right;
-
-}
-
-
-
 
 /* Custom Button Styles */
 
@@ -83,58 +67,30 @@ hr.small {
 
 /* Header */
 
-.header-home {
+.header {
     display: table;
     position: relative;
     width: 100%;
-    height: 75%;
-    opacity: 0.95;
+    height: 100%;
+    opacity: 0.9;
     background: url(img/bg.jpg) no-repeat center center scroll;
-    /*-webkit-background-size: cover;*/
-    /*-moz-background-size: cover;*/
-    background-size: 100%;
-    /*-o-background-size: cover;*/
-}
-.header-dining {
-    display: table;
-    position: relative;
-    width: 100%;
-    height: 75%;
-    background: url(img/dining-collage.jpg) no-repeat left center scroll;
-    /*-webkit-background-size: cover;*/
-    /*-moz-background-size: cover;*/
-    background-size: 100%;
-    /*-o-background-size: cover;*/
-}
-.header-general {
-    display: table;
-    position: relative;
-    width: 100%;
-    height: 75%;
-    opacity: 0.95;
-    background: url(img/telephone2.jpeg) no-repeat right center scroll;
-    /*-webkit-background-size: cover;*/
-    /*-moz-background-size: cover;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
     background-size: cover;
-    /*-o-background-size: cover;*/
+    -o-background-size: cover;
 }
 
 /* About */
 
 .about {
-
-    padding: 60px 0;
+    
+    padding: 50px 0;
 }
 
 /* Services */
 
 .services {
-    background: url(img/fPVFLQ.jpg);
-    opacity: 80;
-    padding: 50px 0;
-}
-.services-general {
-    background-color: rosybrown;
+    background-color: darkorange;
     padding: 50px 0;
 }
 
@@ -146,7 +102,6 @@ a, .btn {
 }
 h2 {
     color: darkblue;
-
 }
 h4, p {
     color: darkblue;
@@ -163,15 +118,12 @@ i .services, .fa-ticket{
 i .services, .fa-bus{
     color: gold;
 }
-i .services-general, .fa-plus-square{
-    color: red;
-}
 
 /* Callout */
 
 .callout {
     display: table;
-    width: 50%;
+    width: 100%;
     height: 400px;
     color: #fff;
     background: url(img/callout.jpg) no-repeat center center scroll;
@@ -381,7 +333,8 @@ footer {
 
 .mainmenu li:hover .submenu {
     display: block;
-    max-height: 200px;
+    /* this setting adjust max height in sub-menu view */
+    max-height: 600px;
 }
 
 /*

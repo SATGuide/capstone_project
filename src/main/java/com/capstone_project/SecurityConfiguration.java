@@ -35,15 +35,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .permitAll() // Anyone can go to the login page
                 .and()
                 .authorizeRequests()
-                .antMatchers("/", "/logout") // anyone can see the home and logout page
+                .antMatchers("/", "/logout", "/merchant/add") // anyone can see the home and logout page
                 .permitAll()
                 .and()
                 .logout()
                 .logoutSuccessUrl("/login?logout") // append a query string value
-                .and()
-                .authorizeRequests()
-                .antMatchers("/merchant/add") // only authenticated users can create ads
-                .authenticated()
+//                .and()
+//                .authorizeRequests()
+//                .antMatchers("/merchant/add") // only authenticated users can create ads
+//                .authenticated()
         ;
     }
 

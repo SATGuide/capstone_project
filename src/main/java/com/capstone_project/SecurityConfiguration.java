@@ -31,19 +31,19 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http
                 .formLogin()
                 .loginPage("/login")
-                .defaultSuccessUrl("/me") // user's home page, it can be any URL
+                .defaultSuccessUrl("/home") // user's home page, it can be any URL
                 .permitAll() // Anyone can go to the login page
                 .and()
                 .authorizeRequests()
-                .antMatchers("/", "/logout", "/merchant/add") // anyone can see the home and logout page
+                .antMatchers("/", "/logout") // anyone can see the home and logout page
                 .permitAll()
                 .and()
                 .logout()
                 .logoutSuccessUrl("/login?logout") // append a query string value
-//                .and()
-//                .authorizeRequests()
-//                .antMatchers("/merchant/add") // only authenticated users can create ads
-//                .authenticated()
+                .and()
+                .authorizeRequests()
+                .antMatchers("/merchant/add") // only authenticated users can create ads
+                .authenticated()
         ;
     }
 

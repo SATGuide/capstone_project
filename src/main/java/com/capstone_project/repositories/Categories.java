@@ -14,6 +14,4 @@ import java.util.List;
 public interface Categories extends CrudRepository<Category, Integer>{
     @Query("SELECT c FROM Category c where c.category like ?1")
     public List<Category> findByCategory(String category);
-
-
 }

@@ -5,14 +5,16 @@
 
 <body>
 <header id="top" class="header-login">
+</header>
+<nav th:replace="fragments/navbar :: navbar"/>
+<div class="container">
 <div class="text-vertical-center">
     <h1>Login</h1>
 </div>
-</header>
 <form th:action="@{/login}" method="post">
     <div class="form-group">
-        <label for="email">Email</label>
-        <input id="email" name="email" type="text" class="form-control"/>
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" class="form-control"/>
     </div>
     <div class="form-group">
         <label for="password">Password</label>
@@ -22,10 +24,7 @@
         <input type="submit" value="Log In" class="btn btn-primary" />
     </div>
 </form>
-<nav th:replace="fragments/navbar :: navbar"/>
-
-<section th:replace="fragments/map :: map" />
-
+</div>
 <nav th:replace="fragments/footer :: footer"/>
 
 </body>

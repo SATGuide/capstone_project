@@ -23,13 +23,13 @@ public class UserDetailsLoader implements UserDetailsService {
     }
 
     @Override
-    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        User user = users.findByEmail(email);
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        User user = users.findByUsername(username);
         if (user == null) {
-            throw new UsernameNotFoundException("No user found for " + email);
+            throw new UsernameNotFoundException("No user found for " + username);
         }
 
-        List<String> userRoles = roles.ofUserWith(email);
-        return new UserWithRoles(user, (com.sun.tools.javac.util.List<String>) userRoles);
+        List<String> userRoles = roles.ofUserWith(username);
+        return new UserWithRoles(user, userRoles);
     }
 }

@@ -270,4 +270,12 @@
 // Enable map zooming with mouse scroll when the user clicks the map
     $('.map').on('click', onMapClickHandler);
 
+    // Datepicker ============
+
+    $(function () {
+        $('#datetimepicker1').datetimepicker();
+    });
+    $(function () {
+        $('#datetimepicker2').datetimepicker();
+    });
 })();

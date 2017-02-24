@@ -67,11 +67,16 @@ hr.small {
 
 /* Header */
 
-.header {
-    width: auto;
-    height: auto;
-    background-color: black;
+.header-home {
+    display: table;
+    width: 100%;
+    height: 400px;
+    color: #fff;
+    background: url(img/bg-reduce.jpg) no-repeat left center scroll;
+    background-size: cover;
+
 }
+
 
 /* About */
 
@@ -87,10 +92,16 @@ hr.small {
     padding: 15px 0;
 }
 /*icons and color of icons on the "home" landing page.*/
-.service-item {
+.service-item-home {
     margin-bottom: 30px;
 }
+a {
+    color: darkblue;
+}
 
+.btn {
+    color: white;
+}
 h2 {
     color: darkblue;
 }
@@ -116,9 +127,9 @@ i .services, .fa-bus{
 .service-item-general {
     margin-bottom: 30px;
 }
-a, .btn {
-    color: white;
-}
+/*a, .btn {*/
+    /*color: white;*/
+/*}*/
 h2 {
     color: darkblue;
 }

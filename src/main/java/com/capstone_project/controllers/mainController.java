@@ -35,7 +35,7 @@ public class mainController {
         return  "general";
     }
 
-    @GetMapping("/localvents")
+    @GetMapping("/localevents")
     public String localEventsPage() {
         return "localEvents";
     }

@@ -86,13 +86,11 @@ hr.small {
     background-color: darkorange;
     padding: 15px 0;
 }
-
+/*icons and color of icons on the "home" landing page.*/
 .service-item {
     margin-bottom: 30px;
 }
-a, .btn {
-    color: white;
-}
+
 h2 {
     color: darkblue;
 }
@@ -111,6 +109,32 @@ i .services, .fa-ticket{
 i .services, .fa-bus{
     color: gold;
 }
+i .services, .fa-bus{
+    color: gold;
+}
+/*this section is for both the icons and color of each icon on the "general" landing page.*/
+.service-item-general {
+    margin-bottom: 30px;
+}
+a, .btn {
+    color: white;
+}
+h2 {
+    color: darkblue;
+}
+h4, p {
+    color: darkblue;
+}
+i .services, .fa-university {
+    color: gray;
+}
+i .services, .fa-building{
+    color: darkslategray;
+}
+i .services, .fa-plus-square{
+    color: red;
+}
+
 
 /* Callout */
 

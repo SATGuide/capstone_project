@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header(title='Home')">
+</head>
+
+<body>
+<nav th:replace="fragments/navbar :: navbar"/>
+
+<nav th:replace="fragments/leftNavbar :: leftNavbar"/>
+
+<section id="calendar_form" class="calendar bg-primary">
+    <div class="container">
+        <div class="row text-center">
+            <h1>Calendar form</h1>
+            <div class="col-lg-10 col-lg-offset-1">
+                <div class="form-group">
+                    <label for="event_name">Event name</label>
+                    <input type="text" name="event_name" id="event_name" th:field="*{eventName}" class="form-control"/>
+                    <!--<p th:if="${#fields.hasErrors('event_name')}" th:errors="*{eventName}"/>-->
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" name="location" id="location" th:field="*{location}" class="form-control"/>
+                    <!--<p th:if="${#fields.hasErrors('location')}" th:errors="*{location}"/>-->
+                </div>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker1'>
+                        <label for="start_date">Start date and time</label>
+                        <input type='text' name="start_date" id="start_date" th:field="*{startdate}" class="form-control" />
+                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                    </div>
+                    <!--<p th:if="${#fields.hasErrors('start_time')}" th:errors="*{starttime}"/>-->
+                </div>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker2'>
+                        <label for="end_date">End date and time</label>
+                        <input type='text' name="end_date" id="end_date" th:field="*{enddate}" class="form-control" />
+                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                    </div>
+                    <!--<p th:if="${#fields.hasErrors('end_time')}" th:errors="*{endtime}"/>-->
+                </div>
+                <div class="form-group">
+                    <label for="event_web">Event website (if available)</label>
+                    <input type="text" name="event_web" id="event_web" th:field="*{eventweb}" class="form-control"/>
+                    <!--<p th:if="${#fields.hasErrors('event_web')}" th:errors="*{eventweb}"/>-->
+                </div>
+                <div class="form-group">
+                    <label for="event_phone">Event phone number (if available)</label>
+                    <input type="text" name="event_phone" id="event_phone" th:field="*{eventphone}" class="form-control"/>
+                    <!--<p th:if="${#fields.hasErrors('event_phone')}" th:errors="*{eventphone}"/>-->
+                </div>
+                <div class="form-group">
+                    <label for="event_poc">Event point-of-contact (if available)</label>
+                    <input type="text" name="event_poc" id="event_poc" th:field="*{eventpoc}" class="form-control"/>
+                    <!--<p th:if="${#fields.hasErrors('event_poc')}" th:errors="*{eventpoc}"/>-->
+                </div>
+                <div class="form-group">
+                    <label for="description">Event description</label>
+                    <input type="text" name="description" id="description" th:field="*{description}" class="form-control"/>
+                    <!--<p th:if="${#fields.hasErrors('description')}" th:errors="*{description}"/>-->
+                </div>
+                <input class="btn btn-primary" type="submit" value="Submit"/>
+                <input type="hidden" th:attr="name=${_csrf.parameterName}, value=${_csrf.token}"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer th:replace="fragments/footer :: footer"/>
+</body>
+</html>

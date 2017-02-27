@@ -4,6 +4,9 @@
 </head>
 <body>
 <nav th:replace="fragments/navbar :: navbar"/>
+
+<nav th:replace="fragments/leftNavbar :: leftNavbar"/>
+
 <div class="container">
     <h1>Business registration</h1>
     <form action="/merchant/add" method="post" th:object="${merchant}" enctype="multipart/form-data">

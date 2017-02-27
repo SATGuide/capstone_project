@@ -37,7 +37,7 @@ public class Events {
     @Column(nullable = true, length = 10)
     private String event_poc_phone;
 
-    @Column(nullable = false, length = 2000))
+    @Column(nullable = false, length = 2000)
     private String description;
 
     public int getId() {

@@ -103,6 +103,8 @@
 
     //====================================================================================================
 
+
+
     // Render the map
     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
@@ -111,7 +113,6 @@
         e.preventDefault();
         var dynamicList = "";
         var itemNumber = 0;
-
 
         // show left menu
         $("#left-sidebar-wrapper").toggleClass("active");
@@ -122,37 +123,34 @@
         // hide right menu button to prevent overlapping menu
         $('#menu-toggle').hide();
 
-        $.each(json, function(i,data){
+        var request = $.getJSON('/javaScript/test.json');
 
-            if(category == data.category){
+        request.done(function (json) {
 
-                itemNumber+= 1;
-                dynamicList += ("<li style='color:whitesmoke'>" + itemNumber + ")  " + data.title +  "</li>");
+            $.each(json, function(i,data){
 
-                var location = new google.maps.LatLng(data.lat, data.lng);
+                if(category == data.category){
 
-                // Adds a marker to the map and push to the array.
-                var marker = new google.maps.Marker({
-                    position: location,
-                    map: map
-                });
-                markers.push(marker);
-            }
+                    itemNumber+= 1;
+
+                    var location = new google.maps.LatLng(data.lat, data.lng);
+                    // Adds a marker to the map and push to the array.
+                    var marker = new google.maps.Marker({
+                        position: location,
+                        map: map
+                    });
+
+                    dynamicList += ("<li style='color:whitesmoke'>" + itemNumber + ")  " + data.bus_name +  "</li>");
+
+                    markers.push(marker);
+                }
+            });
+            $("#dynamicList").html(dynamicList);
         });
-
-        $("#dynamicList").html(dynamicList);
-
         setMapOnAll(markers)
     });
 
 
-
-    // Sets the map on all markers in the array.
-    function setMapOnAll(map) {
-        for (var i = 0; i < markers.length; i++) {
-            markers[i].setMap(map);
-        }
-    }
     // Sets the map on all markers in the array.
     function setMapOnAll(map) {
         for (var i = 0; i < markers.length; i++) {
@@ -175,11 +173,6 @@
         clearMarkers();
         markers = [];
     }
-
-
-
-
-    // Creating an icon and putting it on the map
 
 
     // Scrolls to the selected menu item on the page

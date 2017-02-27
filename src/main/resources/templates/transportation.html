@@ -4,7 +4,9 @@
 </head>
 
 <body>
-<navbar th:replace="fragments/navbar :: navbar"/>
+<nav th:replace="fragments/navbar :: navbar"/>
+
+<nav th:replace="fragments/leftNavbar :: leftNavbar"/>
 
 
 <!-- Header -->
@@ -84,8 +86,6 @@
     <!--</div>-->
     <!-- /.container -->
 </section>
-
-<nav th:replace="fragments/leftNavbar :: leftNavbar"/>
 
 <section th:replace="fragments/map :: map" />
 

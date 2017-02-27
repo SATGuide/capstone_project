@@ -4,27 +4,29 @@
 </head>
 
 <body>
-<navbar th:replace="fragments/navbar :: navbar"/>
+<nav th:replace="fragments/navbar :: navbar"/>
 
+<nav th:replace="fragments/leftNavbar :: leftNavbar"/>
 
 <!-- Header -->
-<header id="dining-title" class="header-dining">
-    <div class="text-vertical-center-dining">
-
-            <h1>Dining</h1>
-
+<header id="top" class="header-dining">
+    <div class="text-vertical-center">
+        <h1>SATX Interactive</h1>
+        <!--<h3>Free Bootstrap Themes &amp; Templates</h3>-->
+        <!--<br />-->
+        <!--<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>-->
     </div>
 </header>
 
-<!--&lt;!&ndash; About &ndash;&gt;-->
+<!-- About -->
 <section id="about" class="about">
     <div class="container">
-        <!--<div class="row">-->
-            <!--<div class="col-lg-12 text-center">-->
-                <!--<h2>Your user friendly guide to San Antonio FUN!</h2>-->
-                <!--&lt;!&ndash;<p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>&ndash;&gt;-->
-            <!--</div>-->
-        <!--</div>-->
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Your user friendly guide to San Antonio FUN!</h2>
+                <!--<p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>-->
+            </div>
+        </div>
         <!-- /.row -->
     </div>
     <!-- /.container -->
@@ -32,62 +34,54 @@
 
 <!-- Services -->
 <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-<section id="services-dining" class="services bg-primary">
+<section id="services" class="services bg-primary">
     <div class="container">
         <div class="row text-center">
-            <!--<div class="col-lg-10 col-lg-offset-1">-->
-                <!--<hr class="small" />-->
-                <!--<div class="row">-->
-                        <div class="col-xs-6 col-md-4">
-                        <div class="service-item=dining">
+            <div class="col-lg-10 col-lg-offset-1">
+                <hr class="small" />
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-map-marker fa-stack-1x text-primary"></i>
+                                <i class="fa fa-users fa-stack-1x text-primary"></i>
                             </span>
                             <h4>
-                                <strong>Local Cuisine</strong>
+                                <strong>Local Dining</strong>
                             </h4>
-                            <p>Local eating venues.</p>
+                            <p>Activities ranging from amusement parks to shopping.</p>
+
                         </div>
                     </div>
-                    <div class="col-xs-6 col-md-4">
-                        <div class="service-item-dining">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-globe fa-stack-1x text-primary"></i>
+                                <i class="fa fa-ticket fa-stack-1x text-primary"></i>
                             </span>
                             <h4>
-                                <strong>Favorite Eats</strong>
+                                <strong>Chain Restaurants</strong>
                             </h4>
-                            <p>Find a list of popular restaurants.</p>
+                            <p>Access local music, cultural or sporting events.</p>
+
                         </div>
                     </div>
-            <div class="col-xs-6 col-md-4">
-                <div class="service-item-dining">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-glass fa-stack-1x text-primary"></i>
-                            </span>
-                    <h4>
-                        <strong>Bars/Clubs</strong>
-                    </h4>
-                    <p>Guide to local nightlife.</p>
-                </div>
-            </div>
 
                 </div>
                 <!-- /.row (nested) -->
             </div>
-            <!--&lt;!&ndash; /.col-lg-10 &ndash;&gt;-->
-        <!--</div>-->
-        <!--&lt;!&ndash; /.row &ndash;&gt;-->
-    <!--</div>-->
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
     <!-- /.container -->
 </section>
 
-<nav th:replace="fragments/leftNavbar :: leftNavbar"/>
+<!--<nav th:replace="fragments/navbar :: navbar"/>-->
 
-<section th:replace="fragments/map :: map" />
+<!--<nav th:replace="fragments/leftNavbar :: leftNavbar"/>-->
+
+<!--<section th:replace="fragments/map :: map" />-->
 
 <nav th:replace="fragments/footer :: footer"/>
 

@@ -21,9 +21,7 @@ public class mainController {
     }
 
     @GetMapping("/thingstodo")
-    public String thingsToDoPage() {
-        return "thingsToDo";
-    }
+    public String thingsToDoPage() { return "thingsToDo"; }
 
     @GetMapping("/dining")
     public String whereToEatPage() {
@@ -35,9 +33,8 @@ public class mainController {
         return  "general";
     }
 
-    @GetMapping("/localvents")
+    @GetMapping("/localevents")
     public String localEventsPage() {
         return "localEvents";
     }
-
 }

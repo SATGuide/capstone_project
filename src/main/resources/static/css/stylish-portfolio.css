@@ -16,7 +16,7 @@ body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-.text-vertical-center {
+.text-vertical-center-home {
     color: white;
     display: table-cell;
     text-align: center;
@@ -24,9 +24,65 @@ body {
 
 }
 /*text for the header of the home page.*/
-.text-vertical-center h1 {
+.text-vertical-center-home h1 {
     margin-top: 90px;
+    /*margin-left: 200px;*/
     padding: 0;
+    font-family: Arial;
+    text-shadow: 2px 2px grey;
+    font-size: 4.5em;
+    font-weight: 700;
+}
+.text-vertical-center-dining {
+    color: white;
+    display: table-cell;
+    text-align: center;
+    vertical-align: center;
+
+}
+/*text for the header of the home page.*/
+
+.text-vertical-center-dining h1 {
+    margin-top: 150px;
+    margin-left: 500px;
+    padding: 0;
+    font-family: "Brush Script MT";
+    text-shadow: 4px 4px black;
+    font-size: 7em;
+    font-weight: 500;
+
+}
+.text-vertical-center-thingstodo {
+    color: darkblue;
+    display: table-cell;
+    text-align: center;
+    vertical-align: center;
+}
+
+.text-vertical-center-thingstodo h1 {
+    margin-top: 20px;
+    /*margin-left: 200px;*/
+    padding: 0;
+    font-family: Arial;
+    text-shadow: 1px 1px blue;
+    font-size: 4em;
+    font-weight: 500;
+}
+
+.text-vertical-center-transportation {
+    color: black;
+    display: table-cell;
+    text-align: center;
+    vertical-align: center;
+
+}
+/*text for the header of the transportation page.*/
+.text-vertical-center-transportation h1 {
+    margin-top: 90px;
+    /*margin-left: 200px;*/
+    padding: 0;
+    font-family: Arial;
+    text-shadow: 2px 2px grey;
     font-size: 4.5em;
     font-weight: 700;
 }
@@ -67,15 +123,6 @@ hr.small {
 
 
 /* Header */
-.header-dining {
-    display: table;
-    width: 100%;
-    height: 400px;
-    color: #fff;
-    background: url(img/Food-Collage.jpg) no-repeat left center scroll;
-    background-size: 500px
-
-}
 .header-home {
     display: table;
     width: 100%;
@@ -85,13 +132,37 @@ hr.small {
     background-size: cover;
 
 }
-.header-events {
+.header-dining {
     display: table;
     width: 100%;
     height: 400px;
     color: #fff;
-    background: url(img/Food-Collage.jpg) no-repeat left center scroll;
-    background-size: 500px
+    background-repeat: no-repeat, no-repeat;
+    background-position: left center, right center;
+    background-size: 500px, 780px ;
+    background-image: url(img/Food-Collage.jpg), url(img/chalkboard.jpg);
+    background-attachment: scroll, scroll;
+
+}
+.header-thingstodo {
+    display: table;
+    width: 100%;
+    height: 300px;
+    color: #fff;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: left, center, right;
+    background-image: url(img/seaworld2.jpg), url(img/golf.jpg), url(img/shopping.jpg);
+    background-attachment: scroll, scroll, scroll;
+    background-size: 35%;
+
+}
+
+.header-transportation {
+    display: table;
+    width: 100%;
+    height: 600px;
+    background: url(img/via.jpg) no-repeat left center scroll;
+    background-size: cover;
 
 }
 
@@ -100,29 +171,34 @@ hr.small {
 
 .about {
     
-    padding: 15px 0;
+    padding: 20px 0;
 }
 
 /* Services */
 
 #services-home {
     background-color: darkorange;
-    padding: 15px 0;
+    padding: 50px 0;
 }
-#services-dining {
-    background-color: hotpink;
-    padding: 15px 0;
-}
-/*icons and color of icons on the "home" landing page.*/
+
+/*icons and color of icons on the "Home" landing page.*/
 .service-item-home {
     margin-bottom: 30px;
+
+}
+.service-item-home, p{
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 h2 {
-    color: darkblue;
+    color: white;
 }
 h4, p {
-    color: darkblue;
+    color: white;
+}
+i .services, .fa-circle {
+    color: white;
 }
 
 i .services, .fa-cutlery {
@@ -134,29 +210,130 @@ i .services, .fa-users{
 i .services, .fa-ticket{
     color: deeppink;
 }
-i .services, .fa-bus{
+i .services, .fa-taxi{
     color: gold;
 }
-i .services, .fa-bus{
+
+/*===============================================================*/
+
+/*icon buttons on "Dining" landing page*/
+#services-dining {
+    background-color: teal;
+    padding: 20px 0;
+}
+
+.service-item-dining {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: white;
+
+}
+h4, p {
+    color: white;
+}
+
+i .services-dining, .fa-map-marker{
+    color: red;
+}
+i .services-dining, .fa-globe{
+    color: blue;
+}
+i .services-dining, .fa-glass{
+    color: silver;
+
+}
+
+/*=================================================================*/
+/*icons and color of icons on the "Things To Do" landing page.*/
+#services-thingstodo {
+    background-color: hotpink;
+    padding: 50px 0;
+}
+.service-item-thingstodo {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: white;
+}
+h4, p {
+    color: white;
+}
+i .services, .fa-circle{
+    color: white;
+}
+
+i .services, .fa-film {
+    color: black;
+}
+i .services, .fa-cc-mastercard{
+    color: mediumblue;
+}
+i .services, .fa-flag{
+    color: red;
+}
+i .services, .fa-tree{
+    color: green;
+}
+i .services, .fa-file-image-o{
+    color: rebeccapurple;
+}
+
+/*=================================================================*/
+/*icons and color of icons on the "Transportation" landing page.*/
+#services-transportation {
+    background-color: grey;
+    padding: 50px 0;
+}
+.service-item-transportation {
+    margin-bottom: 30px;
+
+}
+.service-item-transportation, p{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+}
+h4, p {
+    color: white;
+}
+i .services-transportation, .fa-circle {
+    color: white;
+}
+
+i .services-transportation, .fa-bus {
+    color: blue;
+}
+i .services, .fa-car{
+    color: black;
+}
+
+i .services, .fa-taxi{
     color: gold;
 }
-/*this section is for both the icons and color of each icon on the "general" landing page.*/
+
+/*============================================================*/
+
+/*this section is for both the icons and color of each icon on the "General" landing page.*/
 .service-item-general {
     margin-bottom: 30px;
 }
-/*a, .btn {*/
-    /*color: white;*/
-/*}*/
+
 h2 {
     color: darkblue;
 }
 h4, p {
     color: darkblue;
 }
-i .services, .fa-university {
-    color: gray;
+i .services, .fa-graduation-cap{
+    color: black;
 }
-i .services, .fa-building{
+i .services, .fa-university{
     color: darkslategray;
 }
 i .services, .fa-plus-square{
@@ -230,16 +407,13 @@ i .services, .fa-plus-square{
 /* Footer */
 
 footer {
-    padding: 30px 0;
+    padding: 10px 0;
 
 }
+.list-unstyled, i .fa-phone {
+    color: black;
+}
 
-i .fa-facebook {
-    color: darkblue;
-}
-.list-inline, i .fa-twitter {
-    color: dodgerblue;
-}
 
 #to-top {
   display: none;

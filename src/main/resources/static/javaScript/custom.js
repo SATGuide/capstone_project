@@ -135,9 +135,14 @@
 
                     var location = new google.maps.LatLng(data.lat, data.lng);
                     // Adds a marker to the map and push to the array.
-                    var marker = new google.maps.Marker({
+                    var marker = new MarkerWithLabel({
                         position: location,
-                        map: map
+                        map: map,
+                        labelContent: itemNumber,
+                        labelAnchor: new google.maps.Point(15, 35),
+                        labelClass: "labels", // the CSS class for the label
+                        labelInBackground: false,
+                        icon: pinSymbol('red')
                     });
 
                     dynamicList += ("<li style='color:whitesmoke'>" + itemNumber + ")  " + data.bus_name +  "</li>");
@@ -150,6 +155,15 @@
         setMapOnAll(markers)
     });
 
+    function pinSymbol(color) {
+        return {
+            path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z',
+            fillColor: color,
+            fillOpacity: 1,
+            strokeColor: '#000',
+            strokeWeight: 2
+        };
+    }
 
     // Sets the map on all markers in the array.
     function setMapOnAll(map) {
@@ -219,48 +233,5 @@
             }
         }
     });
-
-//========= Google Map API ============================================================================================
-
-
-    //Icon Repositories
-    // var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-    // var pushPin = 'https://maps.google.com/mapfiles/kml/pushpin/';
-
-    // var icons = {
-    //     dining: {
-    //         icon: iconBase + 'dining.png'
-    //     },
-    //     park: {
-    //         icon: iconBase + 'parks.png'
-    //     },
-    //     bar: {
-    //         icon: iconBase + 'bars.png'
-    //     }
-    // };
-
-
-// Disable Google Maps scrolling
-// See http://stackoverflow.com/a/25904582/1607849
-// Disable scroll zooming and bind back the click event
-    var onMapMouseleaveHandler = function(event) {
-        var that = $(this);
-        that.on('click', onMapClickHandler);
-        that.off('mouseleave', onMapMouseleaveHandler);
-        that.find('map-canvas').css("pointer-events", "none");
-    }
-
-    var onMapClickHandler = function(event) {
-        var that = $(this);
-        // Disable the click handler until the user leaves the map area
-        that.off('click', onMapClickHandler);
-        // Enable scrolling zoom
-        that.find('map-canvas').css("pointer-events", "auto");
-        // Handle the mouse leave event
-        that.on('mouseleave', onMapMouseleaveHandler);
-    }
-
-// Enable map zooming with mouse scroll when the user clicks the map
-    $('.map').on('click', onMapClickHandler);
 
 })();

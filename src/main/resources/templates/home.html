@@ -8,7 +8,7 @@
 
 <!-- Header -->
 <header id="home-title" class="header-home">
-    <div class="text-vertical-center">
+    <div class="text-vertical-center-home">
         <h1>SATX Interactive</h1>
     </div>
 
@@ -33,11 +33,11 @@
     <div class="container">
         <div class="row text-center">
             <div class="col-lg-10 col-lg-offset-1">
-                <h2>Activities</h2>
-                <hr class="small" />
+                <!--<h2>Activities</h2>-->
+                <!--<hr class="small" />-->
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
-                        <div class="service-item">
+                        <div class="service-item-home">
                             <a th:href="@{/dining}">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <div class="service-item">
+                        <div class="service-item-home">
                             <a th:href="@{/thingstodo}">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <div class="service-item">
+                        <div class="service-item-home">
                             <a th:href="@{/localevents}">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <div class="service-item">
+                        <div class="service-item-home">
                             <a th:href="@{/transportation}">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
@@ -95,12 +95,14 @@
                 </div>
                 <!-- /.row (nested) -->
             </div>
-            <!-- /.col-lg-10 -->
+             <!--/.col-lg-10-->
         </div>
-        <!-- /.row -->
+         <!--/.row-->
     </div>
-    <!-- /.container -->
+     <!--/.container-->
+
 </section>
+
 
 <footer th:replace="fragments/footer :: footer"/>
 </body>

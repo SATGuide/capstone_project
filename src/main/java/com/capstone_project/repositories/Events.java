@@ -1,12 +1,12 @@
 package com.capstone_project.repositories;
 
-import com.capstone_project.models.Calendar;
+import com.capstone_project.models.Event;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * Created by nedwaldie on 2/27/17.
+ * Created by nedwaldie on 2/28/17.
  */
 @Repository
-public interface Calendars extends CrudRepository<Calendar, Integer>{
+public interface Events extends CrudRepository<Event, Integer> {
 }

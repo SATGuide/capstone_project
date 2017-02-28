@@ -1,7 +1,7 @@
 package com.capstone_project.controllers;
 
-import com.capstone_project.models.Calendar;
-import com.capstone_project.repositories.Calendars;
+import com.capstone_project.models.Event;
+import com.capstone_project.repositories.Events;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,18 +16,17 @@ import javax.validation.Valid;
 @Controller
 public class CalendarController {
     @Autowired
-    Calendars calendarRepo;
-
+    Events eventsRepo;
 
     @GetMapping("/events")
     public String calendarPage(Model model) {
-        model.addAttribute("calendar", new Calendar());
-        return "calendarEvents";
+        model.addAttribute("event", new Event());
+        return "/registration/calendarform";
     }
 
     @PostMapping("/events")
-    public String newCalendarEvent(@Valid Calendar calendar) {
-        calendarRepo.save(calendar);
-        return "redirect:/calendar";
+    public String newCalendarEvent(@Valid Event event) {
+        eventsRepo.save(event);
+        return "redirect:/events";
     }
 }

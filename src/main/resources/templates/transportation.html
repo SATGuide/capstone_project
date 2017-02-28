@@ -9,16 +9,25 @@
 
 <!-- Header -->
 <header id="transportation-title" class="header-transportation">
-    <div class="text-vertical-center-Transportation"></div>
+    <div class="text-vertical-center-Transportation">
+
+        <!--<h1>Transportation</h1>-->
+
+    </div>
 </header>
 
 <!--&lt;!&ndash; About &ndash;&gt;-->
 <section id="about" class="about">
     <div class="container">
         <div class="text-vertical-center-Transportation">
-            <h1>Transportation</h1>
+        <h1>Transportation</h1>
+        <!--&lt;!&ndash;<p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>&ndash;&gt;-->
         </div>
-    </div>
+        </div>
+        <!--</div>-->
+        <!-- /.row -->
+    <!--</div>-->
+    <!-- /.container -->
 </section>
 
 <!-- Services -->
@@ -26,6 +35,9 @@
 <section id="services-transportation" class="services bg-primary">
     <div class="container">
         <div class="row text-center">
+            <!--<div class="col-lg-10 col-lg-offset-1">-->
+            <!--<hr class="small" />-->
+            <!--<div class="row">-->
             <div class="col-xs-6 col-md-4">
                 <div class="service-item-transportation">
                                 <span class="fa-stack fa-4x">
@@ -66,8 +78,16 @@
         </div>
         <!-- /.row (nested) -->
     </div>
+    <!--&lt;!&ndash; /.col-lg-10 &ndash;&gt;-->
+    <!--</div>-->
+    <!--&lt;!&ndash; /.row &ndash;&gt;-->
+    <!--</div>-->
     <!-- /.container -->
 </section>
+
+<nav th:replace="fragments/leftNavbar :: leftNavbar"/>
+
+<section th:replace="fragments/map :: map" />
 
 <nav th:replace="fragments/footer :: footer"/>
 

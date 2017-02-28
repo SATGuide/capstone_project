@@ -148,7 +148,7 @@
         e.preventDefault();
         var dynamicList = "";
         var itemNumber = 0;
-
+        $("#sidebar-wrapper").removeClass("active");
         // show left menu
         $("#left-sidebar-wrapper").toggleClass("active");
 
@@ -278,7 +278,5 @@
             }
         }
     });
-
-
 
 })();

@@ -78,42 +78,61 @@ body {
 }
 /*text for the header of the transportation page.*/
 .text-vertical-center-transportation h1 {
-    margin-top: 90px;
+    margin-top: 150px;
     /*margin-left: 200px;*/
     padding: 0;
     font-family: Arial;
-    text-shadow: 2px 2px grey;
+    text-shadow: 1px 1px white;
     font-size: 4.5em;
     font-weight: 700;
+}
+.text-vertical-center-general {
+    color: black;
+    display: table-cell;
+    text-align: center;
+    vertical-align: center;
+
+}
+/*text for the header of the home page.*/
+
+.text-vertical-center-general h1 {
+    margin-top: 130px;
+    margin-left: 650px;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-shadow: 1px 1px grey;
+    font-size: 4em;
+    font-weight: 500;
+
 }
 
 /* Custom Button Styles */
 
-.btn-dark {
-    border-radius: 0;
-    color: #fff;
-    background-color: rgba(0,0,0,0.4);
-}
+/*.btn-dark {*/
+/*border-radius: 0;*/
+/*color: #fff;*/
+/*background-color: rgba(0,0,0,0.4);*/
+/*}*/
 
-.btn-dark:hover,
-.btn-dark:focus,
-.btn-dark:active {
-    color: #fff;
-    background-color: rgba(0,0,0,0.7);
-}
+/*.btn-dark:hover,*/
+/*.btn-dark:focus,*/
+/*.btn-dark:active {*/
+/*color: #fff;*/
+/*background-color: rgba(0,0,0,0.7);*/
+/*}*/
 
-.btn-light {
-    border-radius: 0;
-    color: #333;
-    background-color: rgb(255,255,255);
-}
+/*.btn-light {*/
+/*border-radius: 0;*/
+/*color: #333;*/
+/*background-color: rgb(255,255,255);*/
+/*}*/
 
-.btn-light:hover,
-.btn-light:focus,
-.btn-light:active {
-    color: #333;
-    background-color: rgba(255,255,255,0.8);
-}
+/*.btn-light:hover,*/
+/*.btn-light:focus,*/
+/*.btn-light:active {*/
+/*color: #333;*/
+/*background-color: rgba(255,255,255,0.8);*/
+/*}*/
 
 /* Custom Horizontal Rule */
 
@@ -127,7 +146,7 @@ hr.small {
     display: table;
     width: 100%;
     height: 400px;
-    color: #fff;
+    /*color: #fff;*/
     background: url(img/bg-reduce.jpg) no-repeat left center scroll;
     background-size: cover;
 
@@ -156,13 +175,65 @@ hr.small {
     background-size: 35%;
 
 }
+/*.header-localevents {*/
+/*display: table;*/
+/*width: 100%;*/
+/*height: 300px;*/
+/*color: #fff;*/
+/*background-repeat: no-repeat, no-repeat, no-repeat;*/
+/*background-position: left, center, right;*/
+/*background-image: url(img/seaworld2.jpg), url(img/golf.jpg), url(img/shopping.jpg);*/
+/*background-attachment: scroll, scroll, scroll;*/
+/*background-size: 35%;*/
 
+/*}*/
+.container-localevents {
+    padding:3px;
+    /*border:1px solid #e6e6e6;*/
+    width:700px;
+    overflow:hidden;
+}
+.marquee{
+    display:block;
+    position:relative;
+    width:100%;
+    height: 300px;
+    animation:scroll 10s linear infinite;
+    padding:3px;
+}
+
+.marquee:hover {
+    animation-play-state: paused
+}
+
+.img1 {
+    width:200px;
+    height:400px;
+    background-color:#f6f6f6;
+    margin:3px;
+    float:left;
+}
+
+/* Make it move */
+@keyframes scroll{
+    0% {left:800px;}
+    100% {left:-800px;}
+}
 .header-transportation {
     display: table;
     width: 100%;
-    height: 600px;
-    background: url(img/via.jpg) no-repeat left center scroll;
+    height: 400px;
+    background: url(img/sanantoniobus.png) no-repeat left center scroll;
     background-size: cover;
+
+}
+.header-general {
+    display: table;
+    width: 100%;
+    height: 400px;
+    /*color: #fff;*/
+    background: url(img/vintagephone.jpeg) no-repeat left center scroll;
+    background-size: 50%;
 
 }
 
@@ -170,45 +241,38 @@ hr.small {
 /* About */
 
 .about {
-    
+
     padding: 20px 0;
 }
 
 /* Services */
 
 #services-home {
-    background-color: darkorange;
+    background-color: coral;
     padding: 50px 0;
 }
-
-/*icons and color of icons on the "Home" landing page.*/
+/*Home landing page icons*/
 .service-item-home {
     margin-bottom: 30px;
 
 }
-.service-item-home, p{
+.service-item-home p{
     margin-bottom: 30px;
     text-align: center;
 }
 
-h2 {
-    color: white;
-}
-h4, p {
-    color: white;
-}
 i .services, .fa-circle {
     color: white;
 }
 
 i .services, .fa-cutlery {
-    color: lightgray;
+    color: grey;
 }
 i .services, .fa-users{
-    color: lightseagreen;
+    color: dodgerblue;
 }
 i .services, .fa-ticket{
-    color: deeppink;
+    color: darkblue;
 }
 i .services, .fa-taxi{
     color: gold;
@@ -218,8 +282,8 @@ i .services, .fa-taxi{
 
 /*icon buttons on "Dining" landing page*/
 #services-dining {
-    background-color: teal;
-    padding: 20px 0;
+    background-color: lightsteelblue;
+    padding: 50px 0;
 }
 
 .service-item-dining {
@@ -238,7 +302,7 @@ i .services-dining, .fa-map-marker{
     color: red;
 }
 i .services-dining, .fa-globe{
-    color: blue;
+    color: dodgerblue;
 }
 i .services-dining, .fa-glass{
     color: silver;
@@ -248,7 +312,7 @@ i .services-dining, .fa-glass{
 /*=================================================================*/
 /*icons and color of icons on the "Things To Do" landing page.*/
 #services-thingstodo {
-    background-color: hotpink;
+    background-color: cornflowerblue;
     padding: 50px 0;
 }
 .service-item-thingstodo {
@@ -280,18 +344,44 @@ i .services, .fa-tree{
 i .services, .fa-file-image-o{
     color: rebeccapurple;
 }
+/*=================================================================*/
+/*icons and color of icons on the "Local Events" landing page.*/
+#services-localevents {
+    background-color: darkorange;
+    padding: 50px 0;
+}
+.service-item-localevents {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: white;
+}
+h4, p {
+    color: white;
+}
+i .services, .fa-circle{
+    color: white;
+}
+
+i .services-localevents, .fa-music {
+    color: black;
+}
+i .services-localevents, .fa-ticket {
+    color: mediumblue;
+}
 
 /*=================================================================*/
 /*icons and color of icons on the "Transportation" landing page.*/
 #services-transportation {
-    background-color: grey;
+    background-color: dimgrey;
     padding: 50px 0;
 }
 .service-item-transportation {
     margin-bottom: 30px;
 
 }
-.service-item-transportation, p{
+.service-item-transportation p{
     margin-bottom: 30px;
     text-align: center;
 }
@@ -320,15 +410,25 @@ i .services, .fa-taxi{
 /*============================================================*/
 
 /*this section is for both the icons and color of each icon on the "General" landing page.*/
+#services-general {
+    background-color: silver;
+    padding: 50px 0;
+}
 .service-item-general {
     margin-bottom: 30px;
+}
+.service-item-general p{
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 h2 {
     color: darkblue;
+    text-shadow: black;
 }
 h4, p {
     color: darkblue;
+
 }
 i .services, .fa-graduation-cap{
     color: black;
@@ -415,13 +515,13 @@ footer {
 }
 
 
-#to-top {
-  display: none;
-  position: fixed;
-  bottom: 5px;
-  right: 5px;
+/*#to-top {*/
+    /*display: none;*/
+    /*position: fixed;*/
+    /*bottom: 5px;*/
+    /*right: 5px;*/
 
-}
+/*}*/
 
 /*=======================================*/
 
@@ -526,7 +626,7 @@ footer {
 
 #left-sidebar-wrapper.active {
     left: 250px;
-    width: 300px;
+    width: 250px;
     -webkit-transition: all 0.4s ease 0s;
     -moz-transition: all 0.4s ease 0s;
     -ms-transition: all 0.4s ease 0s;
@@ -586,15 +686,4 @@ footer {
     margin-left: 10px;
     max-height: 0;
     -webkit-transition: all 0.5s ease-out;
-}
-
-/*=========================================================*/
-.labels {
-    color: white;
-    background-color:transparent;
-    font-family: "Lucida Grande", "Arial", sans-serif;
-    font-size: 10px;
-    text-align: center;
-    width: 30px;
-    white-space: nowrap;
 }

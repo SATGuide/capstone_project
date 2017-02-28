@@ -175,19 +175,50 @@ hr.small {
     background-size: 35%;
 
 }
-.header-localevents {
-    display: table;
-    width: 100%;
-    height: 300px;
-    color: #fff;
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: left, center, right;
-    background-image: url(img/seaworld2.jpg), url(img/golf.jpg), url(img/shopping.jpg);
-    background-attachment: scroll, scroll, scroll;
-    background-size: 35%;
+/*.header-localevents {*/
+    /*display: table;*/
+    /*width: 100%;*/
+    /*height: 300px;*/
+    /*color: #fff;*/
+    /*background-repeat: no-repeat, no-repeat, no-repeat;*/
+    /*background-position: left, center, right;*/
+    /*background-image: url(img/seaworld2.jpg), url(img/golf.jpg), url(img/shopping.jpg);*/
+    /*background-attachment: scroll, scroll, scroll;*/
+    /*background-size: 35%;*/
 
+/*}*/
+.container {
+    padding:3px;
+    /*border:1px solid #e6e6e6;*/
+    width:700px;
+    overflow:hidden;
+}
+.marquee{
+    display:block;
+    position:relative;
+    width:100%;
+    height: 300px;
+    animation:scroll 10s linear infinite;
+    padding:3px;
 }
 
+.marquee:hover {
+    animation-play-state: paused
+}
+
+.img1 {
+    width:200px;
+    height:400px;
+    background-color:#f6f6f6;
+    margin:3px;
+    float:left;
+}
+
+/* Make it move */
+@keyframes scroll{
+    0% {left:800px;}
+    100% {left:-800px;}
+}
 .header-transportation {
     display: table;
     width: 100%;
@@ -312,6 +343,32 @@ i .services, .fa-tree{
 }
 i .services, .fa-file-image-o{
     color: rebeccapurple;
+}
+/*=================================================================*/
+/*icons and color of icons on the "Local Events" landing page.*/
+#services-localevents {
+    background-color: silver;
+    padding: 50px 0;
+}
+.service-item-localevents {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: white;
+}
+h4, p {
+    color: white;
+}
+i .services, .fa-circle{
+    color: white;
+}
+
+i .services-localevents, .fa-ticket {
+    color: black;
+}
+i .services-localevents, .fa-ticket {
+    color: mediumblue;
 }
 
 /*=================================================================*/

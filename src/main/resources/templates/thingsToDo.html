@@ -5,6 +5,8 @@
 
 <body>
 <navbar th:replace="fragments/navbar :: navbar"/>
+
+<!--left side dynamic menu-->
 <nav th:replace="fragments/leftNavbar :: leftNavbar"/>
 
 
@@ -42,45 +44,56 @@
             <div class="col-lg-10 col-lg-offset-1">
                 <hr class="small" />
                 <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="service-item-thingstodo">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-film fa-stack-1x text-primary"></i>
-                            </span>
-                            <h4>
-                                <strong>Attractions</strong>
-                            </h4>
-                            <p>Local dining and Chain dining.</p>
-                            <!--<a th:href="@{/attractions}" class="btn btn-light">Learn More</a>-->
+
+                    <a href="#map-canvas" class="left-menu-toggle attractions"  style="color:black">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item-thingstodo">
+                                    <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-film fa-stack-1x text-primary"></i>
+                                </span>
+                                <h4>
+                                    <strong>Attractions</strong>
+                                </h4>
+                                <p>Local dining and Chain dining.</p>
+                                <!--<a th:href="@{/attractions}" class="btn btn-light">Learn More</a>-->
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-cc-mastercard fa-stack-1x text-primary"></i>
-                            </span>
-                            <h4>
-                                <strong>Shopping</strong>
-                            </h4>
-                            <p>Activities ranging from amusement parks to shopping.</p>
-                            <!--<a th:href="@{/shopping}" class="btn btn-light">Learn More</a>-->
+                    </a>
+
+                    <a href="#map-canvas" class="left-menu-toggle shopping"  style="color:black">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                    <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-cc-mastercard fa-stack-1x text-primary"></i>
+                                </span>
+                                <h4>
+                                    <strong>Shopping</strong>
+                                </h4>
+                                <p>Activities ranging from amusement parks to shopping.</p>
+                                <!--<a th:href="@{/shopping}" class="btn btn-light">Learn More</a>-->
+                            </div>
                         </div>
-                    </div>
+                    </a>
+
+                    <a href="#map-canvas" class="left-menu-toggle golf"  style="color:black">
                     <div class="col-md-3 col-sm-6">
-                        <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-flag fa-stack-1x text-primary"></i>
-                            </span>
-                            <h4>
-                                <strong>Golf</strong>
-                            </h4>
-                            <p>Access local music, cultural or sporting events.</p>
-                            <!--<a th:href="@{/localevents}" class="btn btn-light">Learn Mo</a>-->
+                            <div class="service-item">
+                                    <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-flag fa-stack-1x text-primary"></i>
+                                </span>
+                                <h4>
+                                    <strong>Golf</strong>
+                                </h4>
+                                <p>Access local music, cultural or sporting events.</p>
+                                <!--<a th:href="@{/localevents}" class="btn btn-light">Learn Mo</a>-->
+                            </div>
                         </div>
-                    </div>
+                    </a>
+
+                    <a href="#map-canvas" class="left-menu-toggle parks"  style="color:black">
                     <div class="col-md-3 col-sm-6">
                         <div class="service-item">
                                 <span class="fa-stack fa-4x">
@@ -94,19 +107,24 @@
                             <!--<a th:href="@{/transportation}" class="btn btn-light">Learn More</a>-->
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-file-image-o fa-stack-1x text-primary"></i>
-                            </span>
-                            <h4>
-                                <strong>Culture/Arts</strong>
-                            </h4>
-                            <p>Transportation options provided in San Antonio.</p>
-                            <!--<a th:href="@{/transportation}" class="btn btn-light">Learn More</a>-->
+                    </a>
+
+                    <a href="#map-canvas" class="left-menu-toggle culture-arts"  style="color:black">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                    <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-file-image-o fa-stack-1x text-primary"></i>
+                                </span>
+                                <h4>
+                                    <strong>Culture/Arts</strong>
+                                </h4>
+                                <p>Transportation options provided in San Antonio.</p>
+                                <!--<a th:href="@{/transportation}" class="btn btn-light">Learn More</a>-->
+                            </div>
                         </div>
-                    </div>
+                    </a>
+
                 </div>
                 <!-- /.row (nested) -->
             </div>

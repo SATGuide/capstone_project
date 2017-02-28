@@ -45,57 +45,57 @@
 
     //==== Right side menu listeners =====================================================================
 
-    $("#local").click(function(e) {
+    $(".local").click(function(e) {
         e.preventDefault();
         category = 1;
         categoryTitle = "Local Cuisine"
     });
-    $("#chain").click(function(e) {
+    $(".chain").click(function(e) {
         e.preventDefault();
         category = 2;
         categoryTitle = "Popular Favorites"
     });
-    $("#attractions").click(function(e) {
+    $(".attractions").click(function(e) {
         e.preventDefault();
         category = 3;
         categoryTitle = "Attractions"
     });
-    $("#shopping").click(function(e) {
+    $(".shopping").click(function(e) {
         e.preventDefault();
         category = 4;
         categoryTitle = "Shopping"
     });
-    $("#golf").click(function(e) {
+    $(".golf").click(function(e) {
         e.preventDefault();
         category = 5;
         categoryTitle = "Golf"
     });
-    $("#parks").click(function(e) {
+    $(".parks").click(function(e) {
         e.preventDefault();
         category = 6;
         categoryTitle = "Parks"
     });
-    $("#culture-arts").click(function(e) {
+    $(".culture-arts").click(function(e) {
         e.preventDefault();
         category = 7;
         categoryTitle = "Cultural / Arts"
     });
-    $("#medical").click(function(e) {
+    $(".medical").click(function(e) {
         e.preventDefault();
         category = 8;
         categoryTitle = "Medical"
     });
-    $("#gov-mil").click(function(e) {
+    $(".gov-mil").click(function(e) {
         e.preventDefault();
         category = 9;
         categoryTitle = "Gov / Military"
     });
-    $("#colleges").click(function(e) {
+    $(".colleges").click(function(e) {
         e.preventDefault();
         category = 10;
         categoryTitle = "Colleges"
     });
-    $("#bars").click(function(e) {
+    $(".bars").click(function(e) {
         e.preventDefault();
         category = 11;
         categoryTitle = "Bars/Clubs"
@@ -263,13 +263,22 @@
             if (fixed) {
                 fixed = false;
                 $('#to-top').hide("slow", function() {
+                    // Delete map markers if present
+                    deleteMarkers();
+                    // show right menu button
+                    $('#menu-toggle').show();
+                    // close left menu if open
+                    $("#left-sidebar-wrapper").removeClass("active");
+                    // Scroll to top of page and hide top button
                     $('#to-top').css({
                         display: 'none'
                     });
+
                 });
             }
         }
     });
+
 
 
 })();

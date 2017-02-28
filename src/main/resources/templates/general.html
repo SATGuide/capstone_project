@@ -5,6 +5,8 @@
 
 <body>
 <nav th:replace="fragments/navbar :: navbar"/>
+<!--left side dynamic menu-->
+<nav th:replace="fragments/leftNavbar :: leftNavbar"/>
 
 <!-- Header -->
 <header id="top" class="header-general">
@@ -27,45 +29,53 @@
             <div class="col-lg-10 col-lg-offset-1">
                 <hr class="small" />
                 <div class="row">
-                    <div class="col-xs-6 col-md-4">
-                        <div class="service-item">
+                    <a href="#map-canvas" class="left-menu-toggle colleges"  style="color:black">
+                        <div class="col-xs-6 col-md-4">
+                            <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-graduation-cap fa-stack-1x text-primary"></i>
                             </span>
-                            <h4>
-                                <strong>Colleges and Universities</strong>
-                            </h4>
-                            <p>Colleges and universities.</p>
+                                <h4>
+                                    <strong>Colleges and Universities</strong>
+                                </h4>
+                                <p>Colleges and universities.</p>
 
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-xs-6 col-md-4">
-                        <div class="service-item-general">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-university fa-stack-1x text-primary"></i>
-                            </span>
-                            <h4>
-                                <strong>Government/Military</strong>
-                            </h4>
-                            <p>Government and military installations</p>
+                    </a>
+                    <a href="#map-canvas" class="left-menu-toggle gov-mil"  style="color:black">
+                        <div class="col-xs-6 col-md-4">
+                            <div class="service-item-general">
+                                    <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-university fa-stack-1x text-primary"></i>
+                                </span>
+                                <h4>
+                                    <strong>Government/Military</strong>
+                                </h4>
+                                <p>Government and military installations</p>
 
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-xs-6 col-md-4">
-                        <div class="service-item">
+                    </a>
+
+                    <a href="#map-canvas" class="left-menu-toggle medical"  style="color:black">
+                        <div class="col-xs-6 col-md-4">
+                            <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-plus-square fa-stack-1x text-primary"></i>
                             </span>
-                            <h4>
-                                <strong>Emergency</strong>
-                            </h4>
-                            <p>Emergency contact phone numbers</p>
+                                <h4>
+                                    <strong>Emergency</strong>
+                                </h4>
+                                <p>Emergency contact phone numbers</p>
 
+                            </div>
                         </div>
-                    </div>
+                    </a>
+
                 </div>
                 <!-- /.row (nested) -->
             </div>

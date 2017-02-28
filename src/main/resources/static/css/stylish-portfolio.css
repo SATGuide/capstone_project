@@ -86,6 +86,23 @@ body {
     font-size: 4.5em;
     font-weight: 700;
 }
+.text-vertical-center-localevents {
+    color: black;
+    display: table-cell;
+    text-align: center;
+    vertical-align: center;
+
+}
+/*text for the header of the transportation page.*/
+.text-vertical-center-localevents h1 {
+    margin-top: 150px;
+    /*margin-left: 200px;*/
+    padding: 0;
+    font-family: Arial;
+    text-shadow: 1px 1px white;
+    font-size: 4.5em;
+    font-weight: 700;
+}
 .text-vertical-center-general {
     color: black;
     display: table-cell;
@@ -109,29 +126,29 @@ body {
 /* Custom Button Styles */
 
 /*.btn-dark {*/
-    /*border-radius: 0;*/
-    /*color: #fff;*/
-    /*background-color: rgba(0,0,0,0.4);*/
+/*border-radius: 0;*/
+/*color: #fff;*/
+/*background-color: rgba(0,0,0,0.4);*/
 /*}*/
 
 /*.btn-dark:hover,*/
 /*.btn-dark:focus,*/
 /*.btn-dark:active {*/
-    /*color: #fff;*/
-    /*background-color: rgba(0,0,0,0.7);*/
+/*color: #fff;*/
+/*background-color: rgba(0,0,0,0.7);*/
 /*}*/
 
 /*.btn-light {*/
-    /*border-radius: 0;*/
-    /*color: #333;*/
-    /*background-color: rgb(255,255,255);*/
+/*border-radius: 0;*/
+/*color: #333;*/
+/*background-color: rgb(255,255,255);*/
 /*}*/
 
 /*.btn-light:hover,*/
 /*.btn-light:focus,*/
 /*.btn-light:active {*/
-    /*color: #333;*/
-    /*background-color: rgba(255,255,255,0.8);*/
+/*color: #333;*/
+/*background-color: rgba(255,255,255,0.8);*/
 /*}*/
 
 /* Custom Horizontal Rule */
@@ -156,11 +173,11 @@ hr.small {
     width: 100%;
     height: 400px;
     color: #fff;
+    background-image: url(img/Food-Collage.jpg), url(img/chalkboard.jpg);
     background-repeat: no-repeat, no-repeat;
     background-position: left center, right center;
-    background-size: 500px, 780px ;
-    background-image: url(img/Food-Collage.jpg), url(img/chalkboard.jpg);
     background-attachment: scroll, scroll;
+    background-size: 500px, 780px ;
 
 }
 .header-thingstodo {
@@ -176,29 +193,30 @@ hr.small {
 
 }
 /*.header-localevents {*/
-    /*display: table;*/
-    /*width: 100%;*/
-    /*height: 300px;*/
-    /*color: #fff;*/
-    /*background-repeat: no-repeat, no-repeat, no-repeat;*/
-    /*background-position: left, center, right;*/
-    /*background-image: url(img/seaworld2.jpg), url(img/golf.jpg), url(img/shopping.jpg);*/
-    /*background-attachment: scroll, scroll, scroll;*/
-    /*background-size: 35%;*/
+/*display: table;*/
+/*width: 100%;*/
+/*height: 300px;*/
+/*color: #fff;*/
+/*background-repeat: no-repeat, no-repeat, no-repeat;*/
+/*background-position: left, center, right;*/
+/*background-image: url(img/seaworld2.jpg), url(img/golf.jpg), url(img/shopping.jpg);*/
+/*background-attachment: scroll, scroll, scroll;*/
+/*background-size: 35%;*/
 
 /*}*/
-.container {
+.container-localevents {
     padding:3px;
     /*border:1px solid #e6e6e6;*/
-    width:700px;
+    width:400px;
     overflow:hidden;
+
 }
 .marquee{
     display:block;
     position:relative;
     width:100%;
     height: 300px;
-    animation:scroll 10s linear infinite;
+    animation:scroll 30s linear infinite;
     padding:3px;
 }
 
@@ -207,11 +225,18 @@ hr.small {
 }
 
 .img1 {
-    width:200px;
-    height:400px;
-    background-color:#f6f6f6;
+    width:602px;
+    height:215px;
+    background-image: url(img/hendrix.jpg);
     margin:3px;
-    float:left;
+    float:left
+}
+.img2 {
+    width:660px;
+    height:215px;
+    background-image: url(img/heb.jpeg);
+    margin:3px;
+    float:left
 }
 
 /* Make it move */
@@ -240,15 +265,46 @@ hr.small {
 
 /* About */
 
-.about {
-    
+.about-home {
+
     padding: 20px 0;
+
+
+}
+.about-dining {
+
+    padding: 20px 0;
+
+}
+.about-thingstodo {
+
+    padding: 20px 0;
+
+
+}
+.about-localevents {
+
+    padding: 20px 0;
+
+
+}
+.about-transportation {
+
+    padding: 20px 0;
+
+
+}
+.about-general {
+
+    padding: 20px 0;
+
+
 }
 
 /* Services */
 
 #services-home {
-    background-color: silver;
+    background-color: coral;
     padding: 50px 0;
 }
 /*Home landing page icons*/
@@ -266,10 +322,10 @@ i .services, .fa-circle {
 }
 
 i .services, .fa-cutlery {
-    color: grey;
+    color: silver;
 }
 i .services, .fa-users{
-    color: black;
+    color: dodgerblue;
 }
 i .services, .fa-ticket{
     color: brown;
@@ -282,7 +338,7 @@ i .services, .fa-taxi{
 
 /*icon buttons on "Dining" landing page*/
 #services-dining {
-    background-color: silver;
+    background-color: lightsteelblue;
     padding: 50px 0;
 }
 
@@ -302,17 +358,17 @@ i .services-dining, .fa-map-marker{
     color: red;
 }
 i .services-dining, .fa-globe{
-    color: blue;
+    color: #337ab7;
 }
 i .services-dining, .fa-glass{
-    color: silver;
+    color: grey;
 
 }
 
 /*=================================================================*/
 /*icons and color of icons on the "Things To Do" landing page.*/
 #services-thingstodo {
-    background-color: silver;
+    background-color: cornflowerblue;
     padding: 50px 0;
 }
 .service-item-thingstodo {
@@ -347,7 +403,7 @@ i .services, .fa-file-image-o{
 /*=================================================================*/
 /*icons and color of icons on the "Local Events" landing page.*/
 #services-localevents {
-    background-color: silver;
+    background-color: darkorange;
     padding: 50px 0;
 }
 .service-item-localevents {
@@ -364,11 +420,11 @@ i .services, .fa-circle{
     color: white;
 }
 
-i .services-localevents, .fa-ticket {
+i .services-localevents, .fa-music {
     color: black;
 }
 i .services-localevents, .fa-ticket {
-    color: mediumblue;
+    color: darkblue;
 }
 
 /*=================================================================*/
@@ -516,10 +572,10 @@ footer {
 
 
 #to-top {
-  display: none;
-  position: fixed;
-  bottom: 5px;
-  right: 5px;
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
 
 }
 

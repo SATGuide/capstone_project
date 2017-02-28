@@ -16,7 +16,7 @@ public class Merchant {
     private double lat;
 
     @Column(nullable = false, length = 45)
-    private double lon;
+    private double lng;
 
     @Column(nullable = false, length = 100)
     private String busName;
@@ -94,11 +94,11 @@ public class Merchant {
     }
 
     public double getLon() {
-        return lon;
+        return lng;
     }
 
-    public void setLon(double lon) {
-        this.lon = lon;
+    public void setLon(double lng) {
+        this.lng = lng;
     }
 
     public String getBusName() {

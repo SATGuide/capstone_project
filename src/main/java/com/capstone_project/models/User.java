@@ -1,5 +1,6 @@
 package com.capstone_project.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import org.hibernate.validator.constraints.NotBlank;
 
 import javax.persistence.*;
@@ -57,6 +58,7 @@ public class User {
     public User() {}
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    @JsonBackReference
     private List<Merchant> merchants;
 
     public List<Merchant> getMerchants() {

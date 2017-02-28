@@ -1,5 +1,7 @@
 package com.capstone_project.models;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 
 /**
@@ -34,6 +36,7 @@ public class Merchant {
     private boolean approved;
 
     @ManyToOne
+    @JsonManagedReference
     @JoinColumn (name = "user_id")
     private User user;
 
@@ -46,10 +49,12 @@ public class Merchant {
     }
 
     @ManyToOne
+    @JsonManagedReference
     @JoinColumn (name = "category_id")
     private Category category;
 
     @ManyToOne
+    @JsonManagedReference
     @JoinColumn (name = "age_check_id")
     private AgeCheck ageCheck;
 

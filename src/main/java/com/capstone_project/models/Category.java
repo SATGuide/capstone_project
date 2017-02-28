@@ -1,5 +1,7 @@
 package com.capstone_project.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -17,6 +19,7 @@ public class Category {
     private String category;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
+    @JsonBackReference
     private List<Merchant> merchants;
 
     public List<Merchant> getMerchants() {

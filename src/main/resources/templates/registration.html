@@ -1,11 +1,14 @@
     <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head th:replace="fragments/header :: header(title='Home')">
+    <head th:replace="fragments/header :: header(title='Site registration')">
     </head>
 <body>
 <navbar th:replace="fragments/navbar :: navbar"/>
 
 <div class="container">
+    <h1>Welcome to SATX Interactive Merchant Registration</h1>
+    <p><strong>To the general public: </strong>It is not necessary for general users of this site to sign up to use it. This form is for merchants in San Antonio who wish to add their business(es) to the site.</p>
+    <p><strong>Merchants: </strong>Here is where you can register to become a member of SATX Interactive, and by doing so, have your business located on this guide to San Antonio. Please be aware that your application will be reviewed to ensure that you are in fact a local, legitimate business within the San Antonio city limits. Those who do not meet this qualification will be rejected.</p>
 <form th:action="@{/register}" th:object="${user}" th:method="post">
 <br/><br/>
     <div class="form-group">

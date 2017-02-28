@@ -1,5 +1,7 @@
 package com.capstone_project.models;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import javax.persistence.*;
 import java.util.List;
 

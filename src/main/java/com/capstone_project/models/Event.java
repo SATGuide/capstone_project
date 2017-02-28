@@ -51,12 +51,6 @@ public class Event {
     @NotBlank(message = "Please describe the event: ")
     private String description;
 
-    @ManyToOne
-    @JoinColumn (name = "age_check_id")
-    @NotBlank(message = "Please select the age range for this event: ")
-    private AgeCheck ageCheck;
-
-
     public Event(String eventName, String location, String startDate, String endDate, String eventWeb, String eventPhone, String eventPoc, String eventPocPhone, String description) {
         this.eventName = eventName;
         this.location = location;

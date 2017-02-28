@@ -50,7 +50,7 @@ public class Merchant {
     private Category category;
 
     @ManyToOne
-    @JoinColumn (name = "ageCheck_id")
+    @JoinColumn (name = "age_check_id")
     private AgeCheck ageCheck;
 
     public Category getCategory() {

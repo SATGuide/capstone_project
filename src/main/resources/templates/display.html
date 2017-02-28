@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header(title='Search results')">
+</head>
+
+<body>
+<header id="top" class="header-login">
+</header>
+<nav th:replace="fragments/navbar :: navbar"/>
+<!--left side dynamic menu-->
+<nav th:replace="fragments/leftNavbar :: leftNavbar"/>
+
+<div class="container">
+<!-- Merchant name -->
+<h1 th:text="${merchants.bus_name}"/>
+<!-- Map should go here, created from the lat/lng values-->
+<!--Street view should go here, created from the lat/lng values-->
+    <!--Address on next line needs to be generated from the lat/lng values-->
+    <p th:text="${merchants.address}" /p>
+    <p th:text="${merchants.bus_phone}" /p>
+    <p th:text="${merchants.web}" /p>
+</div>
+
+<nav th:replace="fragments/footer :: footer"/>
+</body>
+</html>

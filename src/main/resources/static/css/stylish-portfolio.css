@@ -86,23 +86,6 @@ body {
     font-size: 4.5em;
     font-weight: 700;
 }
-.text-vertical-center-localevents {
-    color: black;
-    display: table-cell;
-    text-align: center;
-    vertical-align: center;
-
-}
-/*text for the header of the transportation page.*/
-.text-vertical-center-localevents h1 {
-    margin-top: 150px;
-    /*margin-left: 200px;*/
-    padding: 0;
-    font-family: Arial;
-    text-shadow: 1px 1px white;
-    font-size: 4.5em;
-    font-weight: 700;
-}
 .text-vertical-center-general {
     color: black;
     display: table-cell;
@@ -173,11 +156,11 @@ hr.small {
     width: 100%;
     height: 400px;
     color: #fff;
-    background-image: url(img/Food-Collage.jpg), url(img/chalkboard.jpg);
     background-repeat: no-repeat, no-repeat;
     background-position: left center, right center;
-    background-attachment: scroll, scroll;
     background-size: 500px, 780px ;
+    background-image: url(img/Food-Collage.jpg), url(img/chalkboard.jpg);
+    background-attachment: scroll, scroll;
 
 }
 .header-thingstodo {
@@ -207,16 +190,15 @@ hr.small {
 .container-localevents {
     padding:3px;
     /*border:1px solid #e6e6e6;*/
-    width:400px;
+    width:700px;
     overflow:hidden;
-
 }
 .marquee{
     display:block;
     position:relative;
     width:100%;
     height: 300px;
-    animation:scroll 30s linear infinite;
+    animation:scroll 10s linear infinite;
     padding:3px;
 }
 
@@ -225,18 +207,11 @@ hr.small {
 }
 
 .img1 {
-    width:602px;
-    height:215px;
-    background-image: url(img/hendrix.jpg);
+    width:200px;
+    height:400px;
+    background-color:#f6f6f6;
     margin:3px;
-    float:left
-}
-.img2 {
-    width:660px;
-    height:215px;
-    background-image: url(img/heb.jpeg);
-    margin:3px;
-    float:left
+    float:left;
 }
 
 /* Make it move */
@@ -265,40 +240,9 @@ hr.small {
 
 /* About */
 
-.about-home {
+.about {
 
     padding: 20px 0;
-
-
-}
-.about-dining {
-
-    padding: 20px 0;
-
-}
-.about-thingstodo {
-
-    padding: 20px 0;
-
-
-}
-.about-localevents {
-
-    padding: 20px 0;
-
-
-}
-.about-transportation {
-
-    padding: 20px 0;
-
-
-}
-.about-general {
-
-    padding: 20px 0;
-
-
 }
 
 /* Services */
@@ -312,7 +256,7 @@ hr.small {
     margin-bottom: 30px;
 
 }
-.service-item-home, p{
+.service-item-home p{
     margin-bottom: 30px;
     text-align: center;
 }
@@ -322,13 +266,13 @@ i .services, .fa-circle {
 }
 
 i .services, .fa-cutlery {
-    color: silver;
+    color: grey;
 }
 i .services, .fa-users{
     color: dodgerblue;
 }
 i .services, .fa-ticket{
-    color: brown;
+    color: darkblue;
 }
 i .services, .fa-taxi{
     color: gold;
@@ -358,10 +302,10 @@ i .services-dining, .fa-map-marker{
     color: red;
 }
 i .services-dining, .fa-globe{
-    color: #337ab7;
+    color: dodgerblue;
 }
 i .services-dining, .fa-glass{
-    color: grey;
+    color: silver;
 
 }
 
@@ -424,20 +368,20 @@ i .services-localevents, .fa-music {
     color: black;
 }
 i .services-localevents, .fa-ticket {
-    color: darkblue;
+    color: mediumblue;
 }
 
 /*=================================================================*/
 /*icons and color of icons on the "Transportation" landing page.*/
 #services-transportation {
-    background-color: silver;
+    background-color: dimgrey;
     padding: 50px 0;
 }
 .service-item-transportation {
     margin-bottom: 30px;
 
 }
-.service-item-transportation, p{
+.service-item-transportation p{
     margin-bottom: 30px;
     text-align: center;
 }
@@ -473,7 +417,7 @@ i .services, .fa-taxi{
 .service-item-general {
     margin-bottom: 30px;
 }
-.service-item-general, p{
+.service-item-general p{
     margin-bottom: 30px;
     text-align: center;
 }
@@ -571,13 +515,13 @@ footer {
 }
 
 
-#to-top {
-    display: none;
-    position: fixed;
-    bottom: 5px;
-    right: 5px;
+/*#to-top {*/
+    /*display: none;*/
+    /*position: fixed;*/
+    /*bottom: 5px;*/
+    /*right: 5px;*/
 
-}
+/*}*/
 
 /*=======================================*/
 

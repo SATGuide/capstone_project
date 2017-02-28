@@ -45,74 +45,110 @@
 
     //==== Right side menu listeners =====================================================================
 
-    $("#local").click(function(e) {
+    $(".local").click(function(e) {
         e.preventDefault();
         category = 1;
         categoryTitle = "Local Cuisine"
     });
-    $("#chain").click(function(e) {
+    $(".chain").click(function(e) {
         e.preventDefault();
         category = 2;
         categoryTitle = "Popular Favorites"
     });
-    $("#attractions").click(function(e) {
+    $(".attractions").click(function(e) {
         e.preventDefault();
         category = 3;
         categoryTitle = "Attractions"
     });
-    $("#shopping").click(function(e) {
+    $(".shopping").click(function(e) {
         e.preventDefault();
         category = 4;
         categoryTitle = "Shopping"
     });
-    $("#golf").click(function(e) {
+    $(".golf").click(function(e) {
         e.preventDefault();
         category = 5;
         categoryTitle = "Golf"
     });
-    $("#parks").click(function(e) {
+    $(".parks").click(function(e) {
         e.preventDefault();
         category = 6;
         categoryTitle = "Parks"
     });
-    $("#culture-arts").click(function(e) {
+    $(".culture-arts").click(function(e) {
         e.preventDefault();
         category = 7;
         categoryTitle = "Cultural / Arts"
     });
-    $("#medical").click(function(e) {
+    $(".medical").click(function(e) {
         e.preventDefault();
         category = 8;
         categoryTitle = "Medical"
     });
-    $("#gov-mil").click(function(e) {
+    $(".gov-mil").click(function(e) {
         e.preventDefault();
         category = 9;
         categoryTitle = "Gov / Military"
     });
-    $("#colleges").click(function(e) {
+    $(".colleges").click(function(e) {
         e.preventDefault();
         category = 10;
         categoryTitle = "Colleges"
     });
-    $("#bars").click(function(e) {
+    $(".bars").click(function(e) {
         e.preventDefault();
         category = 11;
         categoryTitle = "Bars/Clubs"
     });
 
-    //====================================================================================================
+    //=======Google Map API=============================================================================================
+
+    var minZoomLevel = 9;
 
     // Render the map
     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+    // Bounds for San Antonio Area
+    var strictBounds = new google.maps.LatLngBounds(
+        // Lytle, Texas
+        new google.maps.LatLng(29.2333, -98.7964),
+        // Macdoma, Texas
+        new google.maps.LatLng(29.3258, -98.6911));
+
+    // Listen for the dragend event
+    google.maps.event.addListener(map, 'dragend', function () {
+        if (strictBounds.contains(map.getCenter())) return;
+
+        // Move the map back within the bounds
+
+        var c = map.getCenter(),
+            x = c.lng(),
+            y = c.lat(),
+            maxX = strictBounds.getNorthEast().lng(),
+            maxY = strictBounds.getNorthEast().lat(),
+            minX = strictBounds.getSouthWest().lng(),
+            minY = strictBounds.getSouthWest().lat();
+
+        if (x < minX) x = minX;
+        if (x > maxX) x = maxX;
+        if (y < minY) y = minY;
+        if (y > maxY) y = maxY;
+
+        map.setCenter(new google.maps.LatLng(y, x));
+    });
+
+    // Limit the zoom level
+    google.maps.event.addListener(map, 'zoom_changed', function () {
+        if (map.getZoom() < minZoomLevel) map.setZoom(minZoomLevel);
+    });
+
 
     // Opens left sidebar menu
     $(".left-menu-toggle").click(function(e) {
         e.preventDefault();
         var dynamicList = "";
         var itemNumber = 0;
-
-
+        $("#sidebar-wrapper").removeClass("active");
         // show left menu
         $("#left-sidebar-wrapper").toggleClass("active");
 
@@ -122,37 +158,50 @@
         // hide right menu button to prevent overlapping menu
         $('#menu-toggle').hide();
 
-        $.each(json, function(i,data){
+        var request = $.getJSON('/javaScript/test.json');
 
-            if(category == data.category){
+        request.done(function (json) {
 
-                itemNumber+= 1;
-                dynamicList += ("<li style='color:whitesmoke'>" + itemNumber + ")  " + data.title +  "</li>");
+            $.each(json, function(i,data){
 
-                var location = new google.maps.LatLng(data.lat, data.lng);
+                if(category == data.category){
 
-                // Adds a marker to the map and push to the array.
-                var marker = new google.maps.Marker({
-                    position: location,
-                    map: map
-                });
-                markers.push(marker);
-            }
+                    itemNumber+= 1;
+
+                    var location = new google.maps.LatLng(data.lat, data.lng);
+                    // Adds a marker to the map and push to the array.
+                    var marker = new MarkerWithLabel({
+                        position: location,
+                        map: map,
+                        labelContent: itemNumber,
+                        labelAnchor: new google.maps.Point(15, 35),
+                        labelClass: "labels", // the CSS class for the label
+                        labelInBackground: false,
+                        icon: pinSymbol('red')
+                    });
+
+                    dynamicList += ("<li style='color:whitesmoke'>" + itemNumber + ")  " + data.bus_name +  "</li>");
+
+                    markers.push(marker);
+                }
+            });
+            $("#dynamicList").html(dynamicList);
         });
-
-        $("#dynamicList").html(dynamicList);
-
         setMapOnAll(markers)
     });
 
 
 
-    // Sets the map on all markers in the array.
-    function setMapOnAll(map) {
-        for (var i = 0; i < markers.length; i++) {
-            markers[i].setMap(map);
-        }
+    function pinSymbol(color) {
+        return {
+            path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z',
+            fillColor: color,
+            fillOpacity: 1,
+            strokeColor: '#000',
+            strokeWeight: 2
+        };
     }
+
     // Sets the map on all markers in the array.
     function setMapOnAll(map) {
         for (var i = 0; i < markers.length; i++) {
@@ -175,11 +224,6 @@
         clearMarkers();
         markers = [];
     }
-
-
-
-
-    // Creating an icon and putting it on the map
 
 
     // Scrolls to the selected menu item on the page
@@ -219,55 +263,19 @@
             if (fixed) {
                 fixed = false;
                 $('#to-top').hide("slow", function() {
+                    // Delete map markers if present
+                    deleteMarkers();
+                    // show right menu button
+                    $('#menu-toggle').show();
+                    // close left menu if open
+                    $("#left-sidebar-wrapper").removeClass("active");
+                    // Scroll to top of page and hide top button
                     $('#to-top').css({
                         display: 'none'
                     });
+
                 });
             }
         }
     });
-
-//========= Google Map API ============================================================================================
-
-
-    //Icon Repositories
-    // var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-    // var pushPin = 'https://maps.google.com/mapfiles/kml/pushpin/';
-
-    // var icons = {
-    //     dining: {
-    //         icon: iconBase + 'dining.png'
-    //     },
-    //     park: {
-    //         icon: iconBase + 'parks.png'
-    //     },
-    //     bar: {
-    //         icon: iconBase + 'bars.png'
-    //     }
-    // };
-
-
-// Disable Google Maps scrolling
-// See http://stackoverflow.com/a/25904582/1607849
-// Disable scroll zooming and bind back the click event
-    var onMapMouseleaveHandler = function(event) {
-        var that = $(this);
-        that.on('click', onMapClickHandler);
-        that.off('mouseleave', onMapMouseleaveHandler);
-        that.find('map-canvas').css("pointer-events", "none");
-    }
-
-    var onMapClickHandler = function(event) {
-        var that = $(this);
-        // Disable the click handler until the user leaves the map area
-        that.off('click', onMapClickHandler);
-        // Enable scrolling zoom
-        that.find('map-canvas').css("pointer-events", "auto");
-        // Handle the mouse leave event
-        that.on('mouseleave', onMapMouseleaveHandler);
-    }
-
-// Enable map zooming with mouse scroll when the user clicks the map
-    $('.map').on('click', onMapClickHandler);
-
 })();

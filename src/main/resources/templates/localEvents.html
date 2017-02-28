@@ -7,34 +7,40 @@
 <navbar th:replace="fragments/navbar :: navbar"/>
 
 <!-- Header -->
-<div id="container-localevents">
+<div id="container">
 <header id="localevents-title" class="header-localevents">
-    <!--&lt;!&ndash;<div class="text-vertical-center-localevents">&ndash;&gt;-->
-        <!--<h1>Local Events</h1>-->
-    <!--</div>-->
-</header>
-    <div class="marquee">
-        <div class="img1"></div>
-        <div class="img2"></div>
-        <div class="img3"></div>
-        <div class="img4"></div>
-        <div class="img5"></div>
+    <div class="text-vertical-center-localevents">
+        <h1>Local Events</h1>
+        <p>Lorem ipusm dolor....</p>
     </div>
 
-</div>
+</header>
+    <!--<div class="photobanner">-->
+        <!--<img class="first" src="../img/hendrix.jpg" alt="" />-->
+        <!--<img src="image-2.jpg" alt="" />-->
+        <!--<img src="image-3.jpg" alt="" />-->
+        <!--<img src="image-4.jpg" alt="" />-->
+        <!--<img src="image-5.jpg" alt="" />-->
+        <!--<img src="image-6.jpg" alt="" />-->
+        <!--<img src="image-1.jpg" alt="" />-->
+        <!--<img src="image-2.jpg" alt="" />-->
+        <!--<img src="image-3.jpg" alt="" />-->
+        <!--<img src="image-4.jpg" alt="" />-->
+    <!--</div>-->
+<!--</div>-->
 <!-- About -->
-<section id="about-localevents" class="about-localevents">
+<section id="about" class="about">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>Local Events</h1>
+                <h2>Your pocket guide to San Antonio</h2>
             </div>
         </div>
         <!-- /.row -->
     </div>
     <!-- /.container -->
 </section>
-<!-- Services -->
+!-- Services -->
 <section id="services-localevents" class="services bg-primary">
     <div class="container">
         <div class="row text-center">
@@ -42,35 +48,62 @@
                 <!--<h2>Activities</h2>-->
                 <!--<hr class="small" />-->
                 <div class="row">
-                    <div class="col-md-6 col-sm-6">
+                    <div class="col-md-3 col-sm-6">
                         <div class="service-item-localevents">
-                            <a th:href="@{/localevents}">
+                            <!--<a th:href="@{/dining}">-->
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-music fa-stack-1x text-primary"></i>
+                                <i class="fa fa-cutlery fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Shows</strong>
+                                    <strong>Dining</strong>
                                 </h4>
                                 <p>San Antonio has an abundance of great restaurants. (Don't skip our greatest contribution: breakfast tacos.)</p>
-                            </a>
+                            <!--</a>-->
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-6">
+                    <div class="col-md-3 col-sm-6">
                         <div class="service-item-localevents">
-                            <a th:href="@{/localevents}">
+                            <!--<a th:href="@{/thingstodo}">-->
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-users fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Things To Do</strong>
+                                </h4>
+                                <p>Although it's the number one tourist destination in Texas, the Alamo isn't the only great thing about San Antonio.</p>
+                            <!--</a>-->
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item-localevents">
+                            <!--<a th:href="@{/localevents}">-->
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-ticket fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Sporting Events</strong>
+                                    <strong>Local Events</strong>
                                 </h4>
-                                <p>Although it's the number one tourist destination in Texas, the Alamo isn't the only great thing about San Antonio.</p>
-                            </a>
+                                <p>San Antonio always has <em>something</em> to celebrate, starting with our annual two-week party known as Fiesta.</p>
+                            <!--</a>-->
                         </div>
                     </div>
-
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item-localevents">
+                            <!--<a th:href="@{/transportation}">-->
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-bus fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Transportation</strong>
+                                </h4>
+                                <p>Bus, taxi, rideshare, bicycle, shoe leather: There's lots of ways to get around the Alamo City.</p>
+                            <!--</a>-->
+                        </div>
+                    </div>
                 </div>
                 <!-- /.row (nested) -->
             </div>
@@ -82,7 +115,7 @@
 
 
 </section>
-<!--</div>-->
+</div>
 <nav th:replace="fragments/leftNavbar :: leftNavbar"/>
 
 <section th:replace="fragments/map :: map" />

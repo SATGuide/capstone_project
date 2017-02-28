@@ -5,6 +5,8 @@
 
 <body>
 <navbar th:replace="fragments/navbar :: navbar"/>
+<!--left side dynamic menu-->
+<nav th:replace="fragments/leftNavbar :: leftNavbar"/>
 
 
 <!-- Header -->
@@ -38,54 +40,57 @@
             <!--<div class="col-lg-10 col-lg-offset-1">-->
                 <!--<hr class="small" />-->
                 <!--<div class="row">-->
-                        <div class="col-xs-6 col-md-4">
-                        <div class="service-item=dining">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-map-marker fa-stack-1x text-primary"></i>
-                            </span>
-                            <h4>
-                                <strong>Local Cuisine</strong>
-                            </h4>
-                            <p>Local eating venues.</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-4">
-                        <div class="service-item-dining">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-globe fa-stack-1x text-primary"></i>
-                            </span>
-                            <h4>
-                                <strong>Favorite Eats</strong>
-                            </h4>
-                            <p>Find a list of popular restaurants.</p>
-                        </div>
-                    </div>
-            <div class="col-xs-6 col-md-4">
-                <div class="service-item-dining">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-glass fa-stack-1x text-primary"></i>
-                            </span>
-                    <h4>
-                        <strong>Bars/Clubs</strong>
-                    </h4>
-                    <p>Guide to local nightlife.</p>
-                </div>
-            </div>
 
+            <a href="#map-canvas" class="left-menu-toggle local"  style="color:black">
+                <div class="col-xs-6 col-md-4">
+                    <div class="service-item=dining">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-map-marker fa-stack-1x text-primary"></i>
+                        </span>
+                        <h4>
+                            <strong>Local Cuisine</strong>
+                        </h4>
+                        <p>Local eating venues.</p>
+                    </div>
                 </div>
+            </a>
+
+            <a href="#map-canvas" class="left-menu-toggle chain"  style="color:black">
+                <div class="col-xs-6 col-md-4">
+                    <div class="service-item-dining">
+                            <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-globe fa-stack-1x text-primary"></i>
+                        </span>
+                        <h4>
+                            <strong>Favorite Eats</strong>
+                        </h4>
+                        <p>Find a list of popular restaurants.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#map-canvas" class="left-menu-toggle bars"  style="color:black">
+                <div class="col-xs-6 col-md-4">
+                    <div class="service-item-dining">
+                                    <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-glass fa-stack-1x text-primary"></i>
+                                </span>
+                        <h4>
+                            <strong>Bars/Clubs</strong>
+                        </h4>
+                        <p>Guide to local nightlife.</p>
+                    </div>
+                </div>
+            </a>
                 <!-- /.row (nested) -->
             </div>
-            <!--&lt;!&ndash; /.col-lg-10 &ndash;&gt;-->
-        <!--</div>-->
         <!--&lt;!&ndash; /.row &ndash;&gt;-->
-    <!--</div>-->
+    </div>
     <!-- /.container -->
 </section>
-
-<nav th:replace="fragments/leftNavbar :: leftNavbar"/>
 
 <section th:replace="fragments/map :: map" />
 

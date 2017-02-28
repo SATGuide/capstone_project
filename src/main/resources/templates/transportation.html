@@ -4,14 +4,72 @@
 </head>
 
 <body>
+<navbar th:replace="fragments/navbar :: navbar"/>
 
-<nav th:replace="fragments/navbar :: navbar" />
 
-<h1>Transportation</h1>
+<!-- Header -->
+<header id="transportation-title" class="header-transportation">
+    <div class="text-vertical-center-Transportation"></div>
+</header>
 
-<section th:replace="fragments/map :: map" />
+<!--&lt;!&ndash; About &ndash;&gt;-->
+<section id="about" class="about">
+    <div class="container">
+        <div class="text-vertical-center-Transportation">
+            <h1>Transportation</h1>
+        </div>
+    </div>
+</section>
 
-<nav th:replace="fragments/footer :: footer" />
+<!-- Services -->
+<!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+<section id="services-transportation" class="services bg-primary">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-xs-6 col-md-4">
+                <div class="service-item-transportation">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-bus fa-stack-1x text-primary"></i>
+                            </span>
+                    <h4>
+                        <strong>Bus</strong>
+                    </h4>
+                    <p>Bus</p>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-4">
+                <div class="service-item-transportation">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-car fa-stack-1x text-primary"></i>
+                            </span>
+                    <h4>
+                        <strong>Rideshare</strong>
+                    </h4>
+                    <p>Rideshare</p>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-4">
+                <div class="service-item-transportation">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-taxi fa-stack-1x text-primary"></i>
+                            </span>
+                    <h4>
+                        <strong>Taxi</strong>
+                    </h4>
+                    <p>Taxi</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.row (nested) -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<nav th:replace="fragments/footer :: footer"/>
 
 </body>
 </html>

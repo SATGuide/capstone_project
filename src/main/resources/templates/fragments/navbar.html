@@ -12,48 +12,17 @@
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav mainmenu">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand">
-                <a href="#top" onclick="$('#menu-close').click();">Start Bootstrap</a>
+            <li>
+                <a th:href="@{/home}" class="sidebar-brand" onclick="$('#menu-close').click();">Home</a>
             </li>
             <li>
-                <a th:href="@{/home}" onclick="$('#menu-close').click();">Home</a>
-            </li>
-            <li>
-                <a th:href="@{/wheretoeat}" onclick="$('#menu-close').click();">Dining</a>
-                <ul class="submenu">
-                    <li><a id="local" href="#" class="left-menu-toggle"  style="color:black"
-                           onclick="$('#menu-close').click();">local Cuisine</a></li>
-                    <li><a id="chain" href="#" class="left-menu-toggle"  style="color:black"
-                           onclick="$('#menu-close').click();">Favorite Eats</a></li>
-                    <li><a id="bars" href="#" class="left-menu-toggle"  style="color:black"
-                           onclick="$('#menu-close').click();">Bar / Club</a></li>
-                </ul>
+                <a th:href="@{/dining}" onclick="$('#menu-close').click();">Dining</a>
             </li>
             <li>
                 <a th:href="@{/thingstodo}" onclick="$('#menu-close').click();">Things To Do</a>
-                <ul class="submenu">
-                    <li><a id="attractions" href="#" class="left-menu-toggle"  style="color:black"
-                           onclick="$('#menu-close').click();">Attractions</a></li>
-                    <li><a id="shopping" href="#" class="left-menu-toggle"  style="color:black"
-                           onclick="$('#menu-close').click();">Shopping</a></li>
-                    <li><a id="golf" href="#" class="left-menu-toggle"  style="color:black"
-                           onclick="$('#menu-close').click();">Golf</a></li>
-                    <li><a id="parks" href="#" class="left-menu-toggle"  style="color:black"
-                           onclick="$('#menu-close').click();">Parks</a></li>
-                    <li><a id="culture-arts" href="#" class="left-menu-toggle"  style="color:black"
-                           onclick="$('#menu-close').click();">Cultural / Arts</a></li>
-                </ul>
             </li>
             <li>
                 <a th:href="@{/general}" onclick="$('#menu-close').click();">General</a>
-                <ul class="submenu">
-                    <li><a id="medical" href="#" class="left-menu-toggle"  style="color:black"
-                           onclick="$('#menu-close').click();">Medical</a></li>
-                    <li><a id="gov-mil" href="#" class="left-menu-toggle"  style="color:black"
-                           onclick="$('#menu-close').click();">Gov/Mil</a></li>
-                    <li><a id="colleges" href="#" class="left-menu-toggle"  style="color:black"
-                           onclick="$('#menu-close').click();">Colleges</a></li>
-                </ul>
             </li>
             <li>
                 <a th:href="@{/whatishappening}" onclick="$('#menu-close').click();">Calendar</a>
@@ -62,7 +31,7 @@
                 <a th:href="@{/howtogetthere}" onclick="$('#menu-close').click();">Transportation </a>
             </li>
             <li>
-                <a href="../registration.html" onclick="$('#menu-close').click();">Sign Up</a>
+                <a th:href="@{/register}" onclick="$('#menu-close').click();">Sign Up</a>
             </li>
         </ul>
     </nav>

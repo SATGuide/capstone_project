@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header(title='500 series error')">
+</head>
+
+<body>
+<navbar th:replace="fragments/navbar :: navbar"/>
+
+<!--left side dynamic menu-->
+<nav th:replace="fragments/leftNavbar :: leftNavbar"/>
+
+<!-- Header -->
+<div id="container">
+    <th:block th:switch="${error}">
+        <div th:case="'Not Found'">
+            <h1>Whoops! We've hit a snag here.</h1>
+        </div>
+        <div th:case="'Bad request'">
+            <h1>Please go back to the <a href="../home.html">home page</a></h1>
+        </div>
+        <p th:text="${error}"></p>
+    </th:block>
+</div>
+
+<footer th:replace="fragments/footer :: footer"/>
+</body>
+</html>

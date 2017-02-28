@@ -16,24 +16,31 @@ public class User {
     private int id;
 
     @Column(name = "username")
+    @NotBlank(message = "Enter a username: ")
     private String username;
 
     @Column(nullable = false, length = 45)
+    @NotBlank(message = "Enter a valid email address: ")
     private String email;
 
     @Column(nullable = false)
+    @NotBlank(message = "Enter a strong password, using upper and lower case letters and numbers: ")
     private String password;
 
     @Column(nullable = false, length = 30)
+    @NotBlank(message = "Enter your first name: ")
     private String firstName;
 
     @Column(nullable = false, length = 30)
+    @NotBlank(message = "Enter your last name: ")
     private String lastName;
 
     @Column(nullable = false, length = 45)
+    @NotBlank(message = "Enter your company/business name: ")
     private String company;
 
     @Column(nullable = false, length = 10)
+    @NotBlank(message = "Enter your 10-digit phone number, using numbers only: ")
     private String phone;
 
 

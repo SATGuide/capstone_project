@@ -1,5 +1,7 @@
 package com.capstone_project.models;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import javax.persistence.*;
 
 /**
@@ -14,31 +16,46 @@ public class Event {
     private int id;
 
     @Column(nullable = false, length = 100)
+    @NotBlank(message = "Enter the name of your event: ")
     private String eventName;
 
     @Column(nullable = false, length = 100)
+    @NotBlank(message = "Enter the location of your event: ")
     private String location;
 
     @Column(nullable = false)
+    @NotBlank(message = "Enter the starting date and time of your event: ")
     private String startDate;
 
     @Column(nullable = false)
+    @NotBlank(message = "Enter the ending date and time of your event: ")
     private String endDate;
 
     @Column(nullable = true, length = 100)
+    @NotBlank(message = "Enter the event's website address, if you have one: ")
     private String eventWeb;
 
     @Column(nullable = true, length = 10)
+    @NotBlank(message = "Enter a 10-digit phone number for the public to call, if you have one. Use numbers only, please: ")
     private String eventPhone;
 
     @Column(nullable = true, length = 100)
+    @NotBlank(message = "If the point of contact is not you, please enter the name of the point of contact: ")
     private String eventPoc;
 
     @Column(nullable = true, length = 10)
+    @NotBlank(message = "If the point of contact is not you, please enter the 10-digit phone number of the point of contact: ")
     private String eventPocPhone;
 
     @Column(nullable = false, length = 2000)
+    @NotBlank(message = "Please describe the event: ")
     private String description;
+
+    @ManyToOne
+    @JoinColumn (name = "age_check_id")
+    @NotBlank(message = "Please select the age range for this event: ")
+    private AgeCheck ageCheck;
+
 
     public Event(String eventName, String location, String startDate, String endDate, String eventWeb, String eventPhone, String eventPoc, String eventPocPhone, String description) {
         this.eventName = eventName;

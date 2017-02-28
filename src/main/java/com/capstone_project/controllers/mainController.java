@@ -21,7 +21,7 @@ public class mainController {
     }
 
     @GetMapping("/thingstodo")
-    public String thingsToDoPage() { return "calendarEvents"; }
+    public String thingsToDoPage() { return "thingsToDo"; }
 
     @GetMapping("/dining")
     public String whereToEatPage() {

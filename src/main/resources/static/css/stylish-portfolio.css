@@ -86,8 +86,8 @@ body {
     font-size: 4.5em;
     font-weight: 700;
 }
-.text-vertical-center-general {
-    color: black;
+.text-horizontal-right-general {
+    color: blue;
     display: table-cell;
     text-align: center;
     vertical-align: center;
@@ -95,14 +95,15 @@ body {
 }
 /*text for the header of the home page.*/
 
-.text-vertical-center-general h1 {
+.text-horizontal-right-general h1 {
     margin-top: 130px;
-    margin-left: 650px;
+    margin-left: 600px;
     padding: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-shadow: 1px 1px grey;
+    text-shadow: 1px 1px black;
     font-size: 4em;
     font-weight: 500;
+
 
 }
 
@@ -213,7 +214,34 @@ hr.small {
     margin:3px;
     float:left;
 }
-
+.img2 {
+    width:200px;
+    height:400px;
+    background-color:#f6f6f6;
+    margin:3px;
+    float:left;
+}
+.img3 {
+    width:200px;
+    height:400px;
+    background-color:#f6f6f6;
+    margin:3px;
+    float:left;
+}
+.img4 {
+    width:200px;
+    height:400px;
+    background-color:#f6f6f6;
+    margin:3px;
+    float:left;
+}
+.img5 {
+    width:200px;
+    height:400px;
+    background-color:#f6f6f6;
+    margin:3px;
+    float:left;
+}
 /* Make it move */
 @keyframes scroll{
     0% {left:800px;}
@@ -411,7 +439,7 @@ i .services, .fa-taxi{
 
 /*this section is for both the icons and color of each icon on the "General" landing page.*/
 #services-general {
-    background-color: silver;
+    background-color: grey;
     padding: 50px 0;
 }
 .service-item-general {

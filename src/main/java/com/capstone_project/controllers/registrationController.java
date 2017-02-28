@@ -57,7 +57,7 @@ public class registrationController {
         ur.setUserId(newUser.getId());
         roles.save(ur);
 
-        return "redirect:/register";
+        return "redirect:/login";
     }
 
 

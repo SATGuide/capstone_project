@@ -11,11 +11,83 @@ body {
     width: 100%;
     height: 100%;
 }
+/*==========================================================================*/
+/*Login page*/
 
-body {
-    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+.body {
+    /*font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+
+}
+.container-login {
+    color: cornflowerblue;
 }
 
+.square-login {
+    height: 500px;
+    width: 900px;
+    background-image: url(img/satxwatercolor.jpg);
+    border-style: groove;
+    border-width: 5px;
+    margin-bottom: 20px;
+    margin-top: 70px;
+    float: left;
+    margin-left: 190px;
+
+}
+.text-vertical-center-login {
+
+    color: #337ab7;
+    /*!*display: table-cell;*!*/
+    /*!*text-align: center;*!*/
+    /*!*vertical-align: center;*!*/
+
+}
+.text-vertical-center-login h1{
+
+    padding: 0;
+    height: 10px;
+    text-shadow: 1.5px 1.5px black;
+    font-family: Sathu;
+    font-size: 4.5em;
+    font-weight: 400;
+    margin-top: 100px;
+    margin-left: 350px;
+
+}
+
+.form-group-username {
+    height: 80px;
+    width: 300px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+}
+
+.form-control-username {
+
+    height: 30px;
+    width: 500px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 200px;
+
+}
+.form-control-password {
+
+    height: 30px;
+    width: 500px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 200px;
+
+}
+.btn-primary {
+
+    height: 30px;
+    width: 100px;
+    margin-left: 400px;
+
+}
 .text-vertical-center-home {
     color: white;
     display: table-cell;
@@ -104,7 +176,6 @@ body {
     font-size: 4em;
     font-weight: 500;
 
-
 }
 
 /* Custom Button Styles */
@@ -192,6 +263,13 @@ hr.small {
     /*color: #fff;*/
     background: url(img/vintagephone.jpeg) no-repeat left center scroll;
     background-size: 50%;
+
+}
+.header-login {
+    display: table;
+    width: 100%;
+    height: 200px;
+    /*color: #fff;*/
 
 }
 

@@ -18,9 +18,6 @@ body {
     /*font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;*/
 
 }
-.container-login {
-    color: cornflowerblue;
-}
 
 .square-login {
     height: 500px;
@@ -38,7 +35,6 @@ body {
 .text-vertical-center-login {
 
     color: steelblue;
-    border: groove;
     /*!*display: table-cell;*!*/
     /*!*text-align: center;*!*/
     /*!*vertical-align: center;*!*/
@@ -52,8 +48,8 @@ body {
     text-decoration: solid;
     font-family: Sathu;
     font-size: 4.5em;
-    font-weight: 400;
-    margin-top: 90px;
+    font-weight: 500;
+    margin-top: 95px;
     margin-left: 350px;
 
 }

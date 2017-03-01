@@ -158,32 +158,29 @@
         // hide right menu button to prevent overlapping menu
         $('#menu-toggle').hide();
 
-        var request = $.getJSON('/javaScript/test.json');
+        var request = $.getJSON('/merchants/'+ category +'/list.json');
 
         request.done(function (json) {
 
             $.each(json, function(i,data){
 
-                if(category == data.category){
+                itemNumber+= 1;
 
-                    itemNumber+= 1;
+                var location = new google.maps.LatLng(data.lat, data.lng);
+                // Adds a marker to the map and push to the array.
+                var marker = new MarkerWithLabel({
+                    position: location,
+                    map: map,
+                    labelContent: itemNumber,
+                    labelAnchor: new google.maps.Point(15, 35),
+                    labelClass: "labels", // the CSS class for the label
+                    labelInBackground: false,
+                    icon: pinSymbol('red')
+                });
 
-                    var location = new google.maps.LatLng(data.lat, data.lng);
-                    // Adds a marker to the map and push to the array.
-                    var marker = new MarkerWithLabel({
-                        position: location,
-                        map: map,
-                        labelContent: itemNumber,
-                        labelAnchor: new google.maps.Point(15, 35),
-                        labelClass: "labels", // the CSS class for the label
-                        labelInBackground: false,
-                        icon: pinSymbol('red')
-                    });
+                dynamicList += ("<a href='"+ data.web + "' target='_blank'><li style='color:whitesmoke'>" + itemNumber + ")  " + data.busName +  "</li></a> ");
 
-                    dynamicList += ("<li style='color:whitesmoke'>" + itemNumber + ")  " + data.bus_name +  "</li>");
-
-                    markers.push(marker);
-                }
+                markers.push(marker);
             });
             $("#dynamicList").html(dynamicList);
         });

@@ -98,11 +98,11 @@ public class Merchant {
         this.lat = lat;
     }
 
-    public double getLon() {
+    public double getLng() {
         return lng;
     }
 
-    public void setLon(double lng) {
+    public void setLng(double lng) {
         this.lng = lng;
     }
 

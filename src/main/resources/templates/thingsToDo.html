@@ -5,15 +5,11 @@
 
 <body>
 <navbar th:replace="fragments/navbar :: navbar"/>
-
+<nav th:replace="fragments/leftNavbar :: leftNavbar"/>
 <!-- Header -->
 
 <header id="top" class="header-thingstodo">
     <div class="text-vertical-center">
-        <!--<h1>FUN Things To Do in San Antonio</h1>-->
-        <!--<h3>Free Bootstrap Themes &amp; Templates</h3>-->
-        <!--<br />-->
-        <!--<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>-->
     </div>
 </header>
 
@@ -23,8 +19,6 @@
         <div class="row">
             <div class="col-lg-12 text-vertical-center-thingstodo">
                 <h2>FUN<br/>Things To Do in San Antonio</h2>
-                <!--<h2>Your user friendly guide to San Antonio FUN!</h2>-->
-                <!--<p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>-->
             </div>
         </div>
         <!-- /.row -->
@@ -40,81 +34,88 @@
             <div class="col-lg-12">
                 <hr class="large" />
                 <div class="row">
-                    <div class="col-md-2 col-sm-6 col-lg-offset-1">
-                        <div class="service-item-thingstodo">
-                            <a th:href="@{/attractions}">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-film fa-stack-1x text-primary"></i>
-                            </span>
-                            <h4>
-                                <strong>Attractions</strong>
-                            </h4>
-                            <p>Fiesta Texas</p>
-                                </a>
-                            <!--<a th:href="@{/attractions}" class="btn btn-light">Learn More</a>-->
+
+                    <!--Attractions Button-->
+                    <a href="#map-canvas" class="left-menu-toggle attractions"  style="color:black">
+                        <div class="col-md-2 col-sm-6 col-lg-offset-1">
+                            <div class="service-item-thingstodo">
+                                    <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-film fa-stack-1x text-primary"></i>
+                                </span>
+                                <h4>
+                                    <strong>Attractions</strong>
+                                </h4>
+                                <p>Fiesta Texas</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-2 col-sm-6">
-                        <div class="service-item-thingstodo">
-                            <a th:href="@{/shopping}">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-cc-mastercard fa-stack-1x text-primary"></i>
-                            </span>
-                            <h4>
-                                <strong>Shopping</strong>
-                            </h4>
-                            <p>Activities ranging from amusement parks to shopping.</p>
-                                </a>
-                            <!--<a th:href="@{/shopping}" class="btn btn-light">Learn More</a>-->
+                    </a>
+
+                    <!--Shopping Button-->
+                    <a href="#map-canvas" class="left-menu-toggle shopping"  style="color:black">
+                        <div class="col-md-2 col-sm-6">
+                            <div class="service-item-thingstodo">
+                                    <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-cc-mastercard fa-stack-1x text-primary"></i>
+                                </span>
+                                <h4>
+                                    <strong>Shopping</strong>
+                                </h4>
+                                <p>Activities ranging from amusement parks to shopping.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-2 col-sm-6">
-                        <div class="service-item-thingstodo">
-                            <a th:href="@{/golf}">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-flag fa-stack-1x text-primary"></i>
-                            </span>
-                            <h4>
-                                <strong>Golf</strong>
-                            </h4>
-                            <p>Access local music, cultural or sporting events.</p>
-                                </a>
-                            <!--<a th:href="@{/localevents}" class="btn btn-light">Learn Mo</a>-->
+                    </a>
+
+                    <!--Golf Button-->
+                    <a href="#map-canvas" class="left-menu-toggle golf"  style="color:black">
+                        <div class="col-md-2 col-sm-6">
+                            <div class="service-item-thingstodo">
+                                    <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-flag fa-stack-1x text-primary"></i>
+                                </span>
+                                <h4>
+                                    <strong>Golf</strong>
+                                </h4>
+                                <p>Access local music, cultural or sporting events.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-2 col-sm-6">
-                        <div class="service-item-thingstodo">
-                            <a th:href="@{/parks}">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-tree fa-stack-1x text-primary"></i>
-                            </span>
-                            <h4>
-                                <strong>Parks</strong>
-                            </h4>
-                            <p>Transportation options provided in San Antonio.</p>
-                                </a>
-                            <!--<a th:href="@{/transportation}" class="btn btn-light">Learn More</a>-->
+                    </a>
+
+                    <!--Parks Button-->
+                    <a href="#map-canvas" class="left-menu-toggle parks"  style="color:black">
+                        <div class="col-md-2 col-sm-6">
+                            <div class="service-item-thingstodo">
+                                    <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-tree fa-stack-1x text-primary"></i>
+                                </span>
+                                <h4>
+                                    <strong>Parks</strong>
+                                </h4>
+                                <p>Transportation options provided in San Antonio.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-2 col-sm-6">
-                        <div class="service-item-thingstodo">
-                            <a th:href="@{/culturearts}">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-file-image-o fa-stack-1x text-primary"></i>
-                            </span>
-                            <h4>
-                                <strong>Culture/Arts</strong>
-                            </h4>
-                            <p>Transportation options provided in San Antonio.</p>
-                                </a>
-                            <!--<a th:href="@{/transportation}" class="btn btn-light">Learn More</a>-->
+                    </a>
+
+                    <!--Culture Arts Button-->
+                    <a href="#map-canvas" class="left-menu-toggle culture-arts"  style="color:black">
+                        <div class="col-md-2 col-sm-6">
+                            <div class="service-item-thingstodo">
+                                    <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-file-image-o fa-stack-1x text-primary"></i>
+                                </span>
+                                <h4>
+                                    <strong>Culture/Arts</strong>
+                                </h4>
+                                <p>Transportation options provided in San Antonio.</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
+
+
                 </div>
                 <!-- /.row (nested) -->
             </div>
@@ -124,9 +125,6 @@
     </div>
     <!-- /.container -->
 </section>
-
-
-<nav th:replace="fragments/leftNavbar :: leftNavbar"/>
 
 <section th:replace="fragments/map :: map" />
 

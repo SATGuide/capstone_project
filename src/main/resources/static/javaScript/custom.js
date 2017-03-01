@@ -16,7 +16,9 @@
         center: {
             lat:  29.426791,
             lng: -98.489602
-        }
+        },
+
+        scrollwheel:false
     };
 
 //========= Menus  ============================================================================================
@@ -25,16 +27,7 @@
     $('#menu-close').click(function(e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Closes left sidebar menu
-    $('#left-menu-close').click(function(e) {
-        e.preventDefault();
-        $("#left-sidebar-wrapper").toggleClass("active");
-
-        // show right menu button
-        $('#menu-toggle').show();
-        deleteMarkers();
+        closeLeftMenu();
     });
 
     // Opens the right sidebar menu
@@ -47,58 +40,117 @@
 
     $(".local").click(function(e) {
         e.preventDefault();
+        closeLeftMenu();
         category = 1;
-        categoryTitle = "Local Cuisine"
+        categoryTitle = "Local Cuisine";
+        setTimeout(function(){
+            openLeftMenu();
+        }, 500);
     });
     $(".chain").click(function(e) {
         e.preventDefault();
+        closeLeftMenu();
         category = 2;
-        categoryTitle = "Popular Favorites"
+        categoryTitle = "Popular Favorites";
+        setTimeout(function(){
+            openLeftMenu();
+        }, 500);
     });
+
     $(".attractions").click(function(e) {
         e.preventDefault();
+        closeLeftMenu();
         category = 3;
-        categoryTitle = "Attractions"
+        categoryTitle = "Attractions";
+        setTimeout(function(){
+            openLeftMenu();
+        }, 500);
     });
+
     $(".shopping").click(function(e) {
         e.preventDefault();
+        closeLeftMenu();
         category = 4;
-        categoryTitle = "Shopping"
+        categoryTitle = "Shopping";
+        setTimeout(function(){
+            openLeftMenu();
+        }, 500);
     });
+
     $(".golf").click(function(e) {
         e.preventDefault();
+        closeLeftMenu();
         category = 5;
-        categoryTitle = "Golf"
+        categoryTitle = "Golf";
+        setTimeout(function(){
+            openLeftMenu();
+        }, 500);
     });
+
     $(".parks").click(function(e) {
         e.preventDefault();
+        closeLeftMenu();
         category = 6;
-        categoryTitle = "Parks"
+        categoryTitle = "Parks";
+        setTimeout(function(){
+            openLeftMenu();
+        }, 500);
     });
+
     $(".culture-arts").click(function(e) {
         e.preventDefault();
+        closeLeftMenu();
         category = 7;
-        categoryTitle = "Cultural / Arts"
+        categoryTitle = "Cultural / Arts";
+        setTimeout(function(){
+            openLeftMenu();
+        }, 500);
     });
+
     $(".medical").click(function(e) {
         e.preventDefault();
+        closeLeftMenu();
         category = 8;
-        categoryTitle = "Medical"
+        categoryTitle = "Medical";
+        setTimeout(function(){
+            openLeftMenu();
+        }, 500);
     });
+
     $(".gov-mil").click(function(e) {
         e.preventDefault();
+        closeLeftMenu();
         category = 9;
-        categoryTitle = "Gov / Military"
+        categoryTitle = "Gov / Military";
+        setTimeout(function(){
+            openLeftMenu();
+        }, 500);
     });
+
     $(".colleges").click(function(e) {
         e.preventDefault();
+        closeLeftMenu();
         category = 10;
-        categoryTitle = "Colleges"
+        categoryTitle = "Colleges";
+        setTimeout(function(){
+            openLeftMenu();
+        }, 500);
     });
+
     $(".bars").click(function(e) {
         e.preventDefault();
+        closeLeftMenu();
         category = 11;
-        categoryTitle = "Bars/Clubs"
+        categoryTitle = "Bars/Clubs";
+        setTimeout(function(){
+            openLeftMenu();
+        }, 500);
+    });
+
+    // Listener to close left menu
+    $('#left-menu-close').click(function(e) {
+        e.preventDefault();
+        closeLeftMenu();
     });
 
     //=======Google Map API=============================================================================================
@@ -143,14 +195,11 @@
     });
 
 
-    // Opens left sidebar menu
-    $(".left-menu-toggle").click(function(e) {
-        e.preventDefault();
-        var dynamicList = "";
-        var itemNumber = 0;
+    function openLeftMenu() {
+
         $("#sidebar-wrapper").removeClass("active");
         // show left menu
-        $("#left-sidebar-wrapper").toggleClass("active");
+        $("#left-sidebar-wrapper").addClass("active");
 
         // show selected Category on top of menu
         $('#categoryTitle').html(categoryTitle);
@@ -158,6 +207,23 @@
         // hide right menu button to prevent overlapping menu
         $('#menu-toggle').hide();
 
+        loadMapDetail();
+    }
+
+    // Closes left sidebar menu
+    function closeLeftMenu() {
+
+        $("#left-sidebar-wrapper").removeClass("active");
+
+        // show right menu button
+        $('#menu-toggle').show();
+        deleteMarkers();
+
+    }
+
+    function loadMapDetail() {
+        var dynamicList = "";
+        var itemNumber = 0;
         var request = $.getJSON('/merchants/'+ category +'/list.json');
 
         request.done(function (json) {
@@ -185,9 +251,7 @@
             $("#dynamicList").html(dynamicList);
         });
         setMapOnAll(markers)
-    });
-
-
+    }
 
     function pinSymbol(color) {
         return {
@@ -224,8 +288,6 @@
 
 
     // Scrolls to the selected menu item on the page
-
-
     $(function() {
         $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {

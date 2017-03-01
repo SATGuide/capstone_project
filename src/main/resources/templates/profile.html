@@ -5,6 +5,10 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>Your Profile Page!</h1>
+    <h1>Welcome to your profile page <span th:text="${firstName} + ' ' + ${lastName}" /></h1>
+    <div style="display: inline-block; margin: 4em;" th:each="merchant : ${merchants}" >
+        <a th:href="${merchant.web}"><h1 th:text="${merchant.busName}"></h1></a>
+        <p th:text="${merchant.description}"></p>
+    </div>
 </body>
 </html>

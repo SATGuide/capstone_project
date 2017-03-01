@@ -14,4 +14,7 @@ import java.util.List;
 public interface Merchants extends CrudRepository<Merchant, Integer>{
     @Query("select m from Merchant m where m.category.id=?1")
     public List<Merchant> findByCategory(int categoryId);
+
+    @Query("select m from Merchant m where m.user.id=?1")
+    public List<Merchant> findByUserId(int userId);
 }

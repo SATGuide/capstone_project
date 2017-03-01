@@ -25,8 +25,9 @@ body {
 .square-login {
     height: 500px;
     width: 900px;
-    background-image: url(img/satxwatercolor.jpg);
+    background-image: url(img/stairs.jpg);
     border-style: groove;
+    /*border-color: gray;*/
     border-width: 5px;
     margin-bottom: 20px;
     margin-top: 70px;
@@ -36,7 +37,8 @@ body {
 }
 .text-vertical-center-login {
 
-    color: #337ab7;
+    color: steelblue;
+    border: groove;
     /*!*display: table-cell;*!*/
     /*!*text-align: center;*!*/
     /*!*vertical-align: center;*!*/
@@ -45,12 +47,13 @@ body {
 .text-vertical-center-login h1{
 
     padding: 0;
-    height: 10px;
+    height: 15px;
     text-shadow: 1.5px 1.5px black;
+    text-decoration: solid;
     font-family: Sathu;
     font-size: 4.5em;
     font-weight: 400;
-    margin-top: 100px;
+    margin-top: 90px;
     margin-left: 350px;
 
 }
@@ -58,8 +61,8 @@ body {
 .form-group-username {
     height: 80px;
     width: 300px;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin-top: 60px;
+    margin-bottom: 20px;
 
 }
 
@@ -67,15 +70,26 @@ body {
 
     height: 30px;
     width: 500px;
+    border-color: gray;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     margin-left: 200px;
 
 }
+.form-group-password {
+
+    height: 80px;
+    width: 300px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
 .form-control-password {
 
     height: 30px;
     width: 500px;
+    border-color: gray;
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 200px;
@@ -83,9 +97,14 @@ body {
 }
 .btn-primary {
 
-    height: 30px;
-    width: 100px;
-    margin-left: 400px;
+    height: 35px;
+    width: 200px;
+    background-color: #337ab7;
+    text-align: center;
+    color: white;
+    border: groove;
+    border-color: gray;
+    margin-left: 340px;
 
 }
 .text-vertical-center-home {

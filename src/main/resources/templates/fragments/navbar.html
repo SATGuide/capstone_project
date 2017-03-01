@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"><head>
     <meta charset="UTF-8"/>
     <title>Title</title>
 </head>
@@ -13,7 +13,7 @@
         <ul class="sidebar-nav mainmenu">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li>
-                <a th:href="@{/home}" class="sidebar-brand" onclick="$('#menu-close').click();">Home</a>
+                <a th:href="@{/}" class="sidebar-brand" onclick="$('#menu-close').click();">Home</a>
             </li>
             <li>
                 <a th:href="@{/dining}" onclick="$('#menu-close').click();">Dining</a>
@@ -23,9 +23,6 @@
             </li>
             <li>
                 <a th:href="@{/general}" onclick="$('#menu-close').click();">General</a>
-            </li>
-            <li>
-                <a th:href="@{/localevents}" onclick="$('#menu-close').click();">Calendar</a>
             </li>
             <li>
                 <a th:href="@{/transportation}" onclick="$('#menu-close').click();">Transportation </a>

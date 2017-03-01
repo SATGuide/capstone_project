@@ -5,6 +5,7 @@
 
 <body>
 <navbar th:replace="fragments/navbar :: navbar"/>
+<nav th:replace="fragments/leftNavbar :: leftNavbar"/>
 
 
 <!-- Header -->
@@ -16,82 +17,64 @@
     </div>
 </header>
 
-<!--&lt;!&ndash; About &ndash;&gt;-->
-<!--<section id="about" class="about">-->
-    <!--<div class="container">-->
-        <!--<div class="row">-->
-            <!--<div class="col-lg-12 text-center">-->
-                <!--<h2>Your user friendly guide to San Antonio FUN!</h2>-->
-                <!--&lt;!&ndash;<p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>&ndash;&gt;-->
-            <!--</div>-->
-        <!--</div>-->
-        <!-- /.row -->
-    <!--</div>-->
-    <!-- /.container -->
-<!--</section>-->
-
 <!-- Services -->
 <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
 <section id="services-dining" class="services bg-primary">
     <div class="container">
         <div class="row text-center">
-            <!--<div class="col-lg-10 col-lg-offset-1">-->
-                <!--<hr class="small" />-->
-                <!--<div class="row">-->
-                        <div class="col-xs-6 col-md-4">
-                        <div class="service-item=dining">
-                            <a th:href="@{/localcuisine}">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-map-marker fa-stack-1x text-primary"></i>
-                            </span>
-                            <h4>
-                                <strong>Local Cuisine</strong>
-                            </h4>
-                            <p>Local eating venues.</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-4">
-                        <div class="service-item-dining">
-                            <a th:href="@{/favoriteats}">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-globe fa-stack-1x text-primary"></i>
-                            </span>
-                            <h4>
-                                <strong>Favorite Eats</strong>
-                            </h4>
-                            <p>Find a list of popular restaurants.</p>
-                            </a>
-                        </div>
-                    </div>
-            <div class="col-xs-6 col-md-4">
-                <div class="service-item-dining">
-                    <a th:href="@{/barsclubs}">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-glass fa-stack-1x text-primary"></i>
-                            </span>
-                    <h4>
-                        <strong>Bars/Clubs</strong>
-                    </h4>
-                    <p>Guide to local nightlife.</p>
-                        </a>
-                </div>
-            </div>
 
+            <!--Local Dining Link-->
+            <a href="#map-canvas" class="left-menu-toggle local"  style="color:black">
+                <div class="col-xs-6 col-md-4">
+                    <div class="service-item=dining">
+                            <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-map-marker fa-stack-1x text-primary"></i>
+                        </span>
+                        <h4>
+                            <strong>Local Cuisine</strong>
+                        </h4>
+                        <p>Local eating venues.</p>
+                    </div>
                 </div>
+            </a>
+
+            <!--Chain Dining Option Link-->
+            <a href="#map-canvas" class="left-menu-toggle chain"  style="color:black">
+                <div class="col-xs-6 col-md-4">
+                    <div class="service-item-dining">
+                            <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-globe fa-stack-1x text-primary"></i>
+                        </span>
+                        <h4>
+                            <strong>Favorite Eats</strong>
+                        </h4>
+                        <p>Find a list of popular restaurants.</p>
+                    </div>
+                </div>
+            </a>
+
+            <!--Bars / Club Links-->
+            <a href="#map-canvas" class="left-menu-toggle bars"  style="color:black">
+                <div class="col-xs-6 col-md-4">
+                    <div class="service-item-dining">
+                                    <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-glass fa-stack-1x text-primary"></i>
+                                </span>
+                        <h4>
+                            <strong>Bars/Clubs</strong>
+                        </h4>
+                        <p>Guide to local nightlife.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
                 <!-- /.row (nested) -->
-            </div>
-            <!--&lt;!&ndash; /.col-lg-10 &ndash;&gt;-->
-        <!--</div>-->
-        <!--&lt;!&ndash; /.row &ndash;&gt;-->
-    <!--</div>-->
+    </div>
     <!-- /.container -->
 </section>
-
-<nav th:replace="fragments/leftNavbar :: leftNavbar"/>
 
 <section th:replace="fragments/map :: map" />
 

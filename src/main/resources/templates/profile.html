@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8"/>
-    <title>Title</title>
+<head th:replace="fragments/header :: header(title='Merchant profile')">
 </head>
 <body>
-    <h1>Your Profile Page!</h1>
+<navbar th:replace="fragments/navbar :: navbar"/>
+
+<div class="container">
+    <img src="../css/img/Luggage-tag-small.png" alt="SATX Interactive" align="right"/>
+    <h1>Your SATX Interactive Merchant Profile</h1>
+    <h2>Welcome, <span th:text="${firstName} + ' ' + ${lastName}" /></h2>
+    <div th:each="merchant : ${merchants}" >
+        <h3 th:text="${merchant.busName}" />
+        <p th:text="${merchant.busPhone}" />
+        <a th:href="${merchant.web}"><p th:text="${merchant.web}" /> </a>
+        <p th:text="${merchant.description}" />
+</div>
+
+<nav th:replace="fragments/footer :: footer"/>
+
+    </div>
 </body>
 </html>

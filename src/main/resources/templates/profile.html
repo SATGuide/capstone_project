@@ -12,12 +12,12 @@
     <h2>Welcome, <span th:text="${firstName} + ' ' + ${lastName}" /></h2>
     <div th:each="merchant : ${merchants}" >
         <h3 th:text="${merchant.busName}" />
-        <p th:text="${merchant.busPhone}" />
+        <p class="phoneText" th:text="${merchant.busPhone}" />
         <a th:href="${merchant.web}"><p th:text="${merchant.web}" /> </a>
         <p th:text="${merchant.description}" />
 </div>
 
 <nav th:replace="fragments/footer :: footer"/>
-
+</div>
 </body>
 </html>

@@ -37,4 +37,5 @@ public class mainController {
     public String localEventsPage() {
         return "localEvents";
     }
+
 }

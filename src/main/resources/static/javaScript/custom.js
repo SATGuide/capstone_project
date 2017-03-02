@@ -1,8 +1,26 @@
 /**
  * Created by jefferysmith on 2/16/17.
  */
+
+
 (function() {
     'use strict';
+
+// format phone numbers as they are entered in forms
+$('.phoneFormat').on('input', function() {
+    var phoneNumber = $(this).val().replace(/[^\d]/g, '');
+    if (phoneNumber.length == 10) {
+        phoneNumber = phoneNumber.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
+    }
+    $(this).val(phoneNumber)
+});
+
+// format phone numbers displayed in profile/generated pages
+$(".phoneText").text(function(i, text) {
+    text = text.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
+    return text;
+});
+
 
     var category;
     var categoryTitle = '';
@@ -333,23 +351,17 @@
                         display: 'none'
                     });
 
-                    // Used to format phone number
-                    function phoneFormatter() {
-                        $('.phone').on('input', function() {
-                            var number = $(this).val().replace(/[^\d]/g, '')
-                            if (number.length == 7) {
-                                number = number.replace(/(\d{3})(\d{4})/, "$1-$2");
-                            } else if (number.length == 10) {
-                                number = number.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
-                            }
-                            $(this).val(number)
-                        });
-                    };
-
-                    $(phoneFormatter);
 
                 });
             }
         }
     });
+                    // Used to format phone number
+                    // function phoneFormatter() {
+    console.log('attaching event listener....');
+    console.log($('.phoneFormat'));
+
+                    // };
+
+                    // $(phoneFormatter);
 })();

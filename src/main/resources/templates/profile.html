@@ -6,15 +6,26 @@
 
 <navbar th:replace="fragments/navbar :: navbar"/>
 
-<div class="container">
-    <img src="../css/img/Luggage-tag-small.png" alt="SATX Interactive" align="right"/>
-    <h1>Your SATX Interactive Merchant Profile</h1>
-    <h2>Welcome, <span th:text="${firstName} + ' ' + ${lastName}" /></h2>
-    <div th:each="merchant : ${merchants}" >
-        <h3 th:text="${merchant.busName}" />
-        <p th:text="${merchant.busPhone}" />
-        <a th:href="${merchant.web}"><p th:text="${merchant.web}" /> </a>
-        <p th:text="${merchant.description}" />
+<div id="login-overlay" class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">SATX Interactive profile for <span th:text="${firstName} + ' ' + ${lastName}"/></h4>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div th:each="merchant : ${merchants}">
+                        <h4 th:text="${merchant.busName}"/>
+                        <ul>
+                        <li class="phoneText" th:text="${merchant.busPhone}"/>
+                        <li><a th:href="${merchant.web}"><p th:text="${merchant.web}"/></a></li>
+                        <li th:text="${merchant.description}"/>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <nav th:replace="fragments/footer :: footer"/>

@@ -321,6 +321,8 @@ $(".phoneText").text(function(i, text) {
         });
     });
 
+    $("#phone").inputmask({"mask": "(999) 999-9999"});
+
 // #to-top button appears after scrolling
 
     var fixed = false;

@@ -29,4 +29,10 @@ public class loginController {
         model.addAttribute("merchants", merchantsRepo.findByUserId(user.getId()));
         return "profile";
     }
+
+    @GetMapping("/logout")
+    public  String logoutpage() {
+        return "redirect:/login?logout";
+    }
+
 }

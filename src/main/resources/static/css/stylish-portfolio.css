@@ -8,32 +8,14 @@
 
 html,
 body {
-
-    height: 100%;
     width: 100%;
-
+    height: 100%;
 }
 /*==========================================================================*/
 /*Login page*/
 
 .body {
     /*font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;*/
-
-}
-
-.container-login {
-
-    height: 100%;
-    width: auto;
-    background-color: lightgoldenrodyellow;
-
-}
-
-.header-login {
-    display: table;
-    width: 100%;
-    height: 200px;
-    /*color: #fff;*/
 
 }
 
@@ -44,7 +26,6 @@ body {
     border-style: groove;
     /*border-color: gray;*/
     border-width: 5px;
-    border-radius: 3px;
     margin-bottom: 20px;
     margin-top: 70px;
     float: left;
@@ -73,34 +54,43 @@ body {
 
 }
 
-#username {
-    /*height: 80px;*/
-    /*width: 300px;*/
+.form-group-username {
+    height: 80px;
+    width: 300px;
     margin-top: 60px;
     margin-bottom: 20px;
 
 }
 
-.input-form {
+.form-control-username {
 
-    height: 45px;
-    width: 450px;
+    height: 30px;
+    width: 500px;
     border-color: gray;
     margin-top: 30px;
     margin-bottom: 20px;
-    margin-left: 210px;
-    border-radius: 3px;
-    box-shadow: inset 0 2px 5px darkslategrey;
-}
-#password {
+    margin-left: 200px;
 
-    /*height: 80px;*/
-    /*width: 300px;*/
+}
+.form-group-password {
+
+    height: 80px;
+    width: 300px;
     margin-top: 30px;
     margin-bottom: 30px;
 
 }
 
+.form-control-password {
+
+    height: 30px;
+    width: 500px;
+    border-color: gray;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 200px;
+
+}
 .btn-primary {
 
     height: 35px;
@@ -113,20 +103,6 @@ body {
     margin-left: 340px;
 
 }
-
-/*================================================================*/
-/*Home page*/
-
-/* Header */
-.header-home {
-    display: table;
-    width: 100%;
-    height: 400px;
-    /*color: #fff;*/
-    background: url(img/bg-reduce.jpg) no-repeat left center scroll;
-    background-size: cover;
-}
-
 .text-vertical-center-home {
     color: white;
     display: table-cell;
@@ -136,7 +112,7 @@ body {
 }
 /*text for the header of the home page.*/
 .text-vertical-center-home h1 {
-    margin-top: 80px;
+    margin-top: 90px;
     /*margin-left: 200px;*/
     padding: 0;
     font-family: Arial;
@@ -144,12 +120,187 @@ body {
     font-size: 4.5em;
     font-weight: 700;
 }
+.text-vertical-center-dining {
+    color: white;
+    display: table-cell;
+    text-align: center;
+    vertical-align: center;
+
+}
+/*text for the header of the home page.*/
+
+.text-vertical-center-dining h1 {
+    margin-top: 150px;
+    margin-left: 500px;
+    padding: 0;
+    font-family: "Brush Script MT";
+    text-shadow: 4px 4px black;
+    font-size: 7em;
+    font-weight: 500;
+
+}
+.text-vertical-center-thingstodo {
+    color: darkblue;
+    display: table-cell;
+    text-align: center;
+    vertical-align: center;
+}
+
+.text-vertical-center-thingstodo h1 {
+    margin-top: 20px;
+    /*margin-left: 200px;*/
+    padding: 0;
+    font-family: Arial;
+    text-shadow: 1px 1px blue;
+    font-size: 4em;
+    font-weight: 500;
+}
+
+.text-vertical-center-transportation {
+    color: black;
+    display: table-cell;
+    text-align: center;
+    vertical-align: center;
+
+}
+/*text for the header of the transportation page.*/
+.text-vertical-center-transportation h1 {
+    margin-top: 150px;
+    /*margin-left: 200px;*/
+    padding: 0;
+    font-family: Arial;
+    text-shadow: 1px 1px white;
+    font-size: 4.5em;
+    font-weight: 700;
+}
+.text-horizontal-right-general {
+    color: blue;
+    display: table-cell;
+    text-align: center;
+    vertical-align: center;
+
+}
+/*text for the header of the home page.*/
+
+.text-horizontal-right-general h1 {
+    margin-top: 130px;
+    margin-left: 600px;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-shadow: 1px 1px black;
+    font-size: 4em;
+    font-weight: 500;
+
+}
+
+/* Custom Button Styles */
+
+/*.btn-dark {*/
+/*border-radius: 0;*/
+/*color: #fff;*/
+/*background-color: rgba(0,0,0,0.4);*/
+/*}*/
+
+/*.btn-dark:hover,*/
+/*.btn-dark:focus,*/
+/*.btn-dark:active {*/
+/*color: #fff;*/
+/*background-color: rgba(0,0,0,0.7);*/
+/*}*/
+
+/*.btn-light {*/
+/*border-radius: 0;*/
+/*color: #333;*/
+/*background-color: rgb(255,255,255);*/
+/*}*/
+
+/*.btn-light:hover,*/
+/*.btn-light:focus,*/
+/*.btn-light:active {*/
+/*color: #333;*/
+/*background-color: rgba(255,255,255,0.8);*/
+/*}*/
+
+/* Custom Horizontal Rule */
+
+hr.small {
+    max-width: 100px;
+}
+
+
+/* Header */
+.header-home {
+    display: table;
+    width: 100%;
+    height: 400px;
+    /*color: #fff;*/
+    background: url(img/bg-reduce.jpg) no-repeat left center scroll;
+    background-size: cover;
+
+}
+.header-dining {
+    display: table;
+    width: 100%;
+    height: 400px;
+    color: #fff;
+    background-repeat: no-repeat, no-repeat;
+    background-position: left center, right center;
+    background-size: 500px, 780px ;
+    background-image: url(img/Food-Collage.jpg), url(img/chalkboard.jpg);
+    background-attachment: scroll, scroll;
+
+}
+.header-thingstodo {
+    display: table;
+    width: 100%;
+    height: 300px;
+    color: #fff;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: left, center, right;
+    background-image: url(img/seaworld2.jpg), url(img/golf.jpg), url(img/shopping.jpg);
+    background-attachment: scroll, scroll, scroll;
+    background-size: 35%;
+
+}
+
+.header-transportation {
+    display: table;
+    width: 100%;
+    height: 400px;
+    background: url(img/sanantoniobus.png) no-repeat left center scroll;
+    background-size: cover;
+
+}
+.header-general {
+    display: table;
+    width: 100%;
+    height: 400px;
+    /*color: #fff;*/
+    background: url(img/vintagephone.jpeg) no-repeat left center scroll;
+    background-size: 50%;
+
+}
+.header-login {
+    display: table;
+    width: 100%;
+    height: 200px;
+    /*color: #fff;*/
+
+}
+
+
+/* About */
+
+.about {
+
+    padding: 20px 0;
+}
 
 /* Services */
 
 #services-home {
     background-color: coral;
-    padding: 20px 0;
+    padding: 50px 0;
 }
 /*Home landing page icons*/
 .service-item-home {
@@ -178,47 +329,16 @@ i .services, .fa-taxi{
     color: gold;
 }
 
-/*================================================================*/
-/*Dining page*/
+/*===============================================================*/
 
-/*.header-dining {*/
-    /*display: table;*/
-    /*width: 650px;*/
-    /*height: 450px;*/
-    /*background-position: right center;*/
-    /*background-image: url(img/chalkboard.jpg);*/
-    /*background-attachment: scroll;*/
-    /*margin-left: 0;*/
-/*}*/
-
-.text-vertical-center-dining {
-    color: white;
-    display: table-cell;
-    text-align: center;
-    vertical-align: center;
-}
-
-.text-vertical-center-dining h1 {
-    margin-top: 150px;
-    margin-right: 300px;
-    margin-left: 250px;
-    padding: 0;
-    font-family: "Brush Script MT";
-    text-shadow: 4px 4px black;
-    font-size: 7em;
-    font-weight: 500;
-
-}
-
-
-/*Services*/
+/*icon buttons on "Dining" landing page*/
 #services-dining {
     background-color: lightsteelblue;
     padding: 50px 0;
 }
 
 .service-item-dining {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 h2 {
@@ -240,27 +360,8 @@ i .services-dining, .fa-glass{
 
 }
 
-/*================================================================*/
-/*Things To Do page*/
-
-.text-vertical-center-thingstodo {
-    color: darkblue;
-    display: table-cell;
-    text-align: center;
-    vertical-align: center;
-}
-
-.text-vertical-center-thingstodo h1 {
-    margin-top: 20px;
-    /*margin-left: 200px;*/
-    padding: 0;
-    font-family: Arial;
-    text-shadow: 1px 1px blue;
-    font-size: 4em;
-    font-weight: 500;
-}
-
-/*Services*/
+/*=================================================================*/
+/*icons and color of icons on the "Things To Do" landing page.*/
 #services-thingstodo {
     background-color: cornflowerblue;
     padding: 50px 0;
@@ -295,35 +396,8 @@ i .services, .fa-file-image-o{
     color: rebeccapurple;
 }
 
-/*================================================================*/
-/*Transportation page*/
-
-.header-transportation {
-    display: table;
-    width: 100%;
-    height: 400px;
-    background: url(img/sanantoniobus.png) no-repeat left center scroll;
-    background-size: cover;
-}
-
-.text-vertical-center-transportation {
-    color: black;
-    display: table-cell;
-    text-align: center;
-    vertical-align: center;
-}
-
-.text-vertical-center-transportation h1 {
-    margin-top: 150px;
-    /*margin-left: 200px;*/
-    padding: 0;
-    font-family: Arial;
-    text-shadow: 1px 1px white;
-    font-size: 4.5em;
-    font-weight: 700;
-}
-
-/*Services*/
+/*=================================================================*/
+/*icons and color of icons on the "Transportation" landing page.*/
 #services-transportation {
     background-color: dimgrey;
     padding: 50px 0;
@@ -358,36 +432,9 @@ i .services, .fa-taxi{
     color: gold;
 }
 
-/*================================================================*/
-/*General page*/
+/*============================================================*/
 
-.header-general {
-    display: table;
-    width: 100%;
-    height: 400px;
-    background: url(img/vintagephone.jpeg) no-repeat left center scroll;
-    background-size: 50%;
-
-}
-
-.text-vertical-center-general {
-    color: blue;
-    display: table-cell;
-    text-align: center;
-    vertical-align: center;
-}
-
-.text-vertical-center-general h1 {
-    margin-top: 130px;
-    margin-left: 700px;
-    padding: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-shadow: 1px 1px black;
-    font-size: 4em;
-    font-weight: 500;
-}
-
-/*Services*/
+/*this section is for both the icons and color of each icon on the "General" landing page.*/
 #services-general {
     background-color: grey;
     padding: 50px 0;
@@ -418,18 +465,6 @@ i .services, .fa-plus-square{
     color: red;
 }
 
-/* Custom Horizontal Rule */
-
-hr.small {
-    max-width: 100px;
-}
-
-/* About */
-
-.about {
-
-    padding: 20px 0;
-}
 
 /* Callout */
 
@@ -494,16 +529,24 @@ hr.small {
     width:100%;
 }
 
-/*=======================================================*/
 /* Footer */
 
 footer {
-    padding: 0;
-    margin-top: auto;
-    color: darkblue;
+    padding: 10px 0;
+
+}
+.list-unstyled, i .fa-phone {
+    color: black;
 }
 
 
+/*#to-top {*/
+    /*display: none;*/
+    /*position: fixed;*/
+    /*bottom: 5px;*/
+    /*right: 5px;*/
+
+/*}*/
 
 /*=======================================*/
 

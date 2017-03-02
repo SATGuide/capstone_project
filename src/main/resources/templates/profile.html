@@ -16,12 +16,20 @@
                 <div class="col-xs-12">
             <a href="/merchant/add" class="btn btn-success">Add new business</a>
                     <div th:each="merchant : ${merchants}">
-                        <h4 th:text="${merchant.busName}"/>
-                        <ul>
-                        <li class="phoneText" th:text="${merchant.busPhone}"/>
-                        <li><a th:href="${merchant.web}"><p th:text="${merchant.web}"/></a></li>
-                        <li th:text="${merchant.description}"/>
-                        </ul>
+                        <form th:attr="action=${'/merchant/' + merchant.id}" method="post">
+                            <h4 th:text="${merchant.busName}"/>
+                            <ul>
+                            <li class="phoneText" th:text="${merchant.busPhone}"/>
+                            <li><a th:href="${merchant.web}"><p th:text="${merchant.web}"/></a></li>
+                            <li th:text="${merchant.description}"/>
+                            </ul>
+
+
+
+                            <input type="submit" value="Delete" class="btn" />
+                            <input type="hidden" th:attr="name=${_csrf.parameterName},value=${_csrf.token}" />
+                        </form>
+                            <a th:href="${'/merchant/' +merchant.id+ '/edit'}"><button>Edit</button></a>
                     </div>
                 </div>
             </div>

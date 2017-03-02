@@ -241,6 +241,40 @@ i .services-dining, .fa-glass{
 /*================================================================*/
 /*Things To Do page*/
 
+#rollercoaster-img {
+    float: left;
+    margin: 0;
+    height: 300px;
+    width: 33.3%;
+    display: inline-block
+}
+#golf-img {
+    float: left;
+    margin: 0;
+    height: 300px;
+    width: 33.3%;
+    display: inline-block
+}
+#shopping-img {
+    float: left;
+    margin: 0;
+    height: 300px;
+    width: 33.3%;
+    display: inline-block
+}
+
+@media (max-width: 850px) {
+    #shopping-img {
+        display: none;
+    }
+    #golf-img {
+        display: none;
+    }
+    #rollercoaster-img {
+        width: 100%;
+    }
+}
+
 .text-vertical-center-thingstodo {
     color: darkblue;
     display: table-cell;

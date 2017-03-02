@@ -596,6 +596,13 @@ footer {
     right: 0;
 }
 
+#left-menu-toggle {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 #sidebar-wrapper.active {
     right: 250px;
     width: 250px;
@@ -620,54 +627,16 @@ footer {
     margin: 5px 5px 0 0;
 }
 
-/*=======================================*/
-
-/* reset our lists to remove bullet points and padding */
-.mainmenu, .submenu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* make ALL links (main and submenu) have padding and background color */
-.mainmenu a {
-    display: block;
-    padding: 10px;
-}
-
-/* when hovering over a .mainmenu item, display the submenu inside it.
-  Submenu's max-height from 0 to 200px;
-*/
-
-.mainmenu li:hover .submenu {
-    display: block;
-    /* this setting adjust max height in sub-menu view */
-    max-height: 600px;
-}
-
-/*
-  Overwrite the background-color for .submenu links only.
-  CSS reads down the page, so code at the bottom will overwrite the code at the top.
-*/
-
-.submenu a {
-    background-color: #999;
-}
-
-/* hover behaviour for links inside .submenu */
-.submenu a:hover {
-    background-color: #666;
+.fa-caret-right{
+    font-size:45px;
+    padding:5px;
     color:whitesmoke;
+    background-color:black;
 }
 
-/* this is the initial state of all submenus.
-  we set it to max-height: 0, and hide the overflowed content.
-*/
-.submenu {
-    overflow: hidden;
-    margin-left: 10px;
-    max-height: 0;
-    -webkit-transition: all 0.5s ease-out;
+.fa-caret-left{
+    margin: 5px 0 0 270px;
+    color:whitesmoke;
 }
 /*=========================================================*/
 .labels {

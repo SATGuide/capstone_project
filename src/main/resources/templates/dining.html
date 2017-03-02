@@ -10,9 +10,9 @@
 <header id="dining-title" class="header-dining">
 
 
-    <img style="float: left; margin: 0; height: auto; width: 60%; display: inline-block" src="/css/img/chalkboard.jpg" />
+    <img id="chalkboard-img" src="/css/img/chalkboard.jpg" />
 
-    <img style="float: left; margin: 0; height: auto; width: 40%; display: inline-block" src="/css/img/Food-Collage.jpg" />
+    <img id="food-img" src="/css/img/Food-Collage.jpg" />
 
 
 
@@ -88,6 +88,12 @@
 <section th:replace="fragments/map :: map"/>
 
 <nav th:replace="fragments/footer :: footer"/>
+
+<!--Google Maps API-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnFZ9Y4VyKhA1di1o-X_x3_AJ7GNuz27g"></script>
+<script src="https://cdn.rawgit.com/googlemaps/v3-utility-library/master/markerwithlabel/src/markerwithlabel.js"></script>
+<script src="../javaScript/mapJs.js"></script>
+
 
 </body>
 </html>

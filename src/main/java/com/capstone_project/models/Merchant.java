@@ -23,7 +23,7 @@ public class Merchant {
     @Column(nullable = false, length = 100)
     private String busName;
 
-    @Column(nullable = true, length = 10)
+    @Column(nullable = true, length = 15)
     private String busPhone;
 
     @Column(nullable = true, length = 5000)

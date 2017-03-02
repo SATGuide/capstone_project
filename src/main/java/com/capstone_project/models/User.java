@@ -40,7 +40,7 @@ public class User {
     @NotBlank(message = "Enter your company/business name: ")
     private String company;
 
-    @Column(nullable = false, length = 10)
+    @Column(nullable = false, length = 15)
     @NotBlank(message = "Enter your 10-digit phone number, using numbers only: ")
     private String phone;
 

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/header :: header(title='Business registration')">
-</head>
+<head th:replace="fragments/header :: header(title='Business registration')"/>
 <body>
 <nav th:replace="fragments/navbar :: navbar"/>
 <div id="login-overlay" class="modal-dialog">
@@ -12,7 +11,7 @@
         <div class="modal-body">
             <div class="row">
                 <div class="col-xs-12">
-                    <form action="/merchant/add" method="post" th:object="${merchant}" enctype="multipart/form-data">
+                    <form th:action="@{'/merchant/' + *{id} + '/edit'}" th:method="post" th:object="${merchant}" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="category">Business category</label>
                             <select id="category" th:field="*{category}">
@@ -53,9 +52,8 @@
                             <!--<p th:if="${#fields.hasErrors('description')}" th:errors="*{description}"/>-->
                         </div>
                         <input class="btn btn-primary" type="submit" value="Submit"/>
-                        <input type="hidden" th:attr="name=${_csrf.parameterName}, value=${_csrf.token}"/>
+                        <input type="hidden" th:attr="name=${_csrf.parameterName},value=${_csrf.token}"/>
                     </form>
-                    <input type="hidden" th:attr="name=${_csrf.parameterName},value=${_csrf.token}"/>
                 </div>
             </div>
         </div>

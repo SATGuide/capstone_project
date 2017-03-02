@@ -181,15 +181,15 @@ i .services, .fa-taxi{
 /*================================================================*/
 /*Dining page*/
 
-.header-dining {
-    display: table;
-    width: 400px;
-    height: 461px;
-    background-position: right center;
-    background-image: url(img/chalkboard.jpg);
-    background-attachment: scroll;
-    margin-left: 200px;
-}
+/*.header-dining {*/
+    /*display: table;*/
+    /*width: 650px;*/
+    /*height: 450px;*/
+    /*background-position: right center;*/
+    /*background-image: url(img/chalkboard.jpg);*/
+    /*background-attachment: scroll;*/
+    /*margin-left: 0;*/
+/*}*/
 
 .text-vertical-center-dining {
     color: white;
@@ -200,7 +200,8 @@ i .services, .fa-taxi{
 
 .text-vertical-center-dining h1 {
     margin-top: 150px;
-    margin-left: 500px;
+    margin-right: 300px;
+    margin-left: 250px;
     padding: 0;
     font-family: "Brush Script MT";
     text-shadow: 4px 4px black;
@@ -217,7 +218,7 @@ i .services, .fa-taxi{
 }
 
 .service-item-dining {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -241,17 +242,6 @@ i .services-dining, .fa-glass{
 
 /*================================================================*/
 /*Things To Do page*/
-
-/*.header-thingstodo {
-    display: table;
-    width: 100%;
-    height: 290px ;
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: left, center, right;
-    background-image: url(img/seaworld2.jpg), url(img/golf.jpg), url(img/shopping.jpg);
-    background-attachment: scroll, scroll, scroll;
-    background-size: 35%;
-}*/
 
 .text-vertical-center-thingstodo {
     color: darkblue;
@@ -380,16 +370,16 @@ i .services, .fa-taxi{
 
 }
 
-.text-horizontal-right-general {
+.text-vertical-center-general {
     color: blue;
     display: table-cell;
     text-align: center;
     vertical-align: center;
 }
 
-.text-horizontal-right-general h1 {
+.text-vertical-center-general h1 {
     margin-top: 130px;
-    margin-left: 600px;
+    margin-left: 700px;
     padding: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-shadow: 1px 1px black;
@@ -509,6 +499,7 @@ hr.small {
 
 footer {
     padding: 0;
+    margin-top: auto;
     color: darkblue;
 }
 

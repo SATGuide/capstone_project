@@ -6,94 +6,86 @@
 <body>
 <navbar th:replace="fragments/navbar :: navbar"/>
 
-
 <!-- Header -->
 <header id="dining-title" class="header-dining">
-    <div class="text-vertical-center-dining">
 
-            <h1>Dining</h1>
 
-    </div>
+    <img style="float: left; margin: 0; height: auto; width: 60%; display: inline-block" src="/css/img/chalkboard.jpg" />
+
+    <img style="float: left; margin: 0; height: auto; width: 40%; display: inline-block" src="/css/img/Food-Collage.jpg" />
+
+
+
+
+    <!--<div class="text-vertical-center-dining">-->
+
+        <!--<h1>Dining</h1>-->
+
+    <!--</div>-->
+
 </header>
 
-<!--&lt;!&ndash; About &ndash;&gt;-->
-<!--<section id="about" class="about">-->
-    <!--<div class="container">-->
-        <!--<div class="row">-->
-            <!--<div class="col-lg-12 text-center">-->
-                <!--<h2>Your user friendly guide to San Antonio FUN!</h2>-->
-                <!--&lt;!&ndash;<p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>&ndash;&gt;-->
-            <!--</div>-->
-        <!--</div>-->
-        <!-- /.row -->
-    <!--</div>-->
-    <!-- /.container -->
-<!--</section>-->
 
 <!-- Services -->
 <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-<section id="services-dining" class="services bg-primary">
-    <div class="container">
+<!--<section id="services-dining" class="services bg-primary">-->
+    <div class="services bg-primary">
+        <hr class="large"/>
         <div class="row text-center">
-            <!--<div class="col-lg-10 col-lg-offset-1">-->
-                <!--<hr class="small" />-->
-                <!--<div class="row">-->
-                        <div class="col-xs-6 col-md-4">
-                        <div class="service-item=dining">
-                            <a th:href="@{/localcuisine}">
+
+            <div class="col-md-4 col-sm-12">
+                <div class="service-item=dining">
+                    <a th:href="@{/localcuisine}">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-map-marker fa-stack-1x text-primary"></i>
                             </span>
-                            <h4>
-                                <strong>Local Cuisine</strong>
-                            </h4>
-                            <p>Local eating venues.</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-4">
-                        <div class="service-item-dining">
-                            <a th:href="@{/favoriteats}">
+                        <h4>
+                            <strong>Local Cuisine</strong>
+                        </h4>
+                        <p>Local eating venues.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="service-item-dining">
+                    <a th:href="@{/favoriteats}">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-globe fa-stack-1x text-primary"></i>
                             </span>
-                            <h4>
-                                <strong>Favorite Eats</strong>
-                            </h4>
-                            <p>Find a list of popular restaurants.</p>
-                            </a>
-                        </div>
-                    </div>
-            <div class="col-xs-6 col-md-4">
+                        <h4>
+                            <strong>Favorite Eats</strong>
+                        </h4>
+                        <p>Find a list of popular restaurants.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
                 <div class="service-item-dining">
                     <a th:href="@{/barsclubs}">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-glass fa-stack-1x text-primary"></i>
                             </span>
-                    <h4>
-                        <strong>Bars/Clubs</strong>
-                    </h4>
-                    <p>Guide to local nightlife.</p>
-                        </a>
+                        <h4>
+                            <strong>Bars/Clubs</strong>
+                        </h4>
+                        <p>Guide to local nightlife.</p>
+                    </a>
                 </div>
             </div>
 
-                </div>
-                <!-- /.row (nested) -->
-            </div>
             <!--&lt;!&ndash; /.col-lg-10 &ndash;&gt;-->
-        <!--</div>-->
+        </div>
         <!--&lt;!&ndash; /.row &ndash;&gt;-->
-    <!--</div>-->
+    </div>
     <!-- /.container -->
-</section>
+<!--</section>-->
 
 <nav th:replace="fragments/leftNavbar :: leftNavbar"/>
 
-<section th:replace="fragments/map :: map" />
+<section th:replace="fragments/map :: map"/>
 
 <nav th:replace="fragments/footer :: footer"/>
 

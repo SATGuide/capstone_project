@@ -8,14 +8,32 @@
 
 html,
 body {
-    width: 100%;
+
     height: 100%;
+    width: 100%;
+
 }
 /*==========================================================================*/
 /*Login page*/
 
 .body {
     /*font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+
+}
+
+.container-login {
+
+    height: 100%;
+    width: auto;
+    background-color: lightgoldenrodyellow;
+
+}
+
+.header-login {
+    display: table;
+    width: 100%;
+    height: 200px;
+    /*color: #fff;*/
 
 }
 
@@ -26,6 +44,7 @@ body {
     border-style: groove;
     /*border-color: gray;*/
     border-width: 5px;
+    border-radius: 3px;
     margin-bottom: 20px;
     margin-top: 70px;
     float: left;
@@ -54,43 +73,17 @@ body {
 
 }
 
-.form-group-username {
-    height: 80px;
-    width: 300px;
-    margin-top: 60px;
-    margin-bottom: 20px;
-
-}
-
-.form-control-username {
-
-    height: 30px;
-    width: 500px;
+.input-form {
+    height: 45px;
+    width: 450px;
     border-color: gray;
     margin-top: 30px;
     margin-bottom: 20px;
-    margin-left: 200px;
-
-}
-.form-group-password {
-
-    height: 80px;
-    width: 300px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-
+    margin-left: 210px;
+    border-radius: 3px;
+    box-shadow: inset 0 2px 5px darkslategrey;
 }
 
-.form-control-password {
-
-    height: 30px;
-    width: 500px;
-    border-color: gray;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 200px;
-
-}
 .btn-primary {
 
     height: 35px;
@@ -103,130 +96,9 @@ body {
     margin-left: 340px;
 
 }
-.text-vertical-center-home {
-    color: white;
-    display: table-cell;
-    text-align: center;
-    vertical-align: center;
 
-}
-/*text for the header of the home page.*/
-.text-vertical-center-home h1 {
-    margin-top: 90px;
-    /*margin-left: 200px;*/
-    padding: 0;
-    font-family: Arial;
-    text-shadow: 2px 2px grey;
-    font-size: 4.5em;
-    font-weight: 700;
-}
-.text-vertical-center-dining {
-    color: white;
-    display: table-cell;
-    text-align: center;
-    vertical-align: center;
-
-}
-/*text for the header of the home page.*/
-
-.text-vertical-center-dining h1 {
-    margin-top: 150px;
-    margin-left: 500px;
-    padding: 0;
-    font-family: "Brush Script MT";
-    text-shadow: 4px 4px black;
-    font-size: 7em;
-    font-weight: 500;
-
-}
-.text-vertical-center-thingstodo {
-    color: darkblue;
-    display: table-cell;
-    text-align: center;
-    vertical-align: center;
-}
-
-.text-vertical-center-thingstodo h1 {
-    margin-top: 20px;
-    /*margin-left: 200px;*/
-    padding: 0;
-    font-family: Arial;
-    text-shadow: 1px 1px blue;
-    font-size: 4em;
-    font-weight: 500;
-}
-
-.text-vertical-center-transportation {
-    color: black;
-    display: table-cell;
-    text-align: center;
-    vertical-align: center;
-
-}
-/*text for the header of the transportation page.*/
-.text-vertical-center-transportation h1 {
-    margin-top: 150px;
-    /*margin-left: 200px;*/
-    padding: 0;
-    font-family: Arial;
-    text-shadow: 1px 1px white;
-    font-size: 4.5em;
-    font-weight: 700;
-}
-.text-horizontal-right-general {
-    color: blue;
-    display: table-cell;
-    text-align: center;
-    vertical-align: center;
-
-}
-/*text for the header of the home page.*/
-
-.text-horizontal-right-general h1 {
-    margin-top: 130px;
-    margin-left: 600px;
-    padding: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-shadow: 1px 1px black;
-    font-size: 4em;
-    font-weight: 500;
-
-}
-
-/* Custom Button Styles */
-
-/*.btn-dark {*/
-/*border-radius: 0;*/
-/*color: #fff;*/
-/*background-color: rgba(0,0,0,0.4);*/
-/*}*/
-
-/*.btn-dark:hover,*/
-/*.btn-dark:focus,*/
-/*.btn-dark:active {*/
-/*color: #fff;*/
-/*background-color: rgba(0,0,0,0.7);*/
-/*}*/
-
-/*.btn-light {*/
-/*border-radius: 0;*/
-/*color: #333;*/
-/*background-color: rgb(255,255,255);*/
-/*}*/
-
-/*.btn-light:hover,*/
-/*.btn-light:focus,*/
-/*.btn-light:active {*/
-/*color: #333;*/
-/*background-color: rgba(255,255,255,0.8);*/
-/*}*/
-
-/* Custom Horizontal Rule */
-
-hr.small {
-    max-width: 100px;
-}
-
+/*================================================================*/
+/*Home page*/
 
 /* Header */
 .header-home {
@@ -236,71 +108,31 @@ hr.small {
     /*color: #fff;*/
     background: url(img/bg-reduce.jpg) no-repeat left center scroll;
     background-size: cover;
-
-}
-.header-dining {
-    display: table;
-    width: 100%;
-    height: 400px;
-    color: #fff;
-    background-repeat: no-repeat, no-repeat;
-    background-position: left center, right center;
-    background-size: 500px, 780px ;
-    background-image: url(img/Food-Collage.jpg), url(img/chalkboard.jpg);
-    background-attachment: scroll, scroll;
-
-}
-.header-thingstodo {
-    display: table;
-    width: 100%;
-    height: 300px;
-    color: #fff;
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: left, center, right;
-    background-image: url(img/seaworld2.jpg), url(img/golf.jpg), url(img/shopping.jpg);
-    background-attachment: scroll, scroll, scroll;
-    background-size: 35%;
-
 }
 
-.header-transportation {
-    display: table;
-    width: 100%;
-    height: 400px;
-    background: url(img/sanantoniobus.png) no-repeat left center scroll;
-    background-size: cover;
+.text-vertical-center-home {
+    color: white;
+    display: table-cell;
+    text-align: center;
+    vertical-align: center;
 
 }
-.header-general {
-    display: table;
-    width: 100%;
-    height: 400px;
-    /*color: #fff;*/
-    background: url(img/vintagephone.jpeg) no-repeat left center scroll;
-    background-size: 50%;
-
-}
-.header-login {
-    display: table;
-    width: 100%;
-    height: 200px;
-    /*color: #fff;*/
-
-}
-
-
-/* About */
-
-.about {
-
-    padding: 20px 0;
+/*text for the header of the home page.*/
+.text-vertical-center-home h1 {
+    margin-top: 80px;
+    /*margin-left: 200px;*/
+    padding: 0;
+    font-family: Arial;
+    text-shadow: 2px 2px grey;
+    font-size: 4.5em;
+    font-weight: 700;
 }
 
 /* Services */
 
 #services-home {
     background-color: coral;
-    padding: 50px 0;
+    padding: 20px 0;
 }
 /*Home landing page icons*/
 .service-item-home {
@@ -329,16 +161,62 @@ i .services, .fa-taxi{
     color: gold;
 }
 
-/*===============================================================*/
+/*================================================================*/
+/*Dining page*/
 
-/*icon buttons on "Dining" landing page*/
+#chalkboard-img {
+    float: left;
+    margin: 0;
+    height: 409px;
+    width: 60%;
+    display: inline-block
+}
+#food-img {
+    float: left;
+    margin: 0;
+    height: 409px;
+    width: 40%;
+    display: inline-block
+}
+
+@media (max-width: 850px) {
+    #food-img {
+        display: none;
+    }
+    #chalboard-img {
+        width: 100%;
+    }
+}
+
+
+.text-vertical-center-dining {
+    color: white;
+    display: table-cell;
+    text-align: center;
+    vertical-align: center;
+}
+
+.text-vertical-center-dining h1 {
+    margin-top: 150px;
+    margin-right: 300px;
+    margin-left: 250px;
+    padding: 0;
+    font-family: "Brush Script MT";
+    text-shadow: 4px 4px black;
+    font-size: 7em;
+    font-weight: 500;
+
+}
+
+
+/*Services*/
 #services-dining {
     background-color: lightsteelblue;
     padding: 50px 0;
 }
 
 .service-item-dining {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -363,41 +241,6 @@ i .services-dining, .fa-glass{
 /*================================================================*/
 /*Things To Do page*/
 
-#rollercoaster-img {
-    float: left;
-    margin: 0;
-    height: 300px;
-    width: 33.3%;
-    display: inline-block
-}
-#golf-img {
-    float: left;
-    margin: 0;
-    height: 300px;
-    width: 33.3%;
-    display: inline-block
-}
-#shopping-img {
-    float: left;
-    margin: 0;
-    height: 300px;
-    width: 33.3%;
-    display: inline-block
-}
-
-@media (max-width: 850px) {
-    #golf-img {
-        display: none;
-    }
-    #shopping-img {
-        display: none;
-    }
-    #rollercoaster-img {
-        width: 100%;
-    }
-}
-
-
 .text-vertical-center-thingstodo {
     color: darkblue;
     display: table-cell;
@@ -414,11 +257,6 @@ i .services-dining, .fa-glass{
     font-size: 4em;
     font-weight: 500;
 }
-
-/*Services*/
-/*================================================================*/
-/*Things To Do page*/
-
 
 /*Services*/
 #services-thingstodo {
@@ -455,8 +293,35 @@ i .services, .fa-file-image-o{
     color: rebeccapurple;
 }
 
-/*=================================================================*/
-/*icons and color of icons on the "Transportation" landing page.*/
+/*================================================================*/
+/*Transportation page*/
+
+.header-transportation {
+    display: table;
+    width: 100%;
+    height: 400px;
+    background: url(img/sanantoniobus.png) no-repeat left center scroll;
+    background-size: cover;
+}
+
+.text-vertical-center-transportation {
+    color: black;
+    display: table-cell;
+    text-align: center;
+    vertical-align: center;
+}
+
+.text-vertical-center-transportation h1 {
+    margin-top: 150px;
+    /*margin-left: 200px;*/
+    padding: 0;
+    font-family: Arial;
+    text-shadow: 1px 1px white;
+    font-size: 4.5em;
+    font-weight: 700;
+}
+
+/*Services*/
 #services-transportation {
     background-color: dimgrey;
     padding: 50px 0;
@@ -491,9 +356,36 @@ i .services, .fa-taxi{
     color: gold;
 }
 
-/*============================================================*/
+/*================================================================*/
+/*General page*/
 
-/*this section is for both the icons and color of each icon on the "General" landing page.*/
+.header-general {
+    display: table;
+    width: 100%;
+    height: 400px;
+    background: url(img/vintagephone.jpeg) no-repeat left center scroll;
+    background-size: 50%;
+
+}
+
+.text-vertical-center-general {
+    color: blue;
+    display: table-cell;
+    text-align: center;
+    vertical-align: center;
+}
+
+.text-vertical-center-general h1 {
+    margin-top: 130px;
+    margin-left: 700px;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-shadow: 1px 1px black;
+    font-size: 4em;
+    font-weight: 500;
+}
+
+/*Services*/
 #services-general {
     background-color: grey;
     padding: 50px 0;
@@ -524,6 +416,18 @@ i .services, .fa-plus-square{
     color: red;
 }
 
+/* Custom Horizontal Rule */
+
+hr.small {
+    max-width: 100px;
+}
+
+/* About */
+
+.about {
+
+    padding: 20px 0;
+}
 
 /* Callout */
 
@@ -588,24 +492,16 @@ i .services, .fa-plus-square{
     width:100%;
 }
 
+/*=======================================================*/
 /* Footer */
 
 footer {
-    padding: 10px 0;
-
-}
-.list-unstyled, i .fa-phone {
-    color: black;
+    padding: 0;
+    margin-top: auto;
+    color: darkblue;
 }
 
 
-/*#to-top {*/
-    /*display: none;*/
-    /*position: fixed;*/
-    /*bottom: 5px;*/
-    /*right: 5px;*/
-
-/*}*/
 
 /*=======================================*/
 

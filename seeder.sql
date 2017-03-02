@@ -1,6 +1,6 @@
 USE satxinteractive_db;
 
-INSERT INTO users (company, email, first_name, last_name, password, phone, username) VALUES (hmt3Design,	harry@hmt3design.com, Harry, Thomas, $2a$10$4iKDkCCaz6ULscVyUylZFeu9CZMrNHG4USBi1TcL1atgEQec7bH0S, 2106834821, hmt3);
+INSERT INTO users (company, email, first_name, last_name, password, phone, username) VALUES ('hmt3Design',	'harry@hmt3design.com', 'Harry', 'Thomas', 'codeup', 2106834821, 'hmt3');
 
 
 INSERT INTO category (category) VALUES ('Local restaurants (not chain)');

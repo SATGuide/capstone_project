@@ -45,7 +45,7 @@ public class registrationController {
         if (validation.hasErrors()) {
             model.addAttribute("errors", validation);
             model.addAttribute("user", user);
-            return "/posts/register";
+            return "registration";
         }
 
         String hashedPassword = encoder.encode(user.getPassword());

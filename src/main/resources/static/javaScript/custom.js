@@ -2,6 +2,10 @@
  * Created by jefferysmith on 2/16/17.
  */
 
+
+(function() {
+    'use strict';
+
 // format phone numbers as they are entered in forms
 $('.phoneFormat').on('input', function() {
     var phoneNumber = $(this).val().replace(/[^\d]/g, '');
@@ -17,8 +21,6 @@ $(".phoneText").text(function(i, text) {
     return text;
 });
 
-(function() {
-    'use strict';
 
     var category;
     var categoryTitle = '';
@@ -318,6 +320,8 @@ $(".phoneText").text(function(i, text) {
             }
         });
     });
+
+    $("#phone").inputmask({"mask": "(999) 999-9999"});
 
 // #to-top button appears after scrolling
 

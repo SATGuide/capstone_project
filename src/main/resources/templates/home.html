@@ -8,10 +8,8 @@
 
 <!-- Header -->
 <header id="home-title" class="header-home">
-        <div class="text-vertical-center-home">
-
-            <h1>SATX Interactive</h1>
-
+    <div class="text-vertical-center-home">
+        <h1>SATX Interactive</h1>
     </div>
 
 
@@ -34,10 +32,11 @@
 <section id="services-home" class="services bg-primary">
     <div class="container">
         <div class="row text-center">
-            <div class="col-lg-10  col-lg-offset-1">
-                <hr class="large" />
+            <div class="col-lg-10 col-lg-offset-1">
+                <!--<h2>Activities</h2>-->
+                <!--<hr class="small" />-->
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <div class="service-item-home">
                             <a th:href="@{/dining}">
                                 <span class="fa-stack fa-4x">
@@ -52,7 +51,7 @@
                                 <!--<a th:href="@{/dining}" class="btn btn-light">Learn More</a>-->
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <div class="service-item-home">
                             <a th:href="@{/thingstodo}">
                                 <span class="fa-stack fa-4x">
@@ -67,7 +66,22 @@
                                 <!--<a th:href="@{/thingstodo}" class="btn btn-light">Learn More</a>-->
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item-home">
+                            <a th:href="@{/localevents}">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-ticket fa-stack-1x text-primary"></i>
+                            </span>
+                            <h4>
+                                <strong>Local Events</strong>
+                            </h4>
+                            <p>San Antonio always has <em>something</em> to celebrate, starting with our annual two-week party known as Fiesta.</p>
+                            </a>
+                            <!--<a th:href="@{/localevents}" class="btn btn-light">Learn More</a>-->
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
                         <div class="service-item-home">
                             <a th:href="@{/transportation}">
                                 <span class="fa-stack fa-4x">
@@ -76,21 +90,6 @@
                             </span>
                             <h4>
                                 <strong>Transportation</strong>
-                            </h4>
-                            <p>Bus, taxi, rideshare, bicycle, shoe leather: There's lots of ways to get around the Alamo City.</p>
-                            </a>
-                            <!--<a th:href="@{/localevents}" class="btn btn-light">Learn More</a>-->
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="service-item-home">
-                            <a th:href="@{/general}">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-university fa-stack-1x text-primary"></i>
-                            </span>
-                            <h4>
-                                <strong>General</strong>
                             </h4>
                             <p>Bus, taxi, rideshare, bicycle, shoe leather: There's lots of ways to get around the Alamo City.</p>
                             </a>
@@ -105,11 +104,10 @@
          <!--/.row-->
     </div>
      <!--/.container-->
-    <nav th:replace="fragments/footer :: footer"/>
 
 </section>
 
 
-<!--<footer th:replace="fragments/footer :: footer"/>-->
+<footer th:replace="fragments/footer :: footer"/>
 </body>
 </html>

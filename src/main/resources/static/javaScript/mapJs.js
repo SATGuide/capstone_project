@@ -162,27 +162,6 @@
         // Macdoma, Texas
         new google.maps.LatLng(29.3258, -98.6911));
 
-    // Listen for the dragend event
-    google.maps.event.addListener(map, 'dragend', function () {
-        if (strictBounds.contains(map.getCenter())) return;
-
-        // Move the map back within the bounds
-
-        var c = map.getCenter(),
-            x = c.lng(),
-            y = c.lat(),
-            maxX = strictBounds.getNorthEast().lng(),
-            maxY = strictBounds.getNorthEast().lat(),
-            minX = strictBounds.getSouthWest().lng(),
-            minY = strictBounds.getSouthWest().lat();
-
-        if (x < minX) x = minX;
-        if (x > maxX) x = maxX;
-        if (y < minY) y = minY;
-        if (y > maxY) y = maxY;
-
-        map.setCenter(new google.maps.LatLng(y, x));
-    });
 
     // Limit the zoom level
     google.maps.event.addListener(map, 'zoom_changed', function () {

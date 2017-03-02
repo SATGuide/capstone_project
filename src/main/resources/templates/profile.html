@@ -14,6 +14,7 @@
         <div class="modal-body">
             <div class="row">
                 <div class="col-xs-12">
+            <a href="/merchant/add" class="btn btn-success">Add new business</a>
                     <div th:each="merchant : ${merchants}">
                         <h4 th:text="${merchant.busName}"/>
                         <ul>

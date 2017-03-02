@@ -202,9 +202,6 @@
         // show selected Category on top of menu
         $('#categoryTitle').html(categoryTitle);
 
-        // hide right menu button to prevent overlapping menu
-        $('#menu-toggle').hide();
-
         loadMapDetail();
     }
 

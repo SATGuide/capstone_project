@@ -195,7 +195,7 @@
 
     function openLeftMenu() {
 
-        $("#sidebar-wrapper").removeClass("active");
+        // $("#sidebar-wrapper").removeClass("active");
         // show left menu
         $("#left-sidebar-wrapper").addClass("active");
 

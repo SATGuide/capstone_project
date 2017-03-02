@@ -5,35 +5,64 @@
 
 <body>
 
-    <nav th:replace="fragments/navbar :: navbar"/>
+<nav th:replace="fragments/navbar :: navbar"/>
 
-<div class="container-login">
-    <!--<header id="top" class="header-login">-->
-        <!--<div class="text-vertical-center-login">-->
-            <!--<h1>Login</h1>-->
-        <!--</div>-->
-    <!--</header>-->
-    <div class="square-login">
-<form th:action="@{/login}" method="post">
-    <div class="text-vertical-center-login">
-        <h1>Login</h1>
-    </div>
-    <div class="form-group-username">
-        <!--<label for="username">Username</label>-->
-        <input id="username" name="username" type="text" class="form-control-username" placeholder="Username"/>
-    </div>
-    <div class="form-group-password">
-        <!--<label for="password">Password</label>-->
-        <input id="password" name="password" type="password" class="form-control-password" placeholder="Password"/>
-    </div>
-    <div class="form-group-submit">
-        <input id="submit" name="submit" type="submit" value="Log In" class="btn btn-primary" />
-    </div>
-</form>
+<!--<div class="container-login">-->
+<!--&lt;!&ndash;<header id="top" class="header-login">&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="text-vertical-center-login">&ndash;&gt;-->
+<!--&lt;!&ndash;<h1>Login</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</header>&ndash;&gt;-->
+<!--<div class="square-login">-->
+<div id="login-overlay" class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Login to SATX Interactive</h4>
         </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="well">
+                        <form th:action="@{/login}" method="post">
+                            <div class="form-group">
+                                <label for="username" class="control-label">Username</label>
+                                <input type="text" class="form-control username" id="username" name="username" value="" required="" title="Please enter your username" />
+                                <span class="help-block"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="control-label">Password</label>
+                                <input type="password" class="form-control password" id="password" name="password" value="" required="" title="Please enter your password" />
+                                <span class="help-block"></span>
+                            </div>
+                            <div id="loginErrorMsg" class="alert alert-error hide">Wrong username og password</div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="remember" id="remember" /> Remember login
+                                </label>
+                                <p class="help-block">(if this is a private computer)</p>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block">Login</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <p class="lead">Merchants: Register now for <span class="text-success">FREE</span></p>
+                    <ul class="list-unstyled" style="line-height: 2">
+                        <li><span class="fa fa-check text-success"></span> Get your business(es) listed</li>
+                        <li><span class="fa fa-check text-success"></span> Expand your visibility</li>
+                        <li><span class="fa fa-check text-success"></span> List your offerings</li>
+                        <li><span class="fa fa-check text-success"></span> Edit at any time</li>
+                        <li><span class="fa fa-check text-success"></span> Be part of our growing community!</li>
+                    </ul>
+                    <p><a href="/register" class="btn btn-info btn-block">Yes please, register now!</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
 <div id="footer-login">
-<nav th:replace="fragments/footer :: footer"/>
+    <nav th:replace="fragments/footer :: footer"/>
 </div>
 
 

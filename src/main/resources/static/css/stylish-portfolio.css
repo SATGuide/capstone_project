@@ -71,11 +71,11 @@ i .services, .fa-cutlery {
 i .services, .fa-users{
     color: dodgerblue;
 }
-i .services, .fa-ticket{
-    color: darkblue;
-}
 i .services, .fa-taxi{
     color: gold;
+}
+i .services, .fa-book{
+    color: brown;
 }
 
 /*================================================================*/
@@ -113,9 +113,10 @@ i .services, .fa-taxi{
 }
 
 .text-vertical-center-dining h1 {
-    margin-top: 150px;
-    margin-right: 300px;
-    margin-left: 250px;
+    position: absolute;
+    top: 125px;
+    left: -263px;
+    width: 100%;
     padding: 0;
     font-family: "Brush Script MT";
     text-shadow: 4px 4px black;
@@ -126,8 +127,8 @@ i .services, .fa-taxi{
 
 /*Services*/
 #services-dining {
-    background-color: lightsteelblue;
-    padding: 50px 0;
+    background-color: #c1e2b3;
+    padding: 20px 0;
 }
 
 .service-item-dining {
@@ -152,6 +153,7 @@ i .services-dining, .fa-glass{
     color: silver;
 
 }
+
 
 /*================================================================*/
 /*Things To Do page*/
@@ -209,7 +211,7 @@ i .services-dining, .fa-glass{
 /*Services*/
 #services-thingstodo {
     background-color: cornflowerblue;
-    padding: 50px 0;
+    padding: 20px 0;
 }
 .service-item-thingstodo {
     margin-bottom: 30px;
@@ -225,8 +227,8 @@ i .services, .fa-circle{
     color: white;
 }
 
-i .services, .fa-film {
-    color: black;
+i .services, .fa-file-image-o {
+    color: rebeccapurple;
 }
 i .services, .fa-cc-mastercard{
     color: mediumblue;
@@ -237,8 +239,8 @@ i .services, .fa-flag{
 i .services, .fa-tree{
     color: green;
 }
-i .services, .fa-file-image-o{
-    color: rebeccapurple;
+i .services, .fa-film{
+    color: black;
 }
 
 /*================================================================*/
@@ -267,11 +269,17 @@ i .services, .fa-file-image-o{
     font-size: 4.5em;
     font-weight: 700;
 }
+@media (max-width: 450px) {
+    .text-vertical-center-transportation h1 {
+        font-size: 3.5em;
+    }
+
+}
 
 /*Services*/
 #services-transportation {
-    background-color: dimgrey;
-    padding: 50px 0;
+    background-color: lightsteelblue;
+    padding: 20px 0;
 }
 .service-item-transportation {
     margin-bottom: 30px;
@@ -319,9 +327,6 @@ i .services, .fa-taxi{
     #vintagephone-img {
         display: none;
     }
-    #phonenumber h1 {
-        width: 100%;
-    }
 }
 
 .header-general {
@@ -368,7 +373,7 @@ i .services, .fa-graduation-cap{
     color: black;
 }
 i .services, .fa-university{
-    color: darkslategray;
+    color: darkolivegreen;
 }
 i .services, .fa-plus-square{
     color: red;

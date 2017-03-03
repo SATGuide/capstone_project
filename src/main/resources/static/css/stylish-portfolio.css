@@ -366,7 +366,7 @@ h2 {
     text-shadow: black;
 }
 h4, p {
-    color: darkblue;
+    color: white;
 
 }
 i .services, .fa-graduation-cap{
@@ -461,7 +461,7 @@ hr.small {
 footer {
     padding: 0;
     margin-top: auto;
-    color: darkblue;
+    color: white;
 }
 
 
@@ -548,6 +548,13 @@ footer {
 .sidebar-nav > .sidebar-brand a:hover {
     color: #fff;
     background: none;
+}
+#logout {
+    color: white;
+    background-color: limegreen;
+    border-radius: 3px;
+    width: 36%;
+
 }
 
 #menu-toggle {

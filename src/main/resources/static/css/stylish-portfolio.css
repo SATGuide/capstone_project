@@ -521,7 +521,7 @@ footer {
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #999;
+    color: whitesmoke;
 }
 
 .sidebar-nav li a:hover {
@@ -542,7 +542,7 @@ footer {
 }
 
 .sidebar-nav > .sidebar-brand a {
-    color: #999;
+    color: whitesmoke;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
@@ -588,18 +588,32 @@ footer {
     margin: 5px 5px 0 0;
 }
 
-.fa-caret-right{
+a .fa-arrow-circle-o-right{
     font-size:45px;
-    padding:5px;
+    padding:2px 5px 2px 5px;
+    text-indent:0;
     color:whitesmoke;
-    background-color:black;
+    background-color:rgba(0,0,0,.5);
+    border-radius:10px;
 }
 
-.fa-caret-left{
-    margin: 5px 0 0 270px;
+a .fa-arrow-circle-o-left{
+    font-size:45px;
+    text-indent:0;
+    padding:2px 5px 2px 5px;
     color:whitesmoke;
+    background-color:rgba(0,0,0,.5);
+    border-radius:10px;
+
+
 }
-/*=========================================================*/
+#SATXbrand{
+    color:whitesmoke;
+    font-size:18px;
+    line-height:45px;
+}
+
+/*==========Google Maps API Marker Labes===============================================*/
 .labels {
     color: white;
     background-color:transparent;

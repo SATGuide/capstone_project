@@ -7,19 +7,20 @@
 <body>
 
 <nav th:fragment="leftNavbar">
-    <a id="left-menu-toggle" href="#" class="btn btn-dark btn-lg toggle hidden" ><i class="fa fa-caret-right" style="font-size:45px"></i></a>
+    <a id="left-menu-toggle" href="#" class="btn btn-dark btn-lg toggle hidden" ><i class="fa fa-arrow-circle-o-right"></i></a>
 
     <!-- Navigation -->
     <nav id="left-sidebar-wrapper">
         <ul class="sidebar-nav">
-            <a id="left-menu-close" href="#" class="fa fa-caret-left" style="font-size:45px"></a>
+            <li>
+                <a id="left-menu-close" href="#" class="btn btn-dark btn-lg" ><i class="fa fa-arrow-circle-o-left pull-right"></i></a>
+            </li>
             <li class="sidebar-brand">
                 <a id="categoryTitle" href="#"></a>
             </li>
-            <ul id="dynamicList" style="list-style: none"></ul>
+            <li id="dynamicList" style="list-style: none"></li>
         </ul>
     </nav>
-
 </nav>
 </body>
 </html>

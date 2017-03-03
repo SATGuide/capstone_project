@@ -14,6 +14,14 @@
         <div class="modal-body">
             <div class="row">
                 <div class="col-xs-12">
+                    <p>Company: <span th:text="${company}" /></p>
+                    <p>Email: <span th:text="${email}" /></p>
+                    <p>Phone: <span th:text="${phone}" /></p>
+                    <a th:href="${'/profile/' +user.id+ '/edit'}" class="btn btn-info">Edit</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
             <a href="/merchant/add" class="btn btn-success">Add new business</a>
                     <div th:each="merchant : ${merchants}">
                         <form th:attr="action=${'/merchant/' + merchant.id}" method="post">
@@ -26,10 +34,10 @@
 
 
 
-                            <input type="submit" value="Delete" class="btn" />
+                            <input type="submit" value="Delete" class="btn btn-warning" />
                             <input type="hidden" th:attr="name=${_csrf.parameterName},value=${_csrf.token}" />
+                            <a th:href="${'/merchant/' +merchant.id+ '/edit'}" class="btn btn-info">Edit</a>
                         </form>
-                            <a th:href="${'/merchant/' +merchant.id+ '/edit'}"><button>Edit</button></a>
                     </div>
                 </div>
             </div>

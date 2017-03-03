@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header(title='Edit merchant profile')"/>
+<body>
+
+<nav th:replace="fragments/navbar :: navbar"/>
+<div id="login-overlay" class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Login to SATX Interactive</h4>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-xs-12">
+                    <form th:action="@{'/profile/' + *{id} + '/edit'}" th:method="post" th:object="${user}"
+                          enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" class="form-control" id="first-name" th:field="*{firstName}"/>
+                            <!--<p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" />-->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" class="form-control" id="last-name" th:field="*{lastName}"/>
+                            <p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" th:field="*{username}"/>
+                            <!--<p th:if="${#fields.hasErrors('username')}" th:errors="*{username}" />-->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" th:field="*{email}"/>
+                            <!--<p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" />-->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" th:field="*{password}"/>
+                            <!--<p th:if="${#fields.hasErrors('password')}" th:errors="*{password}" />-->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirm-password" name="confirm-password"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" class="form-control" id="company" th:field="*{company}"/>
+                            <!--<p th:if="${#fields.hasErrors('company')}" th:errors="*{company}" />-->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number (10 digits, area code first, no spaces or
+                                symbols)</label><br/>
+                            <input type="text" class="form-class phoneFormat" id="phone" th:field="*{phone}"/>
+                            <!--<p th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}" />-->
+                        </div>
+                        <input type="submit" value="Submit"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer-login">
+    <nav th:replace="fragments/footer :: footer"/>
+</div>
+</body>
+</html>

@@ -13,89 +13,6 @@ body {
     width: 100%;
 
 }
-/*==========================================================================*/
-/*Login page*/
-
-.body {
-    /*font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;*/
-
-}
-
-.container-login {
-
-    height: 100%;
-    width: auto;
-    background-color: lightgoldenrodyellow;
-
-}
-
-.header-login {
-    display: table;
-    width: 100%;
-    height: 200px;
-    /*color: #fff;*/
-
-}
-
-.square-login {
-    height: 500px;
-    width: 900px;
-    background-image: url(img/stairs.jpg);
-    border-style: groove;
-    /*border-color: gray;*/
-    border-width: 5px;
-    border-radius: 3px;
-    margin-bottom: 20px;
-    margin-top: 70px;
-    float: left;
-    margin-left: 190px;
-
-}
-.text-vertical-center-login {
-
-    color: steelblue;
-    /*!*display: table-cell;*!*/
-    /*!*text-align: center;*!*/
-    /*!*vertical-align: center;*!*/
-
-}
-.text-vertical-center-login h1{
-
-    padding: 0;
-    height: 15px;
-    text-shadow: 1.5px 1.5px black;
-    text-decoration: solid;
-    font-family: Sathu;
-    font-size: 4.5em;
-    font-weight: 500;
-    margin-top: 95px;
-    margin-left: 350px;
-
-}
-
-.input-form {
-    height: 45px;
-    width: 450px;
-    border-color: gray;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    margin-left: 210px;
-    border-radius: 3px;
-    box-shadow: inset 0 2px 5px darkslategrey;
-}
-
-.btn-primary {
-
-    height: 35px;
-    width: 200px;
-    background-color: #337ab7;
-    text-align: center;
-    color: white;
-    border: groove;
-    border-color: gray;
-    margin-left: 340px;
-
-}
 
 /*================================================================*/
 /*Home page*/
@@ -183,11 +100,10 @@ i .services, .fa-taxi{
     #food-img {
         display: none;
     }
-    #chalboard-img {
+    #chalkboard-img {
         width: 100%;
     }
 }
-
 
 .text-vertical-center-dining {
     color: white;
@@ -207,7 +123,6 @@ i .services, .fa-taxi{
     font-weight: 500;
 
 }
-
 
 /*Services*/
 #services-dining {
@@ -284,7 +199,6 @@ i .services-dining, .fa-glass{
 
 .text-vertical-center-thingstodo h1 {
     margin-top: 20px;
-    /*margin-left: 200px;*/
     padding: 0;
     font-family: Arial;
     text-shadow: 1px 1px blue;
@@ -347,9 +261,8 @@ i .services, .fa-file-image-o{
 
 .text-vertical-center-transportation h1 {
     margin-top: 150px;
-    /*margin-left: 200px;*/
     padding: 0;
-    font-family: Arial;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-shadow: 1px 1px white;
     font-size: 4.5em;
     font-weight: 700;
@@ -393,35 +306,46 @@ i .services, .fa-taxi{
 /*================================================================*/
 /*General page*/
 
+#vintagephone-img {
+    float: left;
+    margin: 0;
+    height: 409px;
+    width: 55%;
+    display: inline-block
+}
+
+@media (max-width: 850px) {
+
+    #vintagephone-img {
+        display: none;
+    }
+    #phonenumber h1 {
+        width: 100%;
+    }
+}
+
 .header-general {
     display: table;
     width: 100%;
     height: 400px;
-    background: url(img/vintagephone.jpeg) no-repeat left center scroll;
     background-size: 50%;
 
 }
-
-.text-vertical-center-general {
-    color: blue;
-    display: table-cell;
+#phonenumber {
+    color: black;
     text-align: center;
-    vertical-align: center;
-}
-
-.text-vertical-center-general h1 {
-    margin-top: 130px;
-    margin-left: 700px;
+    margin-top: 150px;
+    margin-left: 730px;
     padding: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-shadow: 1px 1px black;
-    font-size: 4em;
+    text-shadow: 1px 1px silver;
+    font-size: 8em;
     font-weight: 500;
 }
 
 /*Services*/
 #services-general {
-    background-color: grey;
+    background-color: silver;
     padding: 50px 0;
 }
 .service-item-general {

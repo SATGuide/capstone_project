@@ -357,15 +357,15 @@ i .services, .fa-file-image-o{
 
 /*Services*/
 #services-transportation {
-    background-color: dimgrey;
+    background-color: lightblue;
     padding: 50px 0;
 }
 .service-item-transportation {
     margin-bottom: 30px;
 
 }
-.service-item-transportation p{
-    margin-bottom: 30px;
+.service-item-transportation p {
+    margin-bottom: 4px;
     text-align: center;
 }
 

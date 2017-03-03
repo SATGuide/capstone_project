@@ -17,12 +17,12 @@
                     <p>Company: <span th:text="${company}" /></p>
                     <p>Email: <span th:text="${email}" /></p>
                     <p>Phone: <span th:text="${phone}" /></p>
-                    <a th:href="${'/profile/' +user.id+ '/edit'}" class="btn btn-info">Edit</a>
+                    <a th:href="${'/profile/' +user.id+ '/edit'}" class="btn btn-info">Edit profile</a>
+                    <a href="/merchant/add" class="btn btn-success">Add new business</a>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12">
-            <a href="/merchant/add" class="btn btn-success">Add new business</a>
                     <div th:each="merchant : ${merchants}">
                         <form th:attr="action=${'/merchant/' + merchant.id}" method="post">
                             <h4 th:text="${merchant.busName}"/>
@@ -46,6 +46,9 @@
 </div>
 
 <nav th:replace="fragments/footer :: footer"/>
+<!-- Custom phone JavaScript -->
+<script src="../javaScript/phonejs.js"></script>
+
 
 </body>
 </html>

@@ -13,6 +13,89 @@ body {
     width: 100%;
 
 }
+/*==========================================================================*/
+/*Login page*/
+
+.body {
+    /*font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+
+}
+
+.container-login {
+
+    height: 100%;
+    width: auto;
+    background-color: lightgoldenrodyellow;
+
+}
+
+.header-login {
+    display: table;
+    width: 100%;
+    height: 200px;
+    /*color: #fff;*/
+
+}
+
+.square-login {
+    height: 500px;
+    width: 900px;
+    background-image: url(img/stairs.jpg);
+    border-style: groove;
+    /*border-color: gray;*/
+    border-width: 5px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    margin-top: 70px;
+    float: left;
+    margin-left: 190px;
+
+}
+.text-vertical-center-login {
+
+    color: steelblue;
+    /*!*display: table-cell;*!*/
+    /*!*text-align: center;*!*/
+    /*!*vertical-align: center;*!*/
+
+}
+.text-vertical-center-login h1{
+
+    padding: 0;
+    height: 15px;
+    text-shadow: 1.5px 1.5px black;
+    text-decoration: solid;
+    font-family: Sathu;
+    font-size: 4.5em;
+    font-weight: 500;
+    margin-top: 95px;
+    margin-left: 350px;
+
+}
+
+.input-form {
+    height: 45px;
+    width: 450px;
+    border-color: gray;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 210px;
+    border-radius: 3px;
+    box-shadow: inset 0 2px 5px darkslategrey;
+}
+
+.btn-primary {
+
+    height: 35px;
+    width: 200px;
+    background-color: #337ab7;
+    text-align: center;
+    color: white;
+    border: groove;
+    border-color: gray;
+    margin-left: 340px;
+
+}
 
 /*================================================================*/
 /*Home page*/
@@ -71,11 +154,11 @@ i .services, .fa-cutlery {
 i .services, .fa-users{
     color: dodgerblue;
 }
+i .services, .fa-ticket{
+    color: darkblue;
+}
 i .services, .fa-taxi{
     color: gold;
-}
-i .services, .fa-book{
-    color: brown;
 }
 
 /*================================================================*/
@@ -100,10 +183,11 @@ i .services, .fa-book{
     #food-img {
         display: none;
     }
-    #chalkboard-img {
+    #chalboard-img {
         width: 100%;
     }
 }
+
 
 .text-vertical-center-dining {
     color: white;
@@ -113,10 +197,9 @@ i .services, .fa-book{
 }
 
 .text-vertical-center-dining h1 {
-    position: absolute;
-    top: 125px;
-    left: -263px;
-    width: 100%;
+    margin-top: 150px;
+    margin-right: 300px;
+    margin-left: 250px;
     padding: 0;
     font-family: "Brush Script MT";
     text-shadow: 4px 4px black;
@@ -125,10 +208,11 @@ i .services, .fa-book{
 
 }
 
+
 /*Services*/
 #services-dining {
-    background-color: #c1e2b3;
-    padding: 20px 0;
+    background-color: lightsteelblue;
+    padding: 50px 0;
 }
 
 .service-item-dining {
@@ -153,7 +237,6 @@ i .services-dining, .fa-glass{
     color: silver;
 
 }
-
 
 /*================================================================*/
 /*Things To Do page*/
@@ -201,6 +284,7 @@ i .services-dining, .fa-glass{
 
 .text-vertical-center-thingstodo h1 {
     margin-top: 20px;
+    /*margin-left: 200px;*/
     padding: 0;
     font-family: Arial;
     text-shadow: 1px 1px blue;
@@ -211,7 +295,7 @@ i .services-dining, .fa-glass{
 /*Services*/
 #services-thingstodo {
     background-color: cornflowerblue;
-    padding: 20px 0;
+    padding: 50px 0;
 }
 .service-item-thingstodo {
     margin-bottom: 30px;
@@ -227,8 +311,8 @@ i .services, .fa-circle{
     color: white;
 }
 
-i .services, .fa-file-image-o {
-    color: rebeccapurple;
+i .services, .fa-film {
+    color: black;
 }
 i .services, .fa-cc-mastercard{
     color: mediumblue;
@@ -239,8 +323,8 @@ i .services, .fa-flag{
 i .services, .fa-tree{
     color: green;
 }
-i .services, .fa-film{
-    color: black;
+i .services, .fa-file-image-o{
+    color: rebeccapurple;
 }
 
 /*================================================================*/
@@ -263,25 +347,18 @@ i .services, .fa-film{
 
 .text-vertical-center-transportation h1 {
     margin-top: 150px;
+    /*margin-left: 200px;*/
     padding: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Arial;
     text-shadow: 1px 1px white;
     font-size: 4.5em;
     font-weight: 700;
 }
-@media (max-width: 450px) {
-    .text-vertical-center-transportation h1 {
-        font-size: 3.5em;
-    }
-
-}
 
 /*Services*/
 #services-transportation {
-
     background-color: lightyellow;
     padding: 50px 0;
-
 }
 .service-item-transportation {
     margin-bottom: 30px;
@@ -316,43 +393,35 @@ i .services, .fa-taxi{
 /*================================================================*/
 /*General page*/
 
-#vintagephone-img {
-    float: left;
-    margin: 0;
-    height: 409px;
-    width: 55%;
-    display: inline-block
-}
-
-@media (max-width: 850px) {
-
-    #vintagephone-img {
-        display: none;
-    }
-}
-
 .header-general {
     display: table;
     width: 100%;
     height: 400px;
+    background: url(img/vintagephone.jpeg) no-repeat left center scroll;
     background-size: 50%;
 
 }
-#phonenumber {
-    color: black;
+
+.text-vertical-center-general {
+    color: blue;
+    display: table-cell;
     text-align: center;
-    margin-top: 150px;
-    margin-left: 730px;
+    vertical-align: center;
+}
+
+.text-vertical-center-general h1 {
+    margin-top: 130px;
+    margin-left: 700px;
     padding: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-shadow: 1px 1px silver;
-    font-size: 8em;
+    text-shadow: 1px 1px black;
+    font-size: 4em;
     font-weight: 500;
 }
 
 /*Services*/
 #services-general {
-    background-color: silver;
+    background-color: grey;
     padding: 50px 0;
 }
 .service-item-general {
@@ -368,14 +437,14 @@ h2 {
     text-shadow: black;
 }
 h4, p {
-    color: white;
+    color: darkblue;
 
 }
 i .services, .fa-graduation-cap{
     color: black;
 }
 i .services, .fa-university{
-    color: darkolivegreen;
+    color: darkslategray;
 }
 i .services, .fa-plus-square{
     color: red;
@@ -463,7 +532,7 @@ hr.small {
 footer {
     padding: 0;
     margin-top: auto;
-    color: white;
+    color: darkblue;
 }
 
 
@@ -523,7 +592,7 @@ footer {
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: whitesmoke;
+    color: #999;
 }
 
 .sidebar-nav li a:hover {
@@ -544,19 +613,12 @@ footer {
 }
 
 .sidebar-nav > .sidebar-brand a {
-    color: whitesmoke;
+    color: #999;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
     color: #fff;
     background: none;
-}
-#logout {
-    color: white;
-    background-color: limegreen;
-    border-radius: 3px;
-    width: 36%;
-
 }
 
 #menu-toggle {
@@ -597,32 +659,18 @@ footer {
     margin: 5px 5px 0 0;
 }
 
-a .fa-arrow-circle-o-right{
+.fa-caret-right{
     font-size:45px;
-    padding:2px 5px 2px 5px;
-    text-indent:0;
+    padding:5px;
     color:whitesmoke;
-    background-color:rgba(0,0,0,.5);
-    border-radius:10px;
+    background-color:black;
 }
 
-a .fa-arrow-circle-o-left{
-    font-size:45px;
-    text-indent:0;
-    padding:2px 5px 2px 5px;
+.fa-caret-left{
+    margin: 5px 0 0 270px;
     color:whitesmoke;
-    background-color:rgba(0,0,0,.5);
-    border-radius:10px;
-
-
 }
-#SATXbrand{
-    color:whitesmoke;
-    font-size:18px;
-    line-height:45px;
-}
-
-/*==========Google Maps API Marker Labes===============================================*/
+/*=========================================================*/
 .labels {
     color: white;
     background-color:transparent;
@@ -632,3 +680,8 @@ a .fa-arrow-circle-o-left{
     width: 30px;
     white-space: nowrap;
  }
+
+.formpages {
+    background-color: lightgoldenrodyellow;
+    padding-top: 3em;
+}

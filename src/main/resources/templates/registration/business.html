@@ -31,10 +31,20 @@
                         </div>
                         <div class="form-group">
                             <label for="bus_address">Street address</label>
-                            <input type="text" id="bus_address" name="bus_address" class="form-control"/>
+                            <input type="text" id="bus_address" name="bus_address" class="form-control" th:field="*{busAddress}"/>
                             <!--<p th:if="${#fields.hasErrors('bus_address')}" th:errors="*{bus_address}"/>-->
                         </div>
                         <div class="form-group">
+                            <div class="form-group">
+                                <label for="bus_address">City</label>
+                                <input type="text" id="city" name="city" class="form-control" th:field="*{city}"/>
+                                <!--<p th:if="${#fields.hasErrors('bus_address')}" th:errors="*{city}"/>-->
+                            </div>
+                            <div class="form-group">
+                                <label for="bus_address">Zip code</label>
+                                <input type="text" id="zipcode" name="zipcode" class="form-control" th:field="*{zipcode}"/>
+                                <!--<p th:if="${#fields.hasErrors('bus_address')}" th:errors="*{zipcode}"/>-->
+                            </div>
                             <label for="bus_phone">Business phone number (Area code and number)</label>
                             <input type="text" name="bus_phone" id="bus_phone" th:field="*{busPhone}"
                                    class="form-control phoneFormat"/>

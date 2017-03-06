@@ -368,7 +368,7 @@ h2 {
     text-shadow: black;
 }
 h4, p {
-    color: white;
+    color: black;
 
 }
 i .services, .fa-graduation-cap{
@@ -463,7 +463,7 @@ hr.small {
 footer {
     padding: 0;
     margin-top: auto;
-    color: white;
+    color: black;
 }
 
 
@@ -632,3 +632,8 @@ a .fa-arrow-circle-o-left{
     width: 30px;
     white-space: nowrap;
  }
+
+.formpages {
+    background-color: lightgoldenrodyellow;
+    margin-top: 2px;
+}

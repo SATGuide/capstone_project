@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/header :: header(title='Merchant profile')">
 </head>
-<body>
+<body class="formpages">
 
 <navbar th:replace="fragments/navbar :: navbar"/>
 
@@ -26,13 +26,9 @@
                     <div th:each="merchant : ${merchants}">
                         <form th:attr="action=${'/merchant/' + merchant.id}" method="post">
                             <h4 th:text="${merchant.busName}"/>
-                            <ul>
-                            <li class="phoneText" th:text="${merchant.busPhone}"/>
-                            <li><a th:href="${merchant.web}"><p th:text="${merchant.web}"/></a></li>
-                            <li th:text="${merchant.description}"/>
-                            </ul>
-
-
+                            <p class="phoneText" th:text="${merchant.busPhone}"/>
+                            <p><a th:href="${merchant.web}"><p th:text="${merchant.web}"/></a></p>
+                            <p th:text="${merchant.description}"/>
 
                             <input type="submit" value="Delete" class="btn btn-warning" />
                             <input type="hidden" th:attr="name=${_csrf.parameterName},value=${_csrf.token}" />

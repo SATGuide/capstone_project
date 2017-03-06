@@ -42,6 +42,11 @@ body {
     font-size: 4.5em;
     font-weight: 700;
 }
+#about-home {
+    color: darkblue;
+    background-color: #f7e1b5;
+    padding: 20px;
+}
 #homelabel {
     color: white;
 }
@@ -248,7 +253,10 @@ i .services-dining, .fa-glass{
     font-size: 4em;
     font-weight: 500;
 }
-
+#about-thingstodo {
+    background-image: url(img/yellowpattern.jpg);
+    background-size: cover;
+}
 /*Services*/
 #services-thingstodo {
     background-color: cornflowerblue;

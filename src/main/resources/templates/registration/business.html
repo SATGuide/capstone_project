@@ -51,16 +51,30 @@
                             <input type="text" name="description" id="description" th:field="*{description}"
                                    class="form-control"/>
                             <!--<p th:if="${#fields.hasErrors('description')}" th:errors="*{description}"/>-->
+                            <h4>Relocate the marker below to your business location.</h4>
                         </div>
-                        <input class="btn btn-primary" type="submit" value="Submit"/>
+                        <div class="col-md-6" id="map-canvas2">
+                        </div>
+                        <div>
+                            <label for="latbox">Latitude</label>
+                            <input type="text" name="lat" id="latbox" class="form-control" placeholder="29.426791" th:field="*{lat}"/>
+                            <label for="lngbox">Longitude</label>
+                            <input type="text" name="lat" id="lngbox" class="form-control" placeholder="-98.489602" th:field="*{lng}"/>
+                        </div>
+                        <input id="newBusiness" class="btn btn-primary" type="submit" value="Submit"/>
                         <input type="hidden" th:attr="name=${_csrf.parameterName}, value=${_csrf.token}"/>
                     </form>
                     <input type="hidden" th:attr="name=${_csrf.parameterName},value=${_csrf.token}"/>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 <footer th:replace="fragments/footer :: footer"/>
+<!--Google Maps API-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnFZ9Y4VyKhA1di1o-X_x3_AJ7GNuz27g"></script>
+<script src="../javaScript/geoCode.js"></script>
+
 </body>
 </html>

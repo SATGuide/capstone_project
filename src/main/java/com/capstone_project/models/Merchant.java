@@ -23,6 +23,39 @@ public class Merchant {
     @Column(nullable = false, length = 100)
     private String busName;
 
+    @Column(nullable = false, length = 100)
+    private String address;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getZipcode() {
+        return zipcode;
+    }
+
+    public void setZipcode(String zipcode) {
+        this.zipcode = zipcode;
+    }
+
+    @Column(nullable = false, length = 30)
+    private String city;
+
+    @Column(nullable = false, length = 5)
+    private String zipcode;
+
     @Column(nullable = true, length = 15)
     private String busPhone;
 

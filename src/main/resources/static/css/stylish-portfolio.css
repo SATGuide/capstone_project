@@ -134,6 +134,7 @@ i .services, .fa-book{
     #chalkboard-img {
         width: 100%;
     }
+
 }
 
 .text-vertical-center-dining {
@@ -145,8 +146,8 @@ i .services, .fa-book{
 
 .text-vertical-center-dining h1 {
     position: absolute;
-    top: 125px;
-    left: -263px;
+    top: 20%;
+    left: -20%;
     width: 100%;
     padding: 0;
     font-family: "Brush Script MT";
@@ -441,16 +442,21 @@ i .services, .fa-taxi{
     background-size: 50%;
 
 }
+#top {
+    background-image: url(img/tanpattern.jpg);
+    background-size: cover;
+}
 #phonenumber {
-    color: black;
+    color: mediumblue;
     text-align: center;
     margin-top: 150px;
     margin-left: 730px;
     padding: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-shadow: 1px 1px silver;
+    text-shadow: 1px 1px black;
     font-size: 8em;
     font-weight: 500;
+
 }
 
 /*Services*/

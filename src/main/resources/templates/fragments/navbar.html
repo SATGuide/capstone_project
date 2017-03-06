@@ -8,10 +8,13 @@
 <nav th:fragment="navbar">
 
     <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <a id="menu-toggle" href="#" class="btn toggle"><i class="fa fa-arrow-circle-o-left"></i></a>
     <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav mainmenu">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+        <ul class="sidebar-nav">
+            <li>
+                <a id="menu-close" href="#" class="btn toggle"><i class="fa fa-arrow-circle-o-right pull-left"></i></a>
+            </li>
+            <li id="SATXbrand">SATX Interactive</li>
             <li>
                 <a th:href="@{/}" class="sidebar-brand" onclick="$('#menu-close').click();">Home</a>
             </li>
@@ -25,7 +28,7 @@
                 <a th:href="@{/general}" onclick="$('#menu-close').click();">General</a>
             </li>
             <li>
-                <a th:href="@{/transportation}" onclick="$('#menu-close').click();">Transportation </a>
+                <a th:href="@{/transportation}" onclick="$('#menu-close').click();">Transportation</a>
             </li>
             <li>
                 <a th:href="@{/register}" onclick="$('#menu-close').click();">Sign Up</a>
@@ -35,7 +38,7 @@
             </li>
             <li sec:authorize="isAuthenticated()">
                 <form th:action="@{/logout}" th:method="POST">
-                <input type="submit" value="logout"/>
+                <input type="submit" value="Logout" id="logout"/>
                 </form>
             </li>
         </ul>

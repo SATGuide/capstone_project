@@ -10,15 +10,16 @@
 
 <!-- Header -->
 <header id="dining-title" class="header-dining">
+
     <div class="text-vertical-center-dining">
 
-        <img id="chalkboard-img" src="/css/img/chalkboard.jpg" />
+            <img id="chalkboard-img" src="/css/img/chalkboard.jpg" />
 
-        <img id="food-img" src="/css/img/Food-Collage.jpg"/>
+            <h1 class="heading-text">Dining</h1>
 
-            <!--<h1>Dining</h1>-->
-
+            <img id="food-img" src="/css/img/Food-Collage.jpg"/>
     </div>
+
 </header>
 
 <!-- Services -->
@@ -26,10 +27,12 @@
 <section id="services-dining" class="services bg-primary">
     <div class="container">
         <div class="row text-center">
-
+            <div class="col-lg-10 col-lg-offset-1">
+                <hr class="large" />
+                <div class="row">
             <!--Local Dining Link-->
             <a href="#map-canvas" class="left-menu-toggle local"  style="color:black">
-                <div class="col-xs-6 col-md-4">
+                <div class="col-md-4">
                     <div class="service-item=dining">
                             <span class="fa-stack fa-4x">
                             <i class="fa fa-circle fa-stack-2x"></i>
@@ -38,14 +41,14 @@
                         <h4>
                             <strong>Local Cuisine</strong>
                         </h4>
-                        <p>Local eating venues.</p>
+                        <p>Local eating venues</p>
                     </div>
                 </div>
             </a>
 
             <!--Chain Dining Option Link-->
             <a href="#map-canvas" class="left-menu-toggle chain"  style="color:black">
-                <div class="col-xs-6 col-md-4">
+                <div class="col-md-4">
                     <div class="service-item-dining">
                             <span class="fa-stack fa-4x">
                             <i class="fa fa-circle fa-stack-2x"></i>
@@ -54,14 +57,14 @@
                         <h4>
                             <strong>Favorite Eats</strong>
                         </h4>
-                        <p>Find a list of popular restaurants.</p>
+                        <p>National chain restaurants</p>
                     </div>
                 </div>
             </a>
 
             <!--Bars / Club Links-->
             <a href="#map-canvas" class="left-menu-toggle bars"  style="color:black">
-                <div class="col-xs-6 col-md-4">
+                <div class="col-md-4">
                     <div class="service-item-dining">
                                     <span class="fa-stack fa-4x">
                                     <i class="fa fa-circle fa-stack-2x"></i>
@@ -70,14 +73,17 @@
                         <h4>
                             <strong>Bars/Clubs</strong>
                         </h4>
-                        <p>Guide to local nightlife.</p>
+                        <p>Local nightlife</p>
                     </div>
                 </div>
             </a>
-        </div>
+
+                </div>
                 <!-- /.row (nested) -->
     </div>
     <!-- /.container -->
+        </div>
+    </div>
 </section>
 
 <section th:replace="fragments/map :: map" />

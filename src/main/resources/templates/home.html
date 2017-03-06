@@ -33,8 +33,7 @@
     <div class="container">
         <div class="row text-center">
             <div class="col-lg-10 col-lg-offset-1">
-                <!--<h2>Activities</h2>-->
-                <!--<hr class="small" />-->
+                <hr class="large" />
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
                         <div class="service-item-home">
@@ -48,7 +47,6 @@
                             </h4>
                             <p>San Antonio has an abundance of great restaurants. (Don't skip our greatest contribution: breakfast tacos.)</p>
                             </a>
-                                <!--<a th:href="@{/dining}" class="btn btn-light">Learn More</a>-->
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
@@ -61,25 +59,9 @@
                             <h4>
                                 <strong>Things To Do</strong>
                             </h4>
-                            <p>Although it's the number one tourist destination in Texas, the Alamo isn't the only great thing about San Antonio.</p>
+                            <p>Although the number one tourist destination in Texas, the Alamo isn't the only great thing about San Antonio.</p>
                             </a>
-                                <!--<a th:href="@{/thingstodo}" class="btn btn-light">Learn More</a>-->
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="service-item-home">
-                            <a th:href="@{/localevents}">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-ticket fa-stack-1x text-primary"></i>
-                            </span>
-                            <h4>
-                                <strong>Local Events</strong>
-                            </h4>
-                            <p>San Antonio always has <em>something</em> to celebrate, starting with our annual two-week party known as Fiesta.</p>
-                            </a>
-                            <!--<a th:href="@{/localevents}" class="btn btn-light">Learn More</a>-->
-                        </div>
+                      </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="service-item-home">
@@ -91,9 +73,22 @@
                             <h4>
                                 <strong>Transportation</strong>
                             </h4>
-                            <p>Bus, taxi, rideshare, bicycle, shoe leather: There's lots of ways to get around the Alamo City.</p>
+                            <p>Bus, taxi and rideshare: There are many ways to get around the Alamo City.</p>
                             </a>
-                            <!--<a th:href="@{/transportation}" class="btn btn-light">Learn More</a>-->
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item-home">
+                            <a th:href="@{/general}">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-book fa-stack-1x text-primary"></i>
+                            </span>
+                            <h4>
+                                <strong>General</strong>
+                            </h4>
+                            <p>Have an emergency or need general information?  This page provides you a directory of useful phone numbers.</p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -104,10 +99,11 @@
          <!--/.row-->
     </div>
      <!--/.container-->
+    <footer th:replace="fragments/footer :: footer"/>
 
 </section>
 
 
-<footer th:replace="fragments/footer :: footer"/>
+<!--<footer th:replace="fragments/footer :: footer"/>-->
 </body>
 </html>

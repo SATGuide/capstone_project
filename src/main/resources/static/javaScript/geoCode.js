@@ -23,16 +23,15 @@
         });
     }
 
-
     initMap();
-    google.maps.event.addListener(marker, 'dragend', function(event) {
+
+    google.maps.event.addListener(marker, 'dragend', function() {
         document.getElementById("latbox").value = this.getPosition().lat();//getPosition is a function in Google API that captures the location of the marker
         document.getElementById("lngbox").value = this.getPosition().lng();
         latVar = latbox.value;
         lngVar = lngbox.value;
 
     });
-
 
 })();
 

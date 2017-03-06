@@ -51,6 +51,15 @@
                                    class="form-control"/>
                             <!--<p th:if="${#fields.hasErrors('description')}" th:errors="*{description}"/>-->
                         </div>
+
+                        <div class="col-md-6" id="map-canvas3">
+                        </div>
+                        <div>
+                            <label for="latbox">Latitude</label>
+                            <input type="text" name="lat" id="latbox" class="form-control"  th:field="*{lat}"/>
+                            <label for="lngbox">Longitude</label>
+                            <input type="text" name="lat" id="lngbox" class="form-control"  th:field="*{lng}"/>
+                        </div>
                         <input class="btn btn-primary" type="submit" value="Submit"/>
                         <input type="hidden" th:attr="name=${_csrf.parameterName},value=${_csrf.token}"/>
                     </form>
@@ -59,6 +68,30 @@
         </div>
     </div>
 </div>
-<footer th:replace="fragments/footer :: footer"/>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1 text-center">
+
+            <ul class="list-unstyled">
+                <li><i class="fa fa-phone fa-fw"></i> (210) 999-9999 | <a href="mailto:name@example.com">admin@satxinteractive.com</a> | Copyright &copy; SATX Interactive, 2017</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+<!--<a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>-->
+
+<!-- jQuery -->
+<script src="/javaScript/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/javaScript/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/javaScript/custom.js"></script>
+
+<!--Google Maps API-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnFZ9Y4VyKhA1di1o-X_x3_AJ7GNuz27g"></script>
+<script src="/javaScript/geoEdit.js"></script>
 </body>
 </html>

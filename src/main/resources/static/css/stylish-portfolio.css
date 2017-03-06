@@ -143,6 +143,8 @@ h4, p {
     color: white;
 }
 
+
+
 i .services-dining, .fa-map-marker{
     color: red;
 }
@@ -453,6 +455,11 @@ hr.small {
 }
 
 #map-canvas{
+    height:500px;
+    width:100%;
+}
+
+#map-canvas2{
     height:500px;
     width:100%;
 }

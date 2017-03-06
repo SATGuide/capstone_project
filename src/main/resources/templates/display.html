@@ -7,8 +7,6 @@
 <header id="top" class="header-login">
 </header>
 <nav th:replace="fragments/navbar :: navbar"/>
-<!--left side dynamic menu-->
-<nav th:replace="fragments/leftNavbar :: leftNavbar"/>
 
 <div class="container">
 <!-- Merchant name -->
@@ -17,6 +15,7 @@
 <!--Street view should go here, created from the lat/lng values-->
     <!--Address on next line needs to be generated from the lat/lng values-->
     <p th:text="${merchants.address}" /p>
+    <p th:text="${merchants.zipcode}" /p>
     <p th:text="${merchants.bus_phone}" /p>
     <p th:text="${merchants.web}" /p>
 </div>

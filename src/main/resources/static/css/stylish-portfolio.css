@@ -25,6 +25,9 @@ body {
     background: url(img/bg-reduce.jpg) no-repeat left center scroll;
     background-size: cover;
 }
+#about-home {
+    background-color: floralwhite;
+}
 
 
 .text-vertical-center-home {
@@ -127,22 +130,17 @@ i .services, .fa-book{
 }
 
 .heading-text {
-    color: darkblue;
+    color: mediumblue;
     text-align: center;
     margin-top: -10px;
-    padding: 140px;
-    font-family: "Brush Script MT";
-    text-shadow: 2px 2px silver;
-    font-size: 8em;
+    padding-top: 150px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-shadow: 1px 1px black;
+    font-size: 5em;
     font-weight: 500;
 
 }
-/*@media (max-width: 450px) {*/
-    /*.heading-text h1 {*/
-        /*font-size: 6em;*/
-    /*}*/
 
-/*Services*/
 #services-dining {
     background-color: cornflowerblue;
     padding: 20px 0;
@@ -404,8 +402,8 @@ i .services, .fa-taxi{
 
 /*================================================================*/
 /*General page*/
-.vintagephone {
-    background-image: url('/css/img/vintagephone.jpeg');
+.phone {
+    background-image: url('/css/img/phone.jpg');
     background-size: auto 445px;
     height: 409px;
 }
@@ -420,7 +418,7 @@ i .services, .fa-taxi{
     color: mediumblue;
     text-align: center;
     margin-top: -10px;
-    padding: 140px;
+    padding-top: 140px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-shadow: 1px 1px black;
     font-size: 3em;

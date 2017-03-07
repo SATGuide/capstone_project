@@ -27,7 +27,7 @@
                         <form th:attr="action=${'/merchant/' + merchant.id}" method="post">
                             <h4 th:text="${merchant.busName}"/>
                             <p class="phoneText" th:text="${'Phone: ' + merchant.busPhone}"/>
-                            <p th:text="${'Address: ' + merchant.address + ', ' + merchant.city + ' ' + merchant.zipcode}"/>
+                            <p th:text="${'Address: ' + merchant.busAddress + ', ' + merchant.city + ' ' + merchant.zipcode}"/>
                             <p><a th:href="${merchant.web}"><p th:text="${merchant.web}"/></a></p>
                             <p th:text="${merchant.description}"/>
 

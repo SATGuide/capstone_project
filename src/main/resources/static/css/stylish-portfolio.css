@@ -45,7 +45,7 @@ body {
 }
 #about-home {
     color: darkblue;
-    background-color: #f7e1b5;
+    /*background-color: #f7e1b5;*/
     padding: 20px;
 }
 #homelabel {
@@ -80,8 +80,8 @@ body {
 /* Services */
 
 #services-home {
-    background-color: coral;
-    padding: 20px 0;
+    background-color: cornflowerblue;
+    padding: 10px 0;
 }
 /*Home landing page icons*/
 .service-item-home {
@@ -113,25 +113,26 @@ i .services, .fa-book{
 /*================================================================*/
 /*Dining page*/
 
-.collage {
-    background-image: url('/css/img/Food-Collage.jpg');
-    background-size: auto 337px;
+.riverwalk {
+    background-image: url('/css/img/riverwalk.jpg');
+    background-size: auto 426px;
     height: 409px;
 }
 
-.chalkboard {
-    background-image: url('/css/img/chalkboard.jpg');
+.TexasStar {
+    background-color: floralwhite;
     background-size: auto 614px;
     height: 409px;
+    /*width: 772px;*/
 }
 
 .heading-text {
-    color: white;
+    color: darkblue;
     margin-top: -10px;
     /*text-align: center;*/
     padding: 150px;
     font-family: "Brush Script MT";
-    text-shadow: 4px 4px black;
+    text-shadow: 2px 2px silver;
     font-size: 8em;
     font-weight: 500;
 
@@ -139,7 +140,7 @@ i .services, .fa-book{
 
 /*Services*/
 #services-dining {
-    background-color: #c1e2b3;
+    background-color: cornflowerblue;
     padding: 20px 0;
 }
 
@@ -188,21 +189,21 @@ i .services-dining, .fa-glass{
 #rollercoaster-img {
     float: left;
     margin: 0;
-    height: 300px;
+    height: 400px;
     width: 33.3%;
     display: inline-block
 }
 #golf-img {
     float: left;
     margin: 0;
-    height: 300px;
+    height: 400px;
     width: 33.3%;
     display: inline-block
 }
 #shopping-img {
     float: left;
     margin: 0;
-    height: 300px;
+    height: 400px;
     width: 33.3%;
     display: inline-block
 }
@@ -235,8 +236,8 @@ i .services-dining, .fa-glass{
     font-weight: 500;
 }
 #about-thingstodo {
-    background-image: url(img/yellowpattern.jpg);
-    background-size: cover;
+    background-color: floralwhite;
+
 }
 /*Services*/
 #services-thingstodo {
@@ -339,7 +340,7 @@ i .services, .fa-film{
 /*Services*/
 #services-transportation {
 
-    background-color: lightsteelblue;
+    background-color: cornflowerblue;
     padding: 50px 0;
 
 }
@@ -399,49 +400,34 @@ i .services, .fa-taxi{
 
 /*================================================================*/
 /*General page*/
-
-#vintagephone-img {
-    float: left;
-    margin: 0;
+.vintagephone {
+    background-image: url('/css/img/vintagephone.jpeg');
+    background-size: auto 445px;
     height: 409px;
-    width: 55%;
-    display: inline-block
 }
 
-@media (max-width: 850px) {
-
-    #vintagephone-img {
-        display: none;
-    }
+.tanpattern {
+    background-color: floralwhite;
+    background-size: auto 614px;
+    height: 409px;
 }
 
-.header-general {
-    display: table;
-    width: 100%;
-    height: 400px;
-    background-size: 50%;
-
-}
-#top {
-    background-image: url(img/tanpattern.jpg);
-    background-size: cover;
-}
-#phonenumber {
+.header-text {
     color: mediumblue;
-    text-align: center;
+    text-align: right;
     margin-top: 150px;
-    margin-left: 730px;
+    /*!*margin-left: 730px;*!*/
     padding: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-shadow: 1px 1px black;
-    font-size: 8em;
+    font-size: 3em;
     font-weight: 500;
 
 }
 
 /*Services*/
 #services-general {
-    background-color: silver;
+    background-color: cornflowerblue;
     padding: 50px 0;
 }
 .service-item-general {

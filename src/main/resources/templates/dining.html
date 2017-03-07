@@ -9,17 +9,17 @@
 
 
 <!-- Header -->
-<header id="dining-title" class="header-dining">
 
-    <div class="text-vertical-center-dining">
-
-            <img id="chalkboard-img" src="/css/img/chalkboard.jpg" />
-
-            <h1 class="heading-text">Dining</h1>
-
-            <img id="food-img" src="/css/img/Food-Collage.jpg"/>
-    </div>
-
+<header>
+<div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-sm-12 chalkboard">
+                <h1 class="heading-text">Dining</h1>
+            </div>
+            <div class="col-md-4 hidden-sm hidden-xs collage">
+            </div>
+        </div>
+</div>
 </header>
 
 <!-- Services -->
@@ -28,67 +28,67 @@
     <div class="container">
         <div class="row text-center">
             <div class="col-lg-10 col-lg-offset-1">
-                <hr class="large" />
+                <hr class="large"/>
                 <div class="row">
-            <!--Local Dining Link-->
-            <a href="#map-canvas" class="left-menu-toggle local"  style="color:black">
-                <div class="col-md-4">
-                    <div class="service-item=dining">
+                    <!--Local Dining Link-->
+                    <a href="#map-canvas" class="left-menu-toggle local" style="color:black">
+                        <div class="col-md-4">
+                            <div class="service-item=dining">
                             <span class="fa-stack fa-4x">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fa fa-map-marker fa-stack-1x text-primary"></i>
                         </span>
 
-                        <h4 id="dininglabel">
-                            <strong>Local Cuisine</strong>
-                        </h4>
-                        <p id="diningdescription">Local eating venues</p>
+                                <h4 id="dininglabel">
+                                    <strong>Local Cuisine</strong>
+                                </h4>
+                                <p id="diningdescription">Local eating venues</p>
 
-                    </div>
-                </div>
-            </a>
+                            </div>
+                        </div>
+                    </a>
 
-            <!--Chain Dining Option Link-->
-            <a href="#map-canvas" class="left-menu-toggle chain"  style="color:black">
-                <div class="col-md-4">
-                    <div class="service-item-dining">
+                    <!--Chain Dining Option Link-->
+                    <a href="#map-canvas" class="left-menu-toggle chain" style="color:black">
+                        <div class="col-md-4">
+                            <div class="service-item-dining">
                             <span class="fa-stack fa-4x">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fa fa-globe fa-stack-1x text-primary"></i>
                         </span>
-                        <h4 id="dininglabel2">
-                            <strong>Favorite Eats</strong>
-                        </h4>
-                        <p id="diningdescription2">National chain restaurants</p>
-                    </div>
-                </div>
-            </a>
+                                <h4 id="dininglabel2">
+                                    <strong>Favorite Eats</strong>
+                                </h4>
+                                <p id="diningdescription2">National chain restaurants</p>
+                            </div>
+                        </div>
+                    </a>
 
-            <!--Bars / Club Links-->
-            <a href="#map-canvas" class="left-menu-toggle bars"  style="color:black">
-                <div class="col-md-4">
-                    <div class="service-item-dining">
+                    <!--Bars / Club Links-->
+                    <a href="#map-canvas" class="left-menu-toggle bars" style="color:black">
+                        <div class="col-md-4">
+                            <div class="service-item-dining">
                                     <span class="fa-stack fa-4x">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-glass fa-stack-1x text-primary"></i>
                                 </span>
-                        <h4 id="dininglabel3">
-                            <strong>Bars/Clubs</strong>
-                        </h4>
-                        <p id="diningdescription3">Local nightlife</p>
-                    </div>
-                </div>
-            </a>
+                                <h4 id="dininglabel3">
+                                    <strong>Bars/Clubs</strong>
+                                </h4>
+                                <p id="diningdescription3">Local nightlife</p>
+                            </div>
+                        </div>
+                    </a>
 
                 </div>
                 <!-- /.row (nested) -->
-    </div>
-    <!-- /.container -->
+            </div>
+            <!-- /.container -->
         </div>
     </div>
 </section>
 
-<section th:replace="fragments/map :: map" />
+<section th:replace="fragments/map :: map"/>
 
 <nav th:replace="fragments/footer :: footer"/>
 

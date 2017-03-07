@@ -26,6 +26,7 @@ body {
     background-size: cover;
 }
 
+
 .text-vertical-center-home {
     color: white;
     display: table-cell;
@@ -112,47 +113,26 @@ i .services, .fa-book{
 /*================================================================*/
 /*Dining page*/
 
-#chalkboard-img {
-    float: left;
-    margin: 0;
+.collage {
+    background-image: url('/css/img/Food-Collage.jpg');
+    background-size: auto 337px;
     height: 409px;
-    width: 60%;
-    display: inline-block
 }
-#food-img {
-    float: left;
-    margin: 0;
+
+.chalkboard {
+    background-image: url('/css/img/chalkboard.jpg');
+    background-size: auto 614px;
     height: 409px;
-    width: 40%;
-    display: inline-block
 }
 
-@media (max-width: 850px) {
-    #food-img {
-        display: none;
-    }
-    #chalkboard-img {
-        width: 100%;
-    }
-
-}
-
-.text-vertical-center-dining {
+.heading-text {
     color: white;
-    display: table-cell;
-    text-align: center;
-    vertical-align: center;
-}
-
-.text-vertical-center-dining h1 {
-    position: absolute;
-    top: 20%;
-    left: -20%;
-    width: 100%;
-    padding: 0;
+    margin-top: -10px;
+    /*text-align: center;*/
+    padding: 150px;
     font-family: "Brush Script MT";
     text-shadow: 4px 4px black;
-    font-size: 7em;
+    font-size: 8em;
     font-weight: 500;
 
 }

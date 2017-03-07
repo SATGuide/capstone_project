@@ -6,7 +6,7 @@
     'use strict';
 
     // Used to format phone number
-    function phoneFormatter() {
+
         $('.phoneFormat').on('input', function() {
             var number = $(this).val().replace(/[^\d]/g, '');
             if (number.length == 7) {
@@ -16,9 +16,6 @@
             }
             $(this).val(number);
         });
-    }
-
-$(phoneFormatter);
 
     $(".phoneText").text(function(i, text) {
         text = text.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");

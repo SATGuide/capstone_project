@@ -118,7 +118,9 @@ i .services, .fa-book{
 
 .riverwalk {
     background-image: url('/css/img/riverwalk.jpg');
-    background-size: auto 426px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 409px;
 }
 
@@ -404,6 +406,8 @@ i .services, .fa-taxi{
 /*General page*/
 .phone {
     background-image: url('/css/img/phone.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: auto 445px;
     height: 409px;
 }

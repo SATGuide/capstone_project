@@ -11,6 +11,7 @@ body {
 
     height: 100%;
     width: 100%;
+    background-color: floralwhite;
 
 }
 
@@ -84,7 +85,7 @@ body {
 
 #services-home {
     background-color: cornflowerblue;
-    padding: 10px 0;
+    padding: 32px 0;
 }
 /*Home landing page icons*/
 .service-item-home {
@@ -345,7 +346,7 @@ i .services, .fa-film{
 #services-transportation {
 
     background-color: cornflowerblue;
-    padding: 50px 0;
+    padding: 78px 0;
 
 }
 .service-item-transportation {
@@ -407,8 +408,8 @@ i .services, .fa-taxi{
 .phone {
     background-image: url('/css/img/phone.jpg');
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto 445px;
+    background-position: left;
+    background-size: auto 480px;
     height: 409px;
 }
 
@@ -421,7 +422,7 @@ i .services, .fa-taxi{
 .header-text {
     color: mediumblue;
     text-align: center;
-    margin-top: -10px;
+    margin-top: 20px;
     padding-top: 140px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-shadow: 1px 1px black;

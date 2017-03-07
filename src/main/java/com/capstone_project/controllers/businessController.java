@@ -44,6 +44,8 @@ public class businessController {
 
     @GetMapping("/merchant/{id}/edit")
     public String editMerchant(Model model, @PathVariable int id){
+        List<Category> categories = (List<Category>) categoryRepo.findAll();
+        model.addAttribute("category", categories);
         model.addAttribute("merchant", merchantRepo.findOne(id));
         return "edit";
     }

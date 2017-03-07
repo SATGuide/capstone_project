@@ -24,14 +24,14 @@ public class Merchant {
     private String busName;
 
     @Column(nullable = false, length = 100)
-    private String address;
+    private String busAddress;
 
-    public String getAddress() {
-        return address;
+    public String getBusAddress() {
+        return busAddress;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setBusAddress(String busAddress) {
+        this.busAddress = busAddress;
     }
 
     public String getCity() {

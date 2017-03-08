@@ -33,6 +33,9 @@
             <li sec:authorize="!isAuthenticated()">
                 <a th:href="@{/register}" onclick="$('#menu-close').click();">Sign Up</a>
             </li>
+            <li sec:authorize="isAuthenticated()">
+                <a th:href="@{/profile}" onclick="$('#menu-close').click();">Profile</a>
+            </li>
             <li sec:authorize="!isAuthenticated()">
                 <a th:href="@{/login}" onclick="$('#menu-close').click();">Log in</a>
             </li>

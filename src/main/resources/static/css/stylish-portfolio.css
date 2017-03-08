@@ -11,7 +11,7 @@ body {
 
     height: 100%;
     width: 100%;
-    background-color: floralwhite;
+
 
 }
 
@@ -19,6 +19,10 @@ body {
 /*Home page*/
 
 /* Header */
+
+.home {
+    background-color: floralwhite;
+}
 .header-home {
     display: table;
     width: 100%;
@@ -117,7 +121,9 @@ i .services, .fa-book{
 
 /*================================================================*/
 /*Dining page*/
-
+.dining{
+    background-color: floralwhite;
+}
 .riverwalk {
     background-image: url('/css/img/riverwalk.jpg');
     background-repeat: no-repeat;
@@ -196,6 +202,10 @@ i .services-dining, .fa-glass{
 
 /*================================================================*/
 /*Things To Do page*/
+
+.thingstodo {
+    background-color: floralwhite;
+}
 
 #rollercoaster-img {
     float: left;
@@ -318,6 +328,9 @@ i .services, .fa-film{
 /*================================================================*/
 /*Transportation page*/
 
+.transportation {
+    background-color: floralwhite;
+}
 .header-transportation {
     display: table;
     width: 100%;
@@ -414,6 +427,9 @@ i .services, .fa-taxi{
 
 /*================================================================*/
 /*General page*/
+.general {
+    background-color: floralwhite;
+}
 .phone {
     background-image: url('/css/img/phone.jpg');
     background-repeat: no-repeat;
@@ -741,10 +757,24 @@ a .fa-arrow-circle-o-left{
  }
 
 .formpages {
+
     background-color: lightgoldenrodyellow;
+
+    padding-top: 1px;
+}
+.forms-container {
+    margin-top: 215px;
+    padding-bottom: 205px;
+}
+@media(max-width:760px) {
+    .forms-container {
+        margin-top: 0;
+    }
+
     margin-top: 2px;
 }
 
 body {
     background-color: lightgoldenrodyellow;
+
 }

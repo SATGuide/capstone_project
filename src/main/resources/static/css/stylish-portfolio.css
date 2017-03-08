@@ -761,12 +761,4 @@ a .fa-arrow-circle-o-left{
     background-color: lightgoldenrodyellow;
     padding-top: 1px;
 }
-.forms-container {
-    margin-top: 215px;
-    padding-bottom: 205px;
-}
-@media(max-width:760px) {
-    .forms-container {
-        margin-top: 0;
-    }
-}
+

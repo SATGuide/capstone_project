@@ -44,7 +44,6 @@ public class User {
     @NotBlank(message = "Enter your 10-digit phone number, using numbers only: ")
     private String phone;
 
-
     public User(User user) {
         id = user.id;
         email = user.email;

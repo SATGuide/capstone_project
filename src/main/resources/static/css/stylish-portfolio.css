@@ -765,3 +765,8 @@ a .fa-arrow-circle-o-left{
     margin-top: 215px;
     padding-bottom: 205px;
 }
+@media(max-width:760px) {
+    .forms-container {
+        margin-top: 0;
+    }
+}
